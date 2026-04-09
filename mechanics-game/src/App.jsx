@@ -1,4 +1,4 @@
-import { useState, useMemo, useCallback } from 'react';
+import { useState, useMemo, useCallback, useEffect } from 'react';
 import questions, { TOPICS, TOPIC_LIST } from './data/questions';
 import './App.css';
 
@@ -11,6 +11,18 @@ function shuffleArray(arr) {
   return a;
 }
 
+function shuffleOptions(q) {
+  const indices = q.options.map((_, i) => i);
+  const shuffled = shuffleArray(indices);
+  return {
+    ...q,
+    options: shuffled.map(i => q.options[i]),
+    correct: shuffled.indexOf(q.correct),
+    _originalOptions: q.options,
+    _originalCorrect: q.correct,
+  };
+}
+
 function App() {
   const [screen, setScreen] = useState('menu');
   const [selectedTopics, setSelectedTopics] = useState(new Set(TOPIC_LIST));
@@ -21,11 +33,19 @@ function App() {
   const [streak, setStreak] = useState(0);
   const [bestStreak, setBestStreak] = useState(0);
   const [results, setResults] = useState([]);
+  const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'dark');
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => setTheme(t => t === 'dark' ? 'light' : 'dark');
 
   const startGame = useCallback(() => {
     const filtered = questions.filter(q => selectedTopics.has(q.topic));
     if (filtered.length === 0) return;
-    const shuffled = shuffleArray(filtered);
+    const shuffled = shuffleArray(filtered).map(shuffleOptions);
     setGameQuestions(shuffled);
     setCurrentIndex(0);
     setSelectedAnswer(null);
@@ -92,6 +112,9 @@ function App() {
     return (
       <div className="app">
         <header className="header">
+          <button className="theme-toggle" onClick={toggleTheme} title="Toggle light/dark mode">
+            {theme === 'dark' ? '\u2600\ufe0f' : '\u{1F319}'}
+          </button>
           <h1>9709 Mechanics</h1>
           <p className="subtitle">Paper 4 Practice Game</p>
         </header>
@@ -132,6 +155,9 @@ function App() {
     return (
       <div className="app">
         <div className="game-header">
+          <button className="theme-toggle small" onClick={toggleTheme} title="Toggle light/dark mode">
+            {theme === 'dark' ? '\u2600\ufe0f' : '\u{1F319}'}
+          </button>
           <div className="progress-info">
             <span className="q-num">Q{currentIndex + 1}/{gameQuestions.length}</span>
             <span className={`topic-badge ${currentQ.difficulty}`}>{currentQ.topic}</span>
@@ -210,6 +236,9 @@ function App() {
     return (
       <div className="app">
         <header className="header">
+          <button className="theme-toggle" onClick={toggleTheme} title="Toggle light/dark mode">
+            {theme === 'dark' ? '\u2600\ufe0f' : '\u{1F319}'}
+          </button>
           <h1>Session Complete</h1>
         </header>
         <div className="summary-card">
