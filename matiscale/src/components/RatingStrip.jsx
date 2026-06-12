@@ -10,7 +10,7 @@ const PLATFORMS = [
   { name: 'Google', score: null, url: null },
 ]
 
-function Star() {
+export function Star() {
   return (
     <svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
       <path
