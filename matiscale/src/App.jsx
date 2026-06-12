@@ -10,7 +10,6 @@ import WhoFor from './components/WhoFor.jsx'
 import FinalCta from './components/FinalCta.jsx'
 import Footer from './components/Footer.jsx'
 import Cursor from './components/Cursor.jsx'
-import Grain from './components/Grain.jsx'
 
 export default function App() {
   // Web fonts change metrics; recalculate trigger positions once they land.
@@ -36,7 +35,6 @@ export default function App() {
         <FinalCta />
       </main>
       <Footer />
-      <Grain />
       <Cursor />
     </>
   )

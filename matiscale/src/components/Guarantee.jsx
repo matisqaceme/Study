@@ -18,7 +18,7 @@ export default function Guarantee() {
             No long contracts. No paying for activity. We get paid because the
             meetings happen.
           </p>
-          <a className="btn" href="#calendly">
+          <a className="btn btn--inverse" href="#calendly">
             Book a call
           </a>
         </div>
