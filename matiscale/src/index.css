@@ -86,6 +86,8 @@ a {
   display: block;
   color: var(--blue);
   margin-bottom: clamp(1.8rem, 4.5vh, 3rem);
+  font-size: clamp(0.8125rem, 1vw, 0.9375rem);
+  letter-spacing: 0.22em;
 }
 
 .visually-hidden {
