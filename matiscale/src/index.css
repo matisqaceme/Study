@@ -22,7 +22,7 @@
 
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
   --container: min(100% - 3rem, 78rem);
-  --section-pad: clamp(7rem, 18vh, 13rem);
+  --section-pad: clamp(5.5rem, 13vh, 9rem);
 }
 
 * {
@@ -85,7 +85,7 @@ a {
 .kicker {
   display: block;
   color: var(--blue);
-  margin-bottom: clamp(2.5rem, 6vh, 4.5rem);
+  margin-bottom: clamp(1.8rem, 4.5vh, 3rem);
 }
 
 .visually-hidden {
@@ -370,13 +370,13 @@ section {
 .hero-inner {
   position: relative;
   z-index: 1;
-  padding-block: clamp(8rem, 18vh, 12rem) clamp(7rem, 16vh, 10rem);
+  padding-block: clamp(8rem, 18vh, 12rem) clamp(5rem, 11vh, 7.5rem);
 }
 
 .hero-title {
   font-family: var(--sans);
   font-weight: 700;
-  font-size: clamp(3rem, 8.6vw, 7.5rem);
+  font-size: clamp(2.9rem, 8vw, 6.5rem);
   line-height: 1.02;
   letter-spacing: -0.03em;
   max-width: 12ch;
@@ -399,7 +399,7 @@ section {
 }
 
 .hero-sub {
-  margin-top: clamp(1.8rem, 4vh, 2.8rem);
+  margin-top: clamp(1.5rem, 3vh, 2.2rem);
   max-width: 34ch;
   font-size: clamp(1.05rem, 1.5vw, 1.25rem);
   line-height: 1.55;
@@ -408,7 +408,7 @@ section {
 }
 
 .hero-actions {
-  margin-top: clamp(2.2rem, 5vh, 3.4rem);
+  margin-top: clamp(1.9rem, 4vh, 2.8rem);
   display: flex;
   align-items: center;
   gap: 1.6rem;
@@ -535,7 +535,7 @@ section {
 }
 
 .marquee {
-  margin-top: clamp(2.6rem, 6vh, 4rem);
+  margin-top: clamp(2.2rem, 5vh, 3rem);
   display: flex;
   align-items: center;
   gap: 2rem;
@@ -640,7 +640,7 @@ section {
 .problem-title {
   font-family: var(--sans);
   font-weight: 650;
-  font-size: clamp(2.1rem, 5.2vw, 4.4rem);
+  font-size: clamp(2rem, 4.8vw, 3.8rem);
   line-height: 1.06;
   letter-spacing: -0.028em;
 }
@@ -651,7 +651,7 @@ section {
 }
 
 .problem-sub {
-  margin-top: clamp(1.8rem, 4vh, 2.6rem);
+  margin-top: clamp(1.4rem, 3vh, 2rem);
   max-width: 44ch;
   font-size: clamp(1rem, 1.3vw, 1.15rem);
   color: var(--ink-dim);
@@ -676,7 +676,7 @@ section {
   grid-template-columns: 7rem 1.1fr 1fr;
   gap: clamp(1.5rem, 3vw, 3rem);
   align-items: baseline;
-  padding-block: clamp(2.6rem, 6vh, 4.2rem);
+  padding-block: clamp(2.2rem, 4.5vh, 3.2rem);
 }
 
 .step-n {
@@ -686,7 +686,7 @@ section {
 .step-title {
   font-family: var(--sans);
   font-weight: 650;
-  font-size: clamp(1.6rem, 3vw, 2.5rem);
+  font-size: clamp(1.55rem, 2.7vw, 2.25rem);
   line-height: 1.1;
   letter-spacing: -0.022em;
 }
@@ -714,9 +714,10 @@ section {
 .service-title {
   font-family: var(--sans);
   font-weight: 650;
-  font-size: clamp(2rem, 5vw, 4.2rem);
+  font-size: clamp(2rem, 4.8vw, 3.8rem);
   line-height: 1.06;
   letter-spacing: -0.028em;
+  text-wrap: balance;
 }
 
 .service-title em {
@@ -732,7 +733,7 @@ section {
 }
 
 .service-grid {
-  margin-top: clamp(2.6rem, 6vh, 4rem);
+  margin-top: clamp(2.2rem, 5vh, 3.2rem);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: clamp(1.2rem, 2.5vw, 2rem);
@@ -981,7 +982,7 @@ section {
 }
 
 .compare-scroll {
-  margin-top: clamp(2.5rem, 6vh, 4rem);
+  margin-top: clamp(2.2rem, 5vh, 3.2rem);
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
@@ -1048,7 +1049,7 @@ section {
 }
 
 .compare-cta {
-  margin-top: clamp(2.6rem, 6vh, 4rem);
+  margin-top: clamp(2.2rem, 5vh, 3.2rem);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1079,20 +1080,20 @@ section {
     radial-gradient(120% 160% at 88% -10%, rgba(255, 255, 255, 0.25), transparent 55%),
     linear-gradient(128deg, #1e63f2 12%, #4d9bff 100%);
   color: #ffffff;
-  padding: clamp(3rem, 8vw, 7rem) clamp(1.8rem, 7vw, 6.5rem);
+  padding: clamp(2.8rem, 6vw, 5.5rem) clamp(1.8rem, 6vw, 5.5rem);
   overflow: hidden;
   box-shadow: 0 30px 80px rgba(39, 114, 255, 0.35);
 }
 
 .guarantee-panel .kicker {
   color: rgba(255, 255, 255, 0.85);
-  margin-bottom: clamp(2rem, 5vh, 3.2rem);
+  margin-bottom: clamp(1.6rem, 4vh, 2.4rem);
 }
 
 .guarantee-title {
   font-family: var(--sans);
   font-weight: 700;
-  font-size: clamp(2.1rem, 4.8vw, 4.1rem);
+  font-size: clamp(2rem, 4.6vw, 3.8rem);
   line-height: 1.06;
   letter-spacing: -0.028em;
   max-width: 21ch;
@@ -1105,7 +1106,7 @@ section {
 }
 
 .guarantee-sub {
-  margin-top: clamp(1.6rem, 4vh, 2.4rem);
+  margin-top: clamp(1.3rem, 3vh, 2rem);
   color: rgba(255, 255, 255, 0.95);
   font-size: 1.0625rem;
   font-weight: 500;
@@ -1114,7 +1115,7 @@ section {
 }
 
 .guarantee-panel .btn {
-  margin-top: clamp(2.4rem, 5vh, 3.4rem);
+  margin-top: clamp(2rem, 4vh, 2.8rem);
 }
 
 /* --- Testimonials ------------------------------------------------------------------ */
@@ -1240,7 +1241,7 @@ section {
   margin-top: 1.8rem;
   font-family: var(--sans);
   font-weight: 650;
-  font-size: clamp(1.45rem, 2.4vw, 2rem);
+  font-size: clamp(1.4rem, 2.2vw, 1.85rem);
   line-height: 1.12;
   letter-spacing: -0.02em;
 }
@@ -1338,7 +1339,7 @@ section {
 .finale-title {
   font-family: var(--sans);
   font-weight: 700;
-  font-size: clamp(2.5rem, 6.6vw, 5.6rem);
+  font-size: clamp(2.4rem, 6vw, 4.8rem);
   line-height: 1.03;
   letter-spacing: -0.03em;
   max-width: 14ch;
@@ -1350,7 +1351,7 @@ section {
 }
 
 .book-panel {
-  margin-top: clamp(2.4rem, 6vh, 3.6rem);
+  margin-top: clamp(2rem, 5vh, 3rem);
   width: min(100%, 44rem);
   border-radius: 28px;
   background: rgba(255, 255, 255, 0.82);
