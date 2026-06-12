@@ -27,7 +27,7 @@ export default function Approach() {
     <section className="approach" id="approach" ref={ref}>
       <div className="container">
         <span className="kicker mono" data-reveal>
-          Approach
+          How Matiscale works
         </span>
         <div className="approach-steps">
           {STEPS.map((step) => (

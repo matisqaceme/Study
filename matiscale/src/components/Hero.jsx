@@ -72,7 +72,7 @@ export default function Hero() {
           — guaranteed.
         </p>
         <div className="hero-actions">
-          <a className="btn" href="#calendly">
+          <a className="btn" href="#contact">
             Book a call
           </a>
           <span className="hero-note mono">30 minutes. No obligation.</span>

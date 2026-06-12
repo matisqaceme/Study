@@ -1,39 +1,38 @@
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import BrandMark from './BrandMark.jsx'
 
 gsap.registerPlugin(ScrollTrigger)
 
 const LINKS = [
-  { label: 'Work', href: '#work' },
   { label: 'Approach', href: '#approach' },
+  { label: 'Compare', href: '#compare' },
   { label: 'Guarantee', href: '#guarantee' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'FAQ', href: '#faq' },
 ]
 
 export default function Nav() {
   const ref = useRef(null)
 
-  // Slip away on scroll down, return on scroll up — keeps the bar from
-  // ever sitting on top of section content.
+  // The bar never leaves — past the hero it just firms up its backdrop
+  // so the brand stays legible over section content.
   useEffect(() => {
     const el = ref.current
     if (!el) return undefined
     const trigger = ScrollTrigger.create({
-      start: 160,
+      start: 40,
       end: 'max',
-      onUpdate: (self) => {
-        el.classList.toggle('nav--hidden', self.direction === 1)
-      },
-      onLeaveBack: () => el.classList.remove('nav--hidden'),
+      toggleClass: { targets: el, className: 'nav--scrolled' },
     })
     return () => trigger.kill()
   }, [])
 
   return (
     <header className="nav" ref={ref}>
-      <a className="nav-mark mono" href="#top">
-        Matiscale
+      <a className="nav-brand" href="#top" aria-label="Matiscale — back to top">
+        <BrandMark />
+        <span className="nav-wordmark">Matiscale</span>
       </a>
       <nav className="nav-links" aria-label="Main">
         {LINKS.map((link) => (
@@ -42,6 +41,9 @@ export default function Nav() {
           </a>
         ))}
       </nav>
+      <a className="btn btn--nav" href="#contact">
+        Book a call
+      </a>
     </header>
   )
 }

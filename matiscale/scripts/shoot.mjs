@@ -55,8 +55,16 @@ async function shoot(name, { width, height, mobile = false, query = '', scrolls 
   await page.goto(`http://localhost:${PORT}/${query}`, { waitUntil: 'networkidle0' })
   await new Promise((r) => setTimeout(r, 2500))
   await page.screenshot({ path: `${OUT}/${name}-hero.png` })
-  for (const [label, y] of scrolls) {
-    await page.evaluate((yy) => window.scrollTo({ top: yy, behavior: 'instant' }), y)
+  for (const [label, target] of scrolls) {
+    await page.evaluate((t) => {
+      if (typeof t === 'number') window.scrollTo({ top: t, behavior: 'instant' })
+      else document.querySelector(t)?.scrollIntoView({ behavior: 'instant', block: 'start' })
+    }, target)
+    if (label === 'faq') {
+      await page.evaluate(() => {
+        document.querySelectorAll('.faq-item').forEach((d, i) => { if (i < 2) d.open = true })
+      })
+    }
     await new Promise((r) => setTimeout(r, 1600))
     await page.screenshot({ path: `${OUT}/${name}-${label}.png` })
   }
@@ -67,26 +75,25 @@ async function shoot(name, { width, height, mobile = false, query = '', scrolls 
   return docH
 }
 
-const desktopH = await shoot('desktop', {
+await shoot('desktop', {
   width: 1440,
   height: 900,
-  query: '?force3d',
   scrolls: [],
 })
-// section shots driven by fraction of page height
-const fr = (f) => Math.round(desktopH * f)
 await shoot('desktop2', {
   width: 1440,
   height: 900,
-  query: '?force3d',
   scrolls: [
     ['proof', 800],
-    ['problem', fr(0.22)],
-    ['approach', fr(0.36)],
-    ['guarantee', fr(0.55)],
-    ['whofor', fr(0.68)],
-    ['finale', desktopH - 900 - 200],
-    ['footer', desktopH],
+    ['problem', '.problem'],
+    ['approach', '#approach'],
+    ['compare', '#compare'],
+    ['guarantee', '#guarantee'],
+    ['quotes', '.quotes'],
+    ['whofor', '.whofor'],
+    ['faq', '#faq'],
+    ['finale', '#contact'],
+    ['footer', 999999],
   ],
 })
 await shoot('mobile', {
@@ -95,8 +102,11 @@ await shoot('mobile', {
   mobile: true,
   scrolls: [
     ['proof', 900],
-    ['guarantee', fr(0.55)],
-    ['footer', 99999],
+    ['compare', '#compare'],
+    ['guarantee', '#guarantee'],
+    ['faq', '#faq'],
+    ['finale', '#contact'],
+    ['footer', 999999],
   ],
 })
 
