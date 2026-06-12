@@ -6,7 +6,7 @@ import BrandMark from './BrandMark.jsx'
 gsap.registerPlugin(ScrollTrigger)
 
 const LINKS = [
-  { label: 'Approach', href: '#approach' },
+  { label: 'What you get', href: '#service' },
   { label: 'Compare', href: '#compare' },
   { label: 'Guarantee', href: '#guarantee' },
   { label: 'FAQ', href: '#faq' },
@@ -15,7 +15,7 @@ const LINKS = [
 export default function Nav() {
   const ref = useRef(null)
 
-  // The bar never leaves — past the hero it just firms up its backdrop
+  // The bar never leaves. Past the hero it just firms up its backdrop
   // so the brand stays legible over section content.
   useEffect(() => {
     const el = ref.current
@@ -30,7 +30,7 @@ export default function Nav() {
 
   return (
     <header className="nav" ref={ref}>
-      <a className="nav-brand" href="#top" aria-label="Matiscale — back to top">
+      <a className="nav-brand" href="#top" aria-label="Matiscale, back to top">
         <BrandMark />
         <span className="nav-wordmark">Matiscale</span>
       </a>

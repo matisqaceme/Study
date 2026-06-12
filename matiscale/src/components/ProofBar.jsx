@@ -2,6 +2,7 @@ import { useLayoutEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { prefersReducedMotion } from '../lib/capabilities.js'
+import Marquee from './Marquee.jsx'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -69,7 +70,7 @@ export default function ProofBar() {
             </div>
           ))}
         </div>
-        {/* CLIENT LOGOS — add later */}
+        <Marquee />
       </div>
     </section>
   )

@@ -87,6 +87,7 @@ await shoot('desktop2', {
     ['proof', 800],
     ['problem', '.problem'],
     ['approach', '#approach'],
+    ['service', '#service'],
     ['compare', '#compare'],
     ['guarantee', '#guarantee'],
     ['quotes', '.quotes'],
@@ -102,6 +103,7 @@ await shoot('mobile', {
   mobile: true,
   scrolls: [
     ['proof', 900],
+    ['service', '#service'],
     ['compare', '#compare'],
     ['guarantee', '#guarantee'],
     ['faq', '#faq'],

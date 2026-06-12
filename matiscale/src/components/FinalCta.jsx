@@ -17,7 +17,7 @@ export default function FinalCta() {
         </h2>
         <div className="book-panel" data-reveal data-delay="0.15">
           {/*
-            CALENDLY — when the booking link exists, replace the
+            CALENDLY: when the booking link exists, replace the
             .book-placeholder div below with the inline embed:
 
             <iframe
@@ -30,9 +30,15 @@ export default function FinalCta() {
             <span className="book-glyph">
               <BrandMark size={30} />
             </span>
-            <p className="book-lead">Online booking is coming soon.</p>
+            <p className="book-lead">What happens on the call</p>
+            <ul className="book-points">
+              <li>We map who you sell to and whether outbound fits.</li>
+              <li>You get the exact plan and the exact price.</li>
+              <li>No pressure. If we are not a fit, we say so.</li>
+            </ul>
             <p className="book-sub">
-              Until then, reach us directly — we reply within one business day.
+              Online booking is coming soon. Until then, reach us directly.
+              We reply within one business day.
             </p>
             <a className="btn" href="mailto:hello@matiscale.com">
               Email hello@matiscale.com

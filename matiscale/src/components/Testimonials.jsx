@@ -2,7 +2,7 @@ import { useRef } from 'react'
 import { useSectionReveal } from '../hooks/useReveal.js'
 
 /*
- * PLACEHOLDER CONTENT — replace every quote and attribution below with
+ * PLACEHOLDER CONTENT: replace every quote and attribution below with
  * real client words (with permission) before going live. Publishing
  * invented testimonials is deceptive and in many places illegal.
  */

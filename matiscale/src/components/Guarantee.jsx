@@ -11,7 +11,7 @@ export default function Guarantee() {
         <div className="guarantee-panel" data-reveal>
           <span className="kicker mono">The Matiscale guarantee</span>
           <h2 className="guarantee-title">
-            5 qualified meetings in your first 30 days —{' '}
+            5 qualified meetings in your first 30 days,{' '}
             <em>or we work free until you get them.</em>
           </h2>
           <p className="guarantee-sub">

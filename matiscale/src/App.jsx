@@ -5,6 +5,7 @@ import Hero from './components/Hero.jsx'
 import ProofBar from './components/ProofBar.jsx'
 import Problem from './components/Problem.jsx'
 import Approach from './components/Approach.jsx'
+import Deliverables from './components/Deliverables.jsx'
 import Comparison from './components/Comparison.jsx'
 import Guarantee from './components/Guarantee.jsx'
 import Testimonials from './components/Testimonials.jsx'
@@ -13,6 +14,7 @@ import Faq from './components/Faq.jsx'
 import FinalCta from './components/FinalCta.jsx'
 import Footer from './components/Footer.jsx'
 import Cursor from './components/Cursor.jsx'
+import MobileCta from './components/MobileCta.jsx'
 
 export default function App() {
   // Web fonts change metrics; recalculate trigger positions once they land.
@@ -33,6 +35,7 @@ export default function App() {
         <ProofBar />
         <Problem />
         <Approach />
+        <Deliverables />
         <Comparison />
         <Guarantee />
         <Testimonials />
@@ -41,6 +44,7 @@ export default function App() {
         <FinalCta />
       </main>
       <Footer />
+      <MobileCta />
       <Cursor />
     </>
   )

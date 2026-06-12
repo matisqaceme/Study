@@ -5,7 +5,7 @@ const STEPS = [
   {
     n: '01',
     title: 'We find your buyers',
-    body: 'A precise list of the companies and decision-makers you want — built by hand, not scraped at scale.',
+    body: 'A precise list of the companies and decision-makers you want, built by hand, not scraped at scale.',
   },
   {
     n: '02',

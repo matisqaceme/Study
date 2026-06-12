@@ -1,4 +1,4 @@
-/** The Matiscale glyph — same mark as the favicon, colored via currentColor. */
+/** The Matiscale glyph, same mark as the favicon, colored via currentColor. */
 export default function BrandMark({ size = 22 }) {
   return (
     <svg

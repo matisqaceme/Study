@@ -4,7 +4,7 @@ import { useSectionReveal } from '../hooks/useReveal.js'
 const ITEMS = [
   {
     q: 'How does it work?',
-    a: 'We build a hand-researched list of your ideal buyers, reach out in your name, and confirmed meetings land on your calendar. You show up and sell — we handle everything before that.',
+    a: 'We build a hand-researched list of your ideal buyers, reach out in your name, and confirmed meetings land on your calendar. You show up and sell. We handle everything before that.',
   },
   {
     q: 'What counts as a qualified meeting?',
@@ -16,7 +16,7 @@ const ITEMS = [
   },
   {
     q: 'What exactly does the guarantee cover?',
-    a: '5 qualified meetings in your first 30 days — or we keep working at no charge until you get them. No partial credits, no fine print.',
+    a: '5 qualified meetings in your first 30 days, or we keep working at no charge until you get them. No partial credits, no fine print.',
   },
   {
     q: 'What do you need from me?',
@@ -28,7 +28,7 @@ const ITEMS = [
   },
   {
     q: 'What does it cost?',
-    a: 'A flat monthly retainer, month to month, no setup fee. The exact number depends on your market and volume — book a call and we’ll give it to you straight.',
+    a: 'A flat monthly retainer, month to month, no setup fee. The exact number depends on your market and volume. Book a call and we’ll give it to you straight.',
   },
 ]
 

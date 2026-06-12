@@ -10,7 +10,7 @@ const ROWS = [
   },
   {
     label: 'Time to first meeting',
-    cells: ['Inside 30 days', '3–6 months of ramp-up', '4–8 weeks, no promise'],
+    cells: ['Inside 30 days', '3-6 months of ramp-up', '4-8 weeks, no promise'],
   },
   {
     label: 'Who does the work',
@@ -22,7 +22,7 @@ const ROWS = [
   },
   {
     label: 'Contract',
-    cells: ['Month to month', 'Employment + notice period', '3–6 month lock-in'],
+    cells: ['Month to month', 'Employment + notice period', '3-6 month lock-in'],
   },
 ]
 
@@ -66,6 +66,14 @@ export default function Comparison() {
               ))}
             </tbody>
           </table>
+        </div>
+        <div className="compare-cta" data-reveal>
+          <p className="compare-cta-text">
+            Keep your team selling. We fill the calendar.
+          </p>
+          <a className="btn" href="#contact">
+            Book a call
+          </a>
         </div>
       </div>
     </section>

@@ -14,7 +14,7 @@ export default function Footer() {
       <div className="container">
         <div className="footer-top">
           <div className="footer-brand">
-            <a className="footer-mark" href="#top" aria-label="Matiscale — back to top">
+            <a className="footer-mark" href="#top" aria-label="Matiscale, back to top">
               <BrandMark />
               <span>Matiscale</span>
             </a>

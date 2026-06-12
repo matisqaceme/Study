@@ -10,7 +10,7 @@ const AUDIENCES = [
   {
     n: 'B',
     title: 'B2B companies',
-    body: 'A steady calendar of buyers who actually fit — booked for your closers.',
+    body: 'A steady calendar of buyers who actually fit, booked for your closers.',
   },
 ]
 
