@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# visual-review screenshots (scripts/shoot.mjs)
+shots
