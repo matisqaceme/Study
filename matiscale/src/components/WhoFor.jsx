@@ -5,12 +5,12 @@ const AUDIENCES = [
   {
     n: 'A',
     title: 'Staffing & recruiting firms',
-    body: 'Get in front of hiring managers before the req ever hits a job board.',
+    body: 'IT, healthcare, light-industrial, finance & accounting, engineering. One placement can be worth $15k–25k — a single meeting that converts pays for months of Matiscale.',
   },
   {
     n: 'B',
     title: 'B2B companies',
-    body: 'A steady calendar of buyers who actually fit, booked for your closers.',
+    body: 'Manufacturing, logistics, and any B2B firm with a clear, high-value offer. A steady calendar of buyers who actually fit, booked for your closers.',
   },
 ]
 

@@ -16,8 +16,8 @@ export default function Guarantee() {
             <em>or we work free until you get them.</em>
           </h2>
           <p className="guarantee-sub">
-            No long contracts. No paying for activity. We get paid because the
-            meetings happen.
+            No fine print. No paying for activity. The risk is ours — you only
+            keep paying if it works.
           </p>
           <a className="btn btn--inverse" href="#contact">
             Book a call

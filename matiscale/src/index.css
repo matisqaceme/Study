@@ -450,47 +450,6 @@ section {
   color: var(--ink-faint);
 }
 
-.rating-strip {
-  margin-top: clamp(1.6rem, 3.5vh, 2.4rem);
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-  flex-wrap: wrap;
-}
-
-.rating-stars {
-  display: inline-flex;
-  gap: 0.2rem;
-  color: var(--blue);
-}
-
-.rating-text {
-  color: var(--ink-dim);
-  font-size: 0.9rem;
-}
-
-.rating-badge {
-  display: inline-flex;
-  align-items: baseline;
-  gap: 0.35rem;
-  padding: 0.35rem 0.9rem;
-  border: 1px solid var(--hair);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.7);
-  color: var(--ink-dim);
-  font-size: 0.875rem;
-  transition: color 0.4s var(--ease), border-color 0.4s var(--ease);
-}
-
-.rating-badge strong {
-  color: var(--ink);
-}
-
-.rating-badge:hover {
-  color: var(--ink);
-  border-color: var(--blue-soft);
-}
-
 .hero-foot {
   position: absolute;
   z-index: 1;
@@ -1177,86 +1136,6 @@ section {
 
 .guarantee-panel .btn {
   margin-top: clamp(2rem, 4vh, 2.8rem);
-}
-
-/* --- Testimonials ------------------------------------------------------------------ */
-
-.quotes {
-  padding-block: var(--section-pad);
-  background: var(--bg-tint);
-}
-
-.quotes-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: clamp(1.2rem, 2.5vw, 2rem);
-}
-
-.quote {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  padding: clamp(2rem, 4vw, 2.8rem);
-}
-
-.quote-stars {
-  display: inline-flex;
-  gap: 0.2rem;
-  color: var(--blue);
-}
-
-.quote-result {
-  margin-top: 1.2rem;
-  font-weight: 650;
-  font-size: clamp(1.1rem, 1.6vw, 1.3rem);
-  line-height: 1.25;
-  letter-spacing: -0.015em;
-  text-wrap: balance;
-}
-
-.quote-body {
-  margin-top: 0.9rem;
-  flex-grow: 1;
-  color: var(--ink-dim);
-  font-size: 0.975rem;
-  text-wrap: pretty;
-}
-
-.quote-who {
-  margin-top: 1.8rem;
-  display: flex;
-  align-items: center;
-  gap: 0.85rem;
-}
-
-.quote-avatar {
-  width: 2.6rem;
-  height: 2.6rem;
-  border-radius: 50%;
-  flex-shrink: 0;
-  background: linear-gradient(135deg, var(--blue-soft), var(--blue-faint));
-  border: 1px solid var(--hair);
-}
-
-.quote-id {
-  display: flex;
-  flex-direction: column;
-  gap: 0.1rem;
-}
-
-.quote-name {
-  font-weight: 600;
-}
-
-.quote-role {
-  color: var(--ink-faint);
-  font-size: 0.875rem;
-}
-
-@media (max-width: 56rem) {
-  .quotes-grid {
-    grid-template-columns: 1fr;
-  }
 }
 
 /* --- Who it's for ------------------------------------------------------------------ */

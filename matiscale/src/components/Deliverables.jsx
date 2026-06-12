@@ -17,7 +17,7 @@ export default function Deliverables() {
           Not reports. <em>Booked meetings.</em>
         </h2>
         <p className="service-sub" data-reveal data-delay="0.1">
-          This is what Matiscale puts in your hands, week after week.
+          One deliverable: meetings. Nothing else.
         </p>
 
         <div className="service-grid">
@@ -46,9 +46,9 @@ export default function Deliverables() {
               ))}
             </div>
             <span className="service-step mono">01 / Research</span>
-            <h3 className="service-card-title">A hand-built list of your exact buyers</h3>
+            <h3 className="service-card-title">A targeted list of your exact buyers</h3>
             <p className="service-card-body">
-              Decision-makers at companies that fit, found and verified one by one.
+              The decision-makers worth reaching, picked on live signals: hiring, growth, funding.
             </p>
           </article>
 
@@ -70,9 +70,9 @@ export default function Deliverables() {
               </span>
             </div>
             <span className="service-step mono">02 / Outreach</span>
-            <h3 className="service-card-title">Outreach written in your name</h3>
+            <h3 className="service-card-title">Outreach that lands and gets replies</h3>
             <p className="service-card-body">
-              One reader at a time, with follow-ups that get answered. No blasts.
+              Personalized messages from a dedicated, deliverability-optimized setup. No blasts.
             </p>
           </article>
 
@@ -97,9 +97,9 @@ export default function Deliverables() {
               </div>
             </div>
             <span className="service-step mono">03 / Meetings</span>
-            <h3 className="service-card-title">Qualified calls on your calendar</h3>
+            <h3 className="service-card-title">Qualified meetings on your calendar</h3>
             <p className="service-card-body">
-              Confirmed, briefed, and ready to close. You just show up.
+              We handle every reply and qualify each prospect. You just show up and close.
             </p>
           </article>
         </div>

@@ -5,13 +5,13 @@
  * track duplication and CSS stay the same.
  */
 const ITEMS = [
-  'B2B SaaS',
-  'Marketing agencies',
-  'Recruiting & staffing',
-  'Consulting',
-  'Dev shops & IT services',
-  'Fintech',
-  'Coaching & training',
+  'IT staffing',
+  'Healthcare staffing',
+  'Light-industrial staffing',
+  'Finance & accounting staffing',
+  'Engineering staffing',
+  'Manufacturing',
+  'Logistics',
 ]
 
 function Group({ hidden }) {
@@ -30,7 +30,7 @@ function Group({ hidden }) {
 export default function Marquee() {
   return (
     <div className="marquee">
-      <span className="marquee-label mono">Booking meetings for</span>
+      <span className="marquee-label mono">Built for</span>
       <div className="marquee-viewport">
         <div className="marquee-track">
           <Group />

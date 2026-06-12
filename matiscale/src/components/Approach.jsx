@@ -5,17 +5,17 @@ const STEPS = [
   {
     n: '01',
     title: 'We find your buyers',
-    body: 'A precise list of the companies and decision-makers you want, built by hand, not scraped at scale.',
+    body: 'A targeted list of the exact decision-makers worth reaching, built on live signals — hiring, growth, funding — so the timing is right.',
   },
   {
     n: '02',
-    title: 'We reach them',
-    body: 'Outreach in your name, written for one reader at a time. No blasts. No templates.',
+    title: 'We reach them, personally',
+    body: 'Every message is personalized and sent from a dedicated, deliverability-optimized setup — so it lands and gets replies.',
   },
   {
     n: '03',
-    title: 'Meetings land in your calendar',
-    body: 'Qualified, confirmed, briefed. You show up and sell.',
+    title: 'Meetings land on your calendar',
+    body: 'We handle every reply and qualify each prospect. You just show up and close.',
   },
 ]
 

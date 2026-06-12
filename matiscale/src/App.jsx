@@ -9,7 +9,6 @@ import Approach from './components/Approach.jsx'
 import Deliverables from './components/Deliverables.jsx'
 import Comparison from './components/Comparison.jsx'
 import Guarantee from './components/Guarantee.jsx'
-import Testimonials from './components/Testimonials.jsx'
 import WhoFor from './components/WhoFor.jsx'
 import Faq from './components/Faq.jsx'
 import FinalCta from './components/FinalCta.jsx'
@@ -42,7 +41,9 @@ export default function App() {
         <Deliverables />
         <Comparison />
         <Guarantee />
-        <Testimonials />
+        {/* CASE STUDIES — add after first results. Client logos, case
+            studies, and testimonials go here once they are real and
+            approved. Do not publish invented clients, quotes, or numbers. */}
         <WhoFor />
         <Faq />
         <FinalCta />

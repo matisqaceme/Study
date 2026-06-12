@@ -90,7 +90,6 @@ await shoot('desktop2', {
     ['service', '#service'],
     ['compare', '#compare'],
     ['guarantee', '#guarantee'],
-    ['quotes', '.quotes'],
     ['whofor', '.whofor'],
     ['faq', '#faq'],
     ['finale', '#contact'],

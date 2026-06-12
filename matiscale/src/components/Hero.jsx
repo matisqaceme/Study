@@ -3,7 +3,6 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { prefersReducedMotion } from '../lib/capabilities.js'
 import HeroAura from './HeroAura.jsx'
-import RatingStrip from './RatingStrip.jsx'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -24,7 +23,7 @@ export default function Hero() {
         { yPercent: 0, duration: 1.25, stagger: 0.13 },
       )
         .fromTo(
-          ['.hero-sub', '.hero-actions', '.rating-strip'],
+          ['.hero-sub', '.hero-actions'],
           { autoAlpha: 0, y: 26 },
           { autoAlpha: 1, y: 0, duration: 1.0, stagger: 0.12 },
           '-=0.75',
@@ -104,17 +103,16 @@ export default function Hero() {
           </span>
         </h1>
         <p className="hero-sub">
-          Done-for-you outbound for B2B teams. We find your buyers, write the
-          outreach, and put qualified meetings on your calendar. 5 in your
-          first 30 days, guaranteed.
+          Done-for-you outbound for staffing firms and B2B companies. We find
+          your buyers, reach them personally, and book qualified meetings
+          straight into your calendar. 5 in your first 30 days, guaranteed.
         </p>
         <div className="hero-actions">
           <a className="btn" href="#contact">
             Book a call
           </a>
-          <span className="hero-note mono">Live in 7 days. No long contracts.</span>
+          <span className="hero-note mono">Live within days. No work on your side.</span>
         </div>
-        <RatingStrip />
       </div>
 
       <div className="hero-foot" aria-hidden="true">

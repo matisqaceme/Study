@@ -7,8 +7,8 @@ import Marquee from './Marquee.jsx'
 gsap.registerPlugin(ScrollTrigger)
 
 const METRICS = [
-  { value: 5, unit: '', label: 'meetings guaranteed / month' },
-  { value: 48, unit: 'hr', label: 'onboarding' },
+  { value: 1, unit: '', label: 'deliverable: booked meetings' },
+  { value: 5, unit: '', label: 'qualified meetings in 30 days, guaranteed' },
   { value: 100, unit: '%', label: 'done-for-you' },
 ]
 

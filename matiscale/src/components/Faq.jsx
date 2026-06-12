@@ -1,38 +1,23 @@
 import { useRef } from 'react'
 import { useSectionReveal } from '../hooks/useReveal.js'
 
+// Keep in sync with the FAQPage entries in index.html.
 const ITEMS = [
   {
-    q: 'How does it work?',
-    a: 'We build a hand-researched list of your ideal buyers, reach out in your name, and confirmed meetings land on your calendar. You show up and sell. We handle everything before that.',
+    q: 'What exactly do you deliver?',
+    a: 'Booked, qualified meetings on your calendar. That’s the whole service.',
   },
   {
     q: 'What counts as a qualified meeting?',
-    a: 'We define it together in onboarding: company profile, size, and the seniority of the person in the room. If a meeting doesn’t match what we agreed, it doesn’t count toward the guarantee.',
+    a: 'A confirmed call with a real decision-maker who fits your ideal customer profile and has agreed to the meeting. Not a lead. Not a maybe. A booked, qualified conversation.',
   },
   {
-    q: 'How fast do meetings start?',
-    a: 'Onboarding takes 48 hours and outreach goes live within the first week. The guarantee clock starts on day one: 5 qualified meetings in your first 30 days.',
+    q: 'How fast do we see results?',
+    a: 'Campaigns go live within days; first meetings typically land inside the first few weeks.',
   },
   {
-    q: 'What exactly does the guarantee cover?',
-    a: '5 qualified meetings in your first 30 days, or we keep working at no charge until you get them. No partial credits, no fine print.',
-  },
-  {
-    q: 'What do you need from me?',
-    a: 'About an hour for onboarding, and clarity on who you sell to. After that we run everything and send you a short weekly summary.',
-  },
-  {
-    q: 'What channels do you use?',
-    a: 'Email-first outbound sent in your name, written for one reader at a time, with follow-ups where they make sense. No blasts, no templates, and your domain reputation stays protected.',
-  },
-  {
-    q: 'Who is this NOT for?',
-    a: 'Pre-revenue startups, B2C products, and anyone who wants mass blasts. Outbound only makes sense when one new client pays for months of the service. If that is not you yet, we will tell you so on the call.',
-  },
-  {
-    q: 'What does it cost?',
-    a: 'A flat monthly retainer, month to month, no setup fee. The exact number depends on your market and volume. Book a call and we’ll give it to you straight.',
+    q: 'What if it doesn’t work?',
+    a: 'You get 5 qualified meetings in your first 30 days or we work free until you do. The risk is ours.',
   },
 ]
 
