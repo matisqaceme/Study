@@ -1,0 +1,43 @@
+import { useEffect } from 'react'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import Nav from './components/Nav.jsx'
+import Hero from './components/Hero.jsx'
+import ProofBar from './components/ProofBar.jsx'
+import Problem from './components/Problem.jsx'
+import Approach from './components/Approach.jsx'
+import Guarantee from './components/Guarantee.jsx'
+import WhoFor from './components/WhoFor.jsx'
+import FinalCta from './components/FinalCta.jsx'
+import Footer from './components/Footer.jsx'
+import Cursor from './components/Cursor.jsx'
+import Grain from './components/Grain.jsx'
+
+export default function App() {
+  // Web fonts change metrics; recalculate trigger positions once they land.
+  useEffect(() => {
+    if (document.fonts?.ready) {
+      document.fonts.ready.then(() => ScrollTrigger.refresh())
+    }
+  }, [])
+
+  return (
+    <>
+      <a className="skip-link" href="#contact">
+        Skip to contact
+      </a>
+      <Nav />
+      <main>
+        <Hero />
+        <ProofBar />
+        <Problem />
+        <Approach />
+        <Guarantee />
+        <WhoFor />
+        <FinalCta />
+      </main>
+      <Footer />
+      <Grain />
+      <Cursor />
+    </>
+  )
+}
