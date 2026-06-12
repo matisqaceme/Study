@@ -1,6 +1,7 @@
 import { useRef } from 'react'
 import { useSectionReveal } from '../hooks/useReveal.js'
 import BrandMark from './BrandMark.jsx'
+import BookForm from './BookForm.jsx'
 
 export default function FinalCta() {
   const ref = useRef(null)
@@ -17,8 +18,8 @@ export default function FinalCta() {
         </h2>
         <div className="book-panel" data-reveal data-delay="0.15">
           {/*
-            CALENDLY: when the booking link exists, replace the
-            .book-placeholder div below with the inline embed:
+            CALENDLY: when the booking link exists, the inline embed can
+            replace or sit above the form:
 
             <iframe
               className="book-embed"
@@ -36,14 +37,11 @@ export default function FinalCta() {
               <li>You get the exact plan and the exact price.</li>
               <li>No pressure. If we are not a fit, we say so.</li>
             </ul>
-            <p className="book-sub">
-              Online booking is coming soon. Until then, reach us directly.
-              We reply within one business day.
-            </p>
-            <a className="btn" href="mailto:hello@matiscale.com">
-              Email hello@matiscale.com
-            </a>
+            <BookForm />
             <span className="book-note mono">30 minutes. No obligation.</span>
+            <a className="book-alt" href="mailto:hello@matiscale.com">
+              Prefer email? hello@matiscale.com
+            </a>
           </div>
         </div>
       </div>

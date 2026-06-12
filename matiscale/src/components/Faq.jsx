@@ -27,6 +27,10 @@ const ITEMS = [
     a: 'Email-first outbound sent in your name, written for one reader at a time, with follow-ups where they make sense. No blasts, no templates, and your domain reputation stays protected.',
   },
   {
+    q: 'Who is this NOT for?',
+    a: 'Pre-revenue startups, B2C products, and anyone who wants mass blasts. Outbound only makes sense when one new client pays for months of the service. If that is not you yet, we will tell you so on the call.',
+  },
+  {
     q: 'What does it cost?',
     a: 'A flat monthly retainer, month to month, no setup fee. The exact number depends on your market and volume. Book a call and we’ll give it to you straight.',
   },

@@ -36,6 +36,24 @@ export default function Hero() {
           { autoAlpha: 1, duration: 1.2 },
           '-=0.6',
         )
+        .fromTo(
+          '.hero-underline path',
+          { strokeDashoffset: 1 },
+          { strokeDashoffset: 0, duration: 0.9, ease: 'power2.inOut' },
+          '-=1.1',
+        )
+
+      // The aura recedes slower than the page scrolls: cheap depth.
+      gsap.to('.aura', {
+        yPercent: 16,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: el,
+          start: 'top top',
+          end: 'bottom top',
+          scrub: true,
+        },
+      })
 
       // The scroll cue has done its job once scrolling starts;
       // fade it before it can brush against the fixed nav.
@@ -64,7 +82,24 @@ export default function Hero() {
           </span>
           <span className="hero-line">
             <span className="hero-line-inner">
-              <em>next clients.</em>
+              <em className="hero-em">
+                next clients.
+                <svg
+                  className="hero-underline"
+                  viewBox="0 0 340 14"
+                  preserveAspectRatio="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M5 10 C 70 4, 150 3, 205 6 C 255 8.5, 305 8, 335 4.5"
+                    pathLength="1"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="5"
+                    strokeLinecap="round"
+                  />
+                </svg>
+              </em>
             </span>
           </span>
         </h1>

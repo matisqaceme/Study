@@ -9,6 +9,7 @@ export default function Guarantee() {
     <section className="guarantee" id="guarantee" ref={ref}>
       <div className="container">
         <div className="guarantee-panel" data-reveal>
+          <span className="guarantee-glow" aria-hidden="true" />
           <span className="kicker mono">The Matiscale guarantee</span>
           <h2 className="guarantee-title">
             5 qualified meetings in your first 30 days,{' '}

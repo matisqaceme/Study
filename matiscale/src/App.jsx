@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useMagneticButtons, useCardGlow } from './hooks/usePointerEffects.js'
 import Nav from './components/Nav.jsx'
 import Hero from './components/Hero.jsx'
 import ProofBar from './components/ProofBar.jsx'
@@ -17,6 +18,9 @@ import Cursor from './components/Cursor.jsx'
 import MobileCta from './components/MobileCta.jsx'
 
 export default function App() {
+  useMagneticButtons()
+  useCardGlow()
+
   // Web fonts change metrics; recalculate trigger positions once they land.
   useEffect(() => {
     if (document.fonts?.ready) {

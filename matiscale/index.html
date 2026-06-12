@@ -17,12 +17,101 @@
       property="og:description"
       content="Done-for-you outbound that puts qualified meetings on your calendar. 5 qualified meetings in your first 30 days, or we work free until you get them."
     />
-    <meta name="twitter:card" content="summary" />
+    <!-- TODO: switch og:image and twitter:image to absolute URLs once the domain exists. -->
+    <meta property="og:image" content="/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Matiscale | We book your next clients." />
     <meta
       name="twitter:description"
       content="Done-for-you outbound that puts qualified meetings on your calendar. Guaranteed."
     />
+    <meta name="twitter:image" content="/og.png" />
+    <!-- Keep the FAQPage entries in sync with src/components/Faq.jsx -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "ProfessionalService",
+            "name": "Matiscale",
+            "description": "Done-for-you B2B outbound. 5 qualified meetings in your first 30 days, or we work free until you get them.",
+            "email": "hello@matiscale.com",
+            "slogan": "We book your next clients."
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How does it work?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "We build a hand-researched list of your ideal buyers, reach out in your name, and confirmed meetings land on your calendar. You show up and sell. We handle everything before that."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What counts as a qualified meeting?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "We define it together in onboarding: company profile, size, and the seniority of the person in the room. If a meeting doesn't match what we agreed, it doesn't count toward the guarantee."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How fast do meetings start?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Onboarding takes 48 hours and outreach goes live within the first week. The guarantee clock starts on day one: 5 qualified meetings in your first 30 days."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What exactly does the guarantee cover?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "5 qualified meetings in your first 30 days, or we keep working at no charge until you get them. No partial credits, no fine print."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What do you need from me?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "About an hour for onboarding, and clarity on who you sell to. After that we run everything and send you a short weekly summary."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What channels do you use?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Email-first outbound sent in your name, written for one reader at a time, with follow-ups where they make sense. No blasts, no templates, and your domain reputation stays protected."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Who is this NOT for?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Pre-revenue startups, B2C products, and anyone who wants mass blasts. Outbound only makes sense when one new client pays for months of the service. If that is not you yet, we will tell you so on the call."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What does it cost?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A flat monthly retainer, month to month, no setup fee. The exact number depends on your market and volume. Book a call and we'll give it to you straight."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -31,6 +120,13 @@
     />
   </head>
   <body>
+    <!-- Static registration so Netlify detects the form at deploy time;
+         the live form is rendered by React (src/components/BookForm.jsx). -->
+    <form name="book-a-call" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="text" name="company" />
+    </form>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

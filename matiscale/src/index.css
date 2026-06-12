@@ -242,6 +242,13 @@ section {
   transform: translateY(0);
 }
 
+/* While gsap drives the magnetic translate, CSS must not animate transform. */
+.btn--magnetic {
+  transition:
+    background-color 0.5s var(--ease),
+    box-shadow 0.5s var(--ease);
+}
+
 .btn--inverse {
   background: #ffffff;
   color: var(--blue);
@@ -387,6 +394,28 @@ section {
 .hero-title em {
   font-style: normal;
   color: var(--blue);
+}
+
+.hero-em {
+  position: relative;
+  display: inline-block;
+}
+
+/* Hand-drawn marker stroke under the azure line. The path uses
+   pathLength=1 so the entrance timeline can draw it 0 -> 1. */
+.hero-underline {
+  position: absolute;
+  left: 0.02em;
+  right: 0.35em;
+  bottom: -0.01em;
+  width: calc(100% - 0.37em);
+  height: 0.13em;
+  color: var(--blue-bright);
+  overflow: visible;
+}
+
+.hero-underline path {
+  stroke-dasharray: 1;
 }
 
 .hero-line {
@@ -1087,6 +1116,36 @@ section {
   box-shadow: 0 30px 80px rgba(39, 114, 255, 0.35);
 }
 
+/* Slow-orbiting white glow that keeps the panel feeling alive. */
+.guarantee-glow {
+  position: absolute;
+  inset: -45%;
+  pointer-events: none;
+  background: radial-gradient(
+    32% 32% at 68% 36%,
+    rgba(255, 255, 255, 0.16),
+    transparent 70%
+  );
+  animation: glow-orbit 22s linear infinite;
+}
+
+.guarantee-panel > :not(.guarantee-glow) {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes glow-orbit {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .guarantee-glow {
+    animation: none;
+  }
+}
+
 .guarantee-panel .kicker {
   color: rgba(255, 255, 255, 0.85);
   margin-bottom: clamp(1.6rem, 4vh, 2.4rem);
@@ -1229,6 +1288,32 @@ section {
     transform: translateY(-6px);
     border-color: var(--blue-soft);
     box-shadow: var(--shadow-lift);
+  }
+}
+
+/* Soft azure glow that follows the cursor (fed by useCardGlow). */
+@media (hover: hover) and (pointer: fine) {
+  .card {
+    position: relative;
+  }
+
+  .card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background: radial-gradient(
+      230px circle at var(--mx, 50%) var(--my, 50%),
+      rgba(39, 114, 255, 0.07),
+      transparent 65%
+    );
+    opacity: 0;
+    transition: opacity 0.5s var(--ease);
+  }
+
+  .card:hover::after {
+    opacity: 1;
   }
 }
 
@@ -1412,21 +1497,124 @@ section {
   transform: rotate(-45deg);
 }
 
-.book-sub {
-  margin-top: 1.2rem;
-  color: var(--ink-faint);
-  font-size: 0.9rem;
-  max-width: 40ch;
-  text-wrap: pretty;
-}
-
 .book-placeholder .btn {
   margin-top: 1.4rem;
+}
+
+.book-form {
+  width: 100%;
+  max-width: 27rem;
+  margin-top: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  text-align: left;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.9rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-label {
+  color: var(--ink-faint);
+  font-size: 0.625rem;
+}
+
+.book-form input {
+  width: 100%;
+  min-height: 2.9rem;
+  padding: 0.6rem 1rem;
+  border: 1px solid var(--hair);
+  border-radius: 12px;
+  background: #ffffff;
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  transition: border-color 0.4s var(--ease), box-shadow 0.4s var(--ease);
+}
+
+.book-form input::placeholder {
+  color: var(--ink-faint);
+}
+
+.book-form input:focus {
+  outline: none;
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px var(--blue-faint);
+}
+
+.form-submit {
+  margin-top: 0.3rem;
+  width: 100%;
+  border: 0;
+  cursor: pointer;
+}
+
+.form-submit:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+
+.form-error {
+  color: var(--ink-dim);
+  font-size: 0.875rem;
+}
+
+.form-error a {
+  color: var(--blue);
+  font-weight: 600;
+}
+
+.form-done {
+  margin-top: 1.6rem;
+  padding: 2rem 1.5rem;
+  width: 100%;
+  max-width: 27rem;
+  border-radius: 16px;
+  background: var(--blue-faint);
+  border: 1px solid var(--blue-soft);
+}
+
+.form-done-lead {
+  font-weight: 650;
+  font-size: 1.15rem;
+  letter-spacing: -0.015em;
+}
+
+.form-done-sub {
+  margin-top: 0.4rem;
+  color: var(--ink-dim);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 30rem) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
 }
 
 .book-note {
   margin-top: 0.9rem;
   color: var(--ink-faint);
+}
+
+.book-alt {
+  margin-top: 0.4rem;
+  color: var(--ink-faint);
+  font-size: 0.875rem;
+  transition: color 0.4s var(--ease);
+}
+
+.book-alt:hover {
+  color: var(--blue);
 }
 
 /* Sized for the Calendly inline embed that replaces the placeholder. */
