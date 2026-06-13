@@ -28,6 +28,26 @@ export default function Nav() {
     return () => trigger.kill()
   }, [])
 
+  // Light up whichever nav link maps to the section currently in view.
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return undefined
+    const triggers = []
+    el.querySelectorAll('.nav-link').forEach((link) => {
+      const section = document.querySelector(link.getAttribute('href'))
+      if (!section) return
+      triggers.push(
+        ScrollTrigger.create({
+          trigger: section,
+          start: 'top center',
+          end: 'bottom center',
+          onToggle: (self) => link.classList.toggle('nav-link--active', self.isActive),
+        }),
+      )
+    })
+    return () => triggers.forEach((t) => t.kill())
+  }, [])
+
   return (
     <header className="nav" ref={ref}>
       <a className="nav-brand" href="#top" aria-label="Matiscale, back to top">

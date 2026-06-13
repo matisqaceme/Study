@@ -57,7 +57,14 @@ async function shoot(name, { width, height, mobile = false, query = '', scrolls 
   await page.screenshot({ path: `${OUT}/${name}-hero.png` })
   for (const [label, target] of scrolls) {
     await page.evaluate((t) => {
-      if (typeof t === 'number') window.scrollTo({ top: t, behavior: 'instant' })
+      let y = t
+      if (typeof t !== 'number') {
+        const node = document.querySelector(t)
+        y = node ? node.getBoundingClientRect().top + window.scrollY - 80 : 0
+      }
+      // Scroll through Lenis when it's active so it doesn't undo the jump.
+      if (window.__lenis) window.__lenis.scrollTo(y, { immediate: true })
+      else if (typeof t === 'number') window.scrollTo({ top: t, behavior: 'instant' })
       else document.querySelector(t)?.scrollIntoView({ behavior: 'instant', block: 'start' })
     }, target)
     if (label === 'faq') {
@@ -65,7 +72,8 @@ async function shoot(name, { width, height, mobile = false, query = '', scrolls 
         document.querySelectorAll('.faq-item').forEach((d, i) => { if (i < 2) d.open = true })
       })
     }
-    await new Promise((r) => setTimeout(r, 1600))
+    // The inbox demo plays a ~3s timeline on scroll-in; let it finish.
+    await new Promise((r) => setTimeout(r, label === 'inbox' ? 3600 : 1600))
     await page.screenshot({ path: `${OUT}/${name}-${label}.png` })
   }
   const docH = await page.evaluate(() => document.documentElement.scrollHeight)
@@ -88,6 +96,7 @@ await shoot('desktop2', {
     ['problem', '.problem'],
     ['approach', '#approach'],
     ['service', '#service'],
+    ['inbox', '#inbox'],
     ['compare', '#compare'],
     ['guarantee', '#guarantee'],
     ['whofor', '.whofor'],
@@ -104,6 +113,7 @@ await shoot('mobile', {
   scrolls: [
     ['proof', 900],
     ['service', '#service'],
+    ['inbox', '#inbox'],
     ['compare', '#compare'],
     ['guarantee', '#guarantee'],
     ['faq', '#faq'],

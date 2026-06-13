@@ -364,9 +364,11 @@ section {
 @keyframes aura-drift-c {
   from {
     transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.85;
   }
   to {
-    transform: translate3d(-6%, -5%, 0) scale(1.12);
+    transform: translate3d(-6%, -5%, 0) scale(1.16);
+    opacity: 1;
   }
 }
 
@@ -1725,6 +1727,149 @@ section {
 @media (pointer: coarse) {
   .cursor-ring,
   .cursor-dot {
+    display: none;
+  }
+}
+
+/* --- Lenis smooth scroll ----------------------------------------------------
+   These classes are added to <html> only while Lenis is active, so they
+   are inert for touch / reduced-motion visitors (who keep native scroll). */
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* --- Scroll progress bar ----------------------------------------------------- */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  width: 100%;
+  height: 2px;
+  transform: scaleX(0);
+  transform-origin: left center;
+  background: linear-gradient(90deg, var(--blue), var(--blue-bright));
+  pointer-events: none;
+}
+
+/* --- Active nav link --------------------------------------------------------- */
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1.5px;
+  border-radius: 2px;
+  background: var(--blue);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.4s var(--ease);
+}
+
+.nav-link:hover::after,
+.nav-link.nav-link--active::after {
+  transform: scaleX(1);
+}
+
+.nav-link.nav-link--active {
+  color: var(--ink);
+}
+
+/* --- Inbox demo -------------------------------------------------------------- */
+.inbox {
+  padding-block: 0 var(--section-pad);
+}
+
+.inbox-title {
+  margin-top: 0.9rem;
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: clamp(1.8rem, 3.6vw, 3rem);
+  line-height: 1.05;
+  letter-spacing: -0.028em;
+  text-wrap: balance;
+}
+
+.inbox-sub {
+  margin-top: 1rem;
+  max-width: 46ch;
+  color: var(--ink-dim);
+  font-size: clamp(1rem, 1.3vw, 1.1rem);
+  text-wrap: pretty;
+}
+
+.inbox-grid {
+  margin-top: clamp(2.2rem, 5vh, 3.2rem);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1rem, 2.5vw, 1.8rem);
+  align-items: stretch;
+}
+
+/* Connective arrows between the three stages on wider screens. */
+.inbox-stage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.inbox-stage + .inbox-stage::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: clamp(-1.4rem, -1.25vw, -0.9rem);
+  width: 0.7rem;
+  height: 0.7rem;
+  border-top: 2px solid var(--blue-soft);
+  border-right: 2px solid var(--blue-soft);
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.inbox-step {
+  display: block;
+  margin-bottom: 0.8rem;
+  color: var(--blue);
+}
+
+.inbox-stage .vis {
+  flex: 1;
+}
+
+/* The "sending" progress sweep under the prospect rows. */
+.id-send {
+  margin-top: auto;
+  display: block;
+  height: 3px;
+  border-radius: 999px;
+  background: var(--hair);
+  overflow: hidden;
+}
+
+.id-send-fill {
+  display: block;
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--blue), var(--blue-bright));
+  transform-origin: left center;
+}
+
+@media (max-width: 56rem) {
+  .inbox-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .inbox-stage + .inbox-stage::before {
     display: none;
   }
 }

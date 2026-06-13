@@ -19,8 +19,8 @@ export default function Hero() {
       })
       tl.fromTo(
         '.hero-line-inner',
-        { yPercent: 112 },
-        { yPercent: 0, duration: 1.25, stagger: 0.13 },
+        { yPercent: 112, skewY: 3 },
+        { yPercent: 0, skewY: 0, duration: 1.25, stagger: 0.13 },
       )
         .fromTo(
           ['.hero-sub', '.hero-actions'],

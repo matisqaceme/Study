@@ -1,12 +1,15 @@
 import { useEffect } from 'react'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useMagneticButtons, useCardGlow } from './hooks/usePointerEffects.js'
+import { useSmoothScroll } from './hooks/useSmoothScroll.js'
+import ScrollProgress from './components/ScrollProgress.jsx'
 import Nav from './components/Nav.jsx'
 import Hero from './components/Hero.jsx'
 import ProofBar from './components/ProofBar.jsx'
 import Problem from './components/Problem.jsx'
 import Approach from './components/Approach.jsx'
 import Deliverables from './components/Deliverables.jsx'
+import InboxDemo from './components/InboxDemo.jsx'
 import Comparison from './components/Comparison.jsx'
 import Guarantee from './components/Guarantee.jsx'
 import WhoFor from './components/WhoFor.jsx'
@@ -18,6 +21,7 @@ import Cursor from './components/Cursor.jsx'
 import MobileCta from './components/MobileCta.jsx'
 
 export default function App() {
+  useSmoothScroll()
   useMagneticButtons()
   useCardGlow()
 
@@ -33,6 +37,7 @@ export default function App() {
       <a className="skip-link" href="#contact">
         Skip to contact
       </a>
+      <ScrollProgress />
       <Nav />
       <main>
         <Hero />
@@ -40,6 +45,7 @@ export default function App() {
         <Problem />
         <Approach />
         <Deliverables />
+        <InboxDemo />
         <Comparison />
         <Guarantee />
         {/* CASE STUDIES — add after first results. Client logos, case
