@@ -9,20 +9,21 @@ export default function Problem() {
     <section className="problem" ref={ref}>
       <div className="container">
         <span className="kicker mono" data-reveal>
-          The problem
+          What we do
         </span>
         <h2 className="problem-title">
           <span className="block" data-reveal>
-            Your pipeline shouldn&rsquo;t depend
+            We run your cold email.
           </span>
           <span className="block" data-reveal data-delay="0.1">
-            on referrals and luck.
+            You take the meetings.
           </span>
         </h2>
         <p className="problem-sub" data-reveal data-delay="0.2">
-          Referrals stall. Inbound is slow. The firms that grow are simply in
-          front of more buyers, more often. Most agencies fix this with
-          volume: spray, pray, and burn your domain. We do the opposite.
+          We find the companies that need your services, email the
+          decision-makers, handle the replies, and book qualified meetings
+          straight into your calendar. You don&rsquo;t send anything, write
+          anything, or manage anything. You show up.
         </p>
       </div>
     </section>

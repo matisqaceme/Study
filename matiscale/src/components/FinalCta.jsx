@@ -33,7 +33,7 @@ export default function FinalCta() {
             </span>
             <p className="book-lead">What happens on the call</p>
             <ul className="book-points">
-              <li>We map who you sell to and whether outbound fits.</li>
+              <li>We map who you place and whether cold email fits.</li>
               <li>You get the exact plan and the exact price.</li>
               <li>No pressure. If we are not a fit, we say so.</li>
             </ul>

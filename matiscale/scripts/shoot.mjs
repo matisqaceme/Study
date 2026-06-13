@@ -91,6 +91,7 @@ await shoot('desktop2', {
     ['compare', '#compare'],
     ['guarantee', '#guarantee'],
     ['whofor', '.whofor'],
+    ['founding', '#founding'],
     ['faq', '#faq'],
     ['finale', '#contact'],
     ['footer', 999999],

@@ -18,7 +18,7 @@ export default function Footer() {
               <BrandMark />
               <span>Matiscale</span>
             </a>
-            <p className="footer-tag">Done-for-you outbound. Meetings guaranteed.</p>
+            <p className="footer-tag">Done-for-you cold email for staffing firms. Meetings guaranteed.</p>
           </div>
           <nav className="footer-nav" aria-label="Footer">
             {LINKS.map((link) => (

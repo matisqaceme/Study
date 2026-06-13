@@ -4,18 +4,18 @@ import { useSectionReveal } from '../hooks/useReveal.js'
 const STEPS = [
   {
     n: '01',
-    title: 'We find your buyers',
-    body: 'A targeted list of the exact decision-makers worth reaching, built on live signals — hiring, growth, funding — so the timing is right.',
+    title: 'We build your list',
+    body: 'We find the exact decision-makers worth reaching, using live signals like hiring activity and growth so the timing is right.',
   },
   {
     n: '02',
-    title: 'We reach them, personally',
-    body: 'Every message is personalized and sent from a dedicated, deliverability-optimized setup — so it lands and gets replies.',
+    title: 'We send the cold emails',
+    body: 'Every email is personalized and sent from dedicated, deliverability-optimized inboxes so it lands in the inbox and gets replies.',
   },
   {
     n: '03',
-    title: 'Meetings land on your calendar',
-    body: 'We handle every reply and qualify each prospect. You just show up and close.',
+    title: 'We book the meetings',
+    body: 'We handle every reply, qualify each prospect, and put confirmed meetings on your calendar.',
   },
 ]
 

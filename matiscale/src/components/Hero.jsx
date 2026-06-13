@@ -77,12 +77,13 @@ export default function Hero() {
       <div className="container hero-inner">
         <h1 className="hero-title">
           <span className="hero-line">
-            <span className="hero-line-inner">We book your</span>
+            <span className="hero-line-inner">We book sales meetings</span>
           </span>
           <span className="hero-line">
             <span className="hero-line-inner">
+              for{' '}
               <em className="hero-em">
-                next clients.
+                staffing firms.
                 <svg
                   className="hero-underline"
                   viewBox="0 0 340 14"
@@ -103,15 +104,14 @@ export default function Hero() {
           </span>
         </h1>
         <p className="hero-sub">
-          Done-for-you outbound for staffing firms and B2B companies. We find
-          your buyers, reach them personally, and book qualified meetings
-          straight into your calendar. 5 in your first 30 days, guaranteed.
+          Done-for-you cold email that puts qualified meetings on your
+          calendar. Guaranteed.
         </p>
         <div className="hero-actions">
           <a className="btn" href="#contact">
             Book a call
           </a>
-          <span className="hero-note mono">Live within days. No work on your side.</span>
+          <span className="hero-note mono">Live within days. You don&rsquo;t send a thing.</span>
         </div>
       </div>
 

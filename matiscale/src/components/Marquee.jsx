@@ -10,8 +10,6 @@ const ITEMS = [
   'Light-industrial staffing',
   'Finance & accounting staffing',
   'Engineering staffing',
-  'Manufacturing',
-  'Logistics',
 ]
 
 function Group({ hidden }) {

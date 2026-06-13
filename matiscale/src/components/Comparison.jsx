@@ -69,7 +69,7 @@ export default function Comparison() {
         </div>
         <div className="compare-cta" data-reveal>
           <p className="compare-cta-text">
-            Keep your team selling. We fill the calendar.
+            Keep your recruiters recruiting. We fill the calendar.
           </p>
           <a className="btn" href="#contact">
             Book a call

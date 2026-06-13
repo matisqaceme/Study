@@ -13,7 +13,7 @@ export default function Guarantee() {
           <span className="kicker mono">The Matiscale guarantee</span>
           <h2 className="guarantee-title">
             5 qualified meetings in your first 30 days,{' '}
-            <em>or we work free until you get them.</em>
+            <em>or we work for free until you get them.</em>
           </h2>
           <p className="guarantee-sub">
             No fine print. No paying for activity. The risk is ours — you only

@@ -46,9 +46,9 @@ export default function Deliverables() {
               ))}
             </div>
             <span className="service-step mono">01 / Research</span>
-            <h3 className="service-card-title">A targeted list of your exact buyers</h3>
+            <h3 className="service-card-title">A list of decision-makers worth reaching</h3>
             <p className="service-card-body">
-              The decision-makers worth reaching, picked on live signals: hiring, growth, funding.
+              The exact people at companies that need your services, picked on live signals: hiring, growth.
             </p>
           </article>
 
@@ -70,9 +70,9 @@ export default function Deliverables() {
               </span>
             </div>
             <span className="service-step mono">02 / Outreach</span>
-            <h3 className="service-card-title">Outreach that lands and gets replies</h3>
+            <h3 className="service-card-title">Personalized cold emails that land</h3>
             <p className="service-card-body">
-              Personalized messages from a dedicated, deliverability-optimized setup. No blasts.
+              Sent from dedicated, deliverability-optimized inboxes. They reach the inbox and get replies.
             </p>
           </article>
 
@@ -99,7 +99,7 @@ export default function Deliverables() {
             <span className="service-step mono">03 / Meetings</span>
             <h3 className="service-card-title">Qualified meetings on your calendar</h3>
             <p className="service-card-body">
-              We handle every reply and qualify each prospect. You just show up and close.
+              We handle every reply and qualify each prospect. You just show up.
             </p>
           </article>
         </div>

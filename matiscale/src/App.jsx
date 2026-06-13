@@ -10,6 +10,7 @@ import Deliverables from './components/Deliverables.jsx'
 import Comparison from './components/Comparison.jsx'
 import Guarantee from './components/Guarantee.jsx'
 import WhoFor from './components/WhoFor.jsx'
+import FoundingClients from './components/FoundingClients.jsx'
 import Faq from './components/Faq.jsx'
 import FinalCta from './components/FinalCta.jsx'
 import Footer from './components/Footer.jsx'
@@ -45,6 +46,7 @@ export default function App() {
             studies, and testimonials go here once they are real and
             approved. Do not publish invented clients, quotes, or numbers. */}
         <WhoFor />
+        <FoundingClients />
         <Faq />
         <FinalCta />
       </main>

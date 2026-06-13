@@ -4,13 +4,13 @@ import { useSectionReveal } from '../hooks/useReveal.js'
 const AUDIENCES = [
   {
     n: 'A',
-    title: 'Staffing & recruiting firms',
-    body: 'IT, healthcare, light-industrial, finance & accounting, engineering. One placement can be worth $15k–25k — a single meeting that converts pays for months of Matiscale.',
+    title: 'Who it’s for',
+    body: 'Staffing and recruiting firms — IT, healthcare, light-industrial, finance and accounting, and engineering. Mid-sized firms, 50 to 500 employees.',
   },
   {
     n: 'B',
-    title: 'B2B companies',
-    body: 'Manufacturing, logistics, and any B2B firm with a clear, high-value offer. A steady calendar of buyers who actually fit, booked for your closers.',
+    title: 'Why it works',
+    body: 'One placement is worth thousands. It only takes one meeting that turns into a client to pay for months of what we do. No vague metrics — just one thing you can count: booked meetings.',
   },
 ]
 
@@ -22,7 +22,7 @@ export default function WhoFor() {
     <section className="whofor" ref={ref}>
       <div className="container">
         <span className="kicker mono" data-reveal>
-          Who it&rsquo;s for
+          Built for staffing
         </span>
         <div className="whofor-grid">
           {AUDIENCES.map((a, i) => (

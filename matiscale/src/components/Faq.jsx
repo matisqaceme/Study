@@ -5,15 +5,15 @@ import { useSectionReveal } from '../hooks/useReveal.js'
 const ITEMS = [
   {
     q: 'What exactly do you deliver?',
-    a: 'Booked, qualified meetings on your calendar. That’s the whole service.',
+    a: 'Qualified sales meetings booked on your calendar. That’s the whole service.',
   },
   {
     q: 'What counts as a qualified meeting?',
-    a: 'A confirmed call with a real decision-maker who fits your ideal customer profile and has agreed to the meeting. Not a lead. Not a maybe. A booked, qualified conversation.',
+    a: 'A confirmed call with a real decision-maker who fits your ideal client and has agreed to meet. Not a lead. A booked conversation.',
   },
   {
-    q: 'How fast do we see results?',
-    a: 'Campaigns go live within days; first meetings typically land inside the first few weeks.',
+    q: 'How fast will we see results?',
+    a: 'Campaigns go live within days. First meetings typically land within the first few weeks.',
   },
   {
     q: 'What if it doesn’t work?',
