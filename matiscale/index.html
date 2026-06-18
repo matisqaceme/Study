@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0A0A0C" />
+    <meta
+      name="description"
+      content="Done-for-you cold email that books qualified sales meetings for staffing firms. 5 qualified meetings in your first 30 days, or we work for free until you get them."
+    />
+    <title>Matiscale | We book sales meetings for staffing firms.</title>
+    <meta property="og:site_name" content="Matiscale" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Matiscale | We book sales meetings for staffing firms." />
+    <meta
+      property="og:description"
+      content="Done-for-you cold email that books qualified sales meetings for staffing firms. 5 qualified meetings in your first 30 days, or we work for free until you get them."
+    />
+    <!-- TODO: switch og:image and twitter:image to absolute URLs once the domain exists. -->
+    <meta property="og:image" content="/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Matiscale | We book sales meetings for staffing firms." />
+    <meta
+      name="twitter:description"
+      content="Done-for-you cold email that puts qualified meetings on your calendar. Guaranteed."
+    />
+    <meta name="twitter:image" content="/og.png" />
+    <!-- Keep the FAQPage entries in sync with src/components/Faq.jsx -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "ProfessionalService",
+            "name": "Matiscale",
+            "description": "Done-for-you cold email for staffing firms. 5 qualified meetings in your first 30 days, or we work for free until you get them.",
+            "email": "hello@matiscale.com",
+            "slogan": "We book sales meetings for staffing firms."
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What exactly do you deliver?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Qualified sales meetings booked on your calendar. That's the whole service."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What counts as a qualified meeting?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A confirmed call with a real decision-maker who fits your ideal client and has agreed to meet. Not a lead. A booked conversation."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How fast will we see results?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Campaigns go live within days. First meetings typically land within the first few weeks."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What if it doesn't work?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "You get 5 qualified meetings in your first 30 days or we work free until you do. The risk is ours."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Static registration so Netlify detects the form at deploy time;
+         the live form is rendered by React (src/components/BookForm.jsx). -->
+    <form name="book-a-call" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="text" name="company" />
+    </form>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
