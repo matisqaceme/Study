@@ -2,7 +2,7 @@
 
 > **Purpose of this file:** This is the reference profile for coaching Austin. Read it before giving advice. It captures who he is, where he's going, his strengths, his blockers, and how he wants to be coached. Update it as things change.
 >
-> **Last updated:** 2026-06-23
+> **Last updated:** 2026-06-24 (added research-backed agency strategy)
 
 ---
 
@@ -58,6 +58,48 @@ This is framed as his **mission**, not a hobby. Use that word back to him when m
 ### Prior attempt (learnings)
 - ~1 year ago ran a **lead-gen agency** running ads for **auto-wrap shops**. **Got zero clients** but "learned a lot."
 - **Key failure pattern:** he was scared of cold calling, so he **avoided it and built a website + busywork instead.** This is the single most important behavioral trap to watch for. (See Blockers.)
+
+---
+
+## Agency strategy — decided & research-backed (updated 2026-06-24)
+
+These are settled decisions and findings from a research-backed strategy session. Don't relitigate the settled calls; do hold him to the priorities.
+
+### Channel strategy (DECIDED)
+- **Email-first to scale, LinkedIn layered in later, manually.** Austin chose this deliberately.
+- Sending plan: **~10 emails/inbox/day × 200 Outlook inboxes ≈ 2,000/day (~44K/mo).** Scales by adding inboxes/domains, not by raising per-inbox volume.
+- **Outlook decision is final (cost).** Risk acknowledged: Microsoft is the most hostile major provider to cold email in 2026 (0.10% complaint threshold, hard junk routing). Coaching action: watch inbox-placement + complaint rate closely; revisit only if bookings stall or domains burn.
+- **Cold calling: he declined as primary** (time-for-results, low volume). NOTE FOR COACH: the data says phone books meetings at ~2–3% (vs email ~0.1–0.5%) and is his documented avoidance area. Don't force it, but when warm/engaged leads pile up, nudge him to call *those* (low-fear, high-yield). Watch for avoidance dressed up as strategy.
+- LinkedIn when added: manual first (15–45% of automated accounts get restricted within 6 months), ~20 requests/day, new accounts ramp 5–10/day. His top-1% appearance is a real asset on LinkedIn ("identity-first").
+
+### The offer (DIRECTION SET)
+- **Core service is right: booked meetings for staffing firms.** Don't change *what* he sells; sharpen the wrapper.
+- **Reframe the unit:** not "a booked meeting" but **"a qualified meeting with a company that has confirmed open roles to fill"** (a job order = the staffing firm's actual revenue). Justifies higher price, closes better.
+- **Pricing ladder:** first 3 clients performance-based (pay-per-qualified-meeting) → testimonials → retainer $1,500, +$500 every few clients → expand with multichannel/exclusivity → (later) tie fee partly to placements.
+- **Risk reversal is the close lever:** put a concrete written guarantee in front of prospects, e.g. *"X qualified meetings/month or billing pauses after 2 consecutive misses."* Vague "we'll try" doesn't close skeptical, over-pitched staffing owners.
+
+### Niche (DECISION NEEDED — highest-leverage open item)
+- The niche sets the income ceiling. A firm placing $120K/yr IT contractors will pay $3–5K/mo; one placing $15/hr warehouse temps can't.
+- **Target high-value verticals:** IT/tech staffing, healthcare & travel nursing, engineering, executive search.
+- **Avoid:** warehouse, retail, light-industrial (thin margins, price-sensitive).
+- ACTION: pick ONE vertical and own it. Leaning IT or healthcare staffing.
+
+### The real bottlenecks to $100K MRR (where coaching attention goes)
+Top-of-funnel (email volume) is NOT the constraint — 2,000/day can fill the pipe. The two real constraints:
+1. **Close rate (unproven).** Unknown 18yo, no testimonials, skeptical buyers → early close maybe 2–5%, not 10–15%. The guarantee + a tight call script is the fix. Getting the first 3 testimonials fast unlocks everything.
+2. **Fulfillment ceiling.** 50 clients = running 50 separate campaigns (each needs its own inboxes/domains/lists/monitoring). Personal cap is ~10–15 clients. Needs SOPs, much more infra, and a first hire/VA by ~10 clients. This is what stops most agencies at $15–30K MRR.
+
+### Honest target reset
+- **$100K MRR by January is the stretch**, reachable only if close rate AND fulfillment capacity keep up.
+- **Bankable target: $10–30K MRR by January.** Treat that as the floor-win; chase $100K if close + delivery click early.
+
+### Immediate priorities (in order)
+1. Lock the niche (IT or healthcare staffing).
+2. Write the offer + concrete written guarantee.
+3. Write a tight call/booking script (fixes the close-rate variable — the biggest swing).
+4. Get emails actually sending; book first 1–3 meetings; land first 3 performance-based testimonials.
+5. Only then: add LinkedIn manually + start building fulfillment SOPs.
+- WATCH: don't let "designing the perfect offer/niche" become this year's website-building (his avoidance pattern). Good-enough beats perfect; ship and send.
 
 ---
 
@@ -119,6 +161,12 @@ This is framed as his **mission**, not a hobby. Use that word back to him when m
 ---
 
 ## Open questions to revisit
-- What's the weekly outreach volume target across the 200 inboxes, and the assumed reply→meeting→close rates?
+- **Niche not yet locked** — pick ONE high-value vertical (IT or healthcare staffing). Highest-leverage open item.
+- Offer + written guarantee not yet drafted.
+- Call/booking script not yet drafted (biggest close-rate lever).
+- Fulfillment plan for scaling past ~10 clients (infra + first hire) — not yet designed.
 - What's the SAT score breakdown goal (math vs. reading/writing) and which section is the bottleneck?
 - Stanford application: essays, extracurriculars, recommendations — none discussed yet. The agency could be a powerful application narrative if framed well. Raise this.
+
+## Research log
+- **2026-06-24 — Agency strategy session.** Researched cold email viability, deliverability rules, channel comparison, and offer design (2026 data). Key findings: cold email reply rates ~3.43% (down from ~7% two years ago); Microsoft/Outlook hardest provider; phone converts ~5–10x better per touch but doesn't scale; multichannel beats single-channel ~40%; niche value sets income ceiling; risk-reversed written guarantees close best; fulfillment is the real wall to $100K MRR. Decisions captured in "Agency strategy" section above.
