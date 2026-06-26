@@ -6,7 +6,7 @@
 
 ## Launch progress (live tracker)
 - **Infrastructure:** Outlook, 200 inboxes, ~100 inboxes/domain (≈2 domains). Phase 0 (DNS/SPF/DKIM/DMARC) ✅ and Phase 1 (PlusVibe warmup config) ✅ per Austin. Inboxes warming in PlusVibe. WATCH: 100 inboxes/domain = concentration risk; monitor per-domain health, consider more domains for resilience.
-- **Phase 2 (asset build) — IN PROGRESS:** niche recommended (IT staffing, awaiting confirm) · ICP drafted · offer+guarantee drafted · NEXT: 4-email sequence + sales-call script · then verified lead list (~1,000) + Calendly/CRM.
+- **Phase 2 (asset build) — IN PROGRESS:** niche **CONFIRMED: IT staffing** · ICP drafted · offer+guarantee drafted · lead list = **LeadSonar** (Austin; confirm verified + ICP filters, bounce <2%) · sequences = **Austin writing himself** (gave him the copy bar) · NEXT (together): **sales-call script** (his fear point — must exist before first meeting) · then Calendly/CRM + reply <24h SLA.
 - Full operational checklist (Phases 0–5) was delivered in chat 2026-06-26.
 
 ---
