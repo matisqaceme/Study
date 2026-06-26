@@ -2,7 +2,12 @@
 
 > **Purpose of this file:** This is the reference profile for coaching Austin. Read it before giving advice. It captures who he is, where he's going, his strengths, his blockers, and how he wants to be coached. Update it as things change.
 >
-> **Last updated:** 2026-06-24 (added research-backed agency strategy)
+> **Last updated:** 2026-06-26 (Phase 2 build started — niche/offer drafted, infra done)
+
+## Launch progress (live tracker)
+- **Infrastructure:** Outlook, 200 inboxes, ~100 inboxes/domain (≈2 domains). Phase 0 (DNS/SPF/DKIM/DMARC) ✅ and Phase 1 (PlusVibe warmup config) ✅ per Austin. Inboxes warming in PlusVibe. WATCH: 100 inboxes/domain = concentration risk; monitor per-domain health, consider more domains for resilience.
+- **Phase 2 (asset build) — IN PROGRESS:** niche recommended (IT staffing, awaiting confirm) · ICP drafted · offer+guarantee drafted · NEXT: 4-email sequence + sales-call script · then verified lead list (~1,000) + Calendly/CRM.
+- Full operational checklist (Phases 0–5) was delivered in chat 2026-06-26.
 
 ---
 
@@ -78,11 +83,29 @@ These are settled decisions and findings from a research-backed strategy session
 - **Pricing ladder:** first 3 clients performance-based (pay-per-qualified-meeting) → testimonials → retainer $1,500, +$500 every few clients → expand with multichannel/exclusivity → (later) tie fee partly to placements.
 - **Risk reversal is the close lever:** put a concrete written guarantee in front of prospects, e.g. *"X qualified meetings/month or billing pauses after 2 consecutive misses."* Vague "we'll try" doesn't close skeptical, over-pitched staffing owners.
 
-### Niche (DECISION NEEDED — highest-leverage open item)
+### Niche (RECOMMENDED: IT staffing — pending Austin's final confirm)
 - The niche sets the income ceiling. A firm placing $120K/yr IT contractors will pay $3–5K/mo; one placing $15/hr warehouse temps can't.
-- **Target high-value verticals:** IT/tech staffing, healthcare & travel nursing, engineering, executive search.
-- **Avoid:** warehouse, retail, light-industrial (thin margins, price-sensitive).
-- ACTION: pick ONE vertical and own it. Leaning IT or healthcare staffing.
+- **KEY INSIGHT — niche is coupled to offer angle:**
+  - Offer = booked CLIENT meetings (BD) → pick a vertical with *direct* BD (IT staffing). Large-facility healthcare is often gated behind MSP/VMS, making "book client meetings" harder.
+  - Offer = CANDIDATE sourcing → healthcare/travel nursing is the goldmine (structural nurse shortage).
+- **Recommendation: IT staffing + "booked client meetings"** — direct BD, high contract value, reachable buyers, simplest copy. Healthcare+sourcing is the alternative if Austin has affinity/connections there.
+- **Avoid:** warehouse, retail, light-industrial (thin margins).
+
+### Deliverable decision (DECIDED)
+- **Primary service: cold email appointment setting** (booked client meetings). Fastest to cash/testimonials, no client ad budget, guarantee-able, matches his infra.
+- **Database reactivation** = optional low-risk wedge offer (uses same skill, easy first "yes").
+- **Paid ads** = future upsell for proven clients (needs their budget + his track record).
+- **SEO / AI automation** = NOT now (SEO too slow for timeline; AAA is a separate business, file for 12–24mo).
+
+### Draft ICP (IT staffing)
+- Who: IT/tech contract & direct-hire staffing firms. Size: ~$1M–$20M rev / ~5–50 employees.
+- Target title: Founder/Owner, VP Sales/BD, Director of Client Services.
+- They want more client companies sending job orders. Trigger angles: many open roles, client funding, hiring BD reps.
+
+### Draft offer + guarantee (IT staffing)
+- "We book your BD team 10–15 qualified meetings/mo with companies actively hiring IT talent — or you don't pay."
+- First 3 = performance (pay per qualified meeting) → testimonials. Then $1,500/mo retainer, +$500 every few clients.
+- Written guarantee: "Miss the target 2 months running → billing pauses until we hit it."
 
 ### The real bottlenecks to $100K MRR (where coaching attention goes)
 Top-of-funnel (email volume) is NOT the constraint — 2,000/day can fill the pipe. The two real constraints:
