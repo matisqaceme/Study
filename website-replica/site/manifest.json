@@ -1,0 +1,1725 @@
+{
+  "source": "https://www.prismoralsurgery.com/",
+  "crawledAt": "2026-09-18T06:44:45.030Z",
+  "pageCount": 39,
+  "assetCount": 326,
+  "pages": {
+    "https://www.prismoralsurgery.com/": "index.html",
+    "https://www.prismoralsurgery.com/about": "about/index.html",
+    "https://www.prismoralsurgery.com/about/meet-dr-jean-kim": "about/meet-dr-jean-kim/index.html",
+    "https://www.prismoralsurgery.com/services": "services/index.html",
+    "https://www.prismoralsurgery.com/services/oral-surgery": "services/oral-surgery/index.html",
+    "https://www.prismoralsurgery.com/services/speciality-services": "services/speciality-services/index.html",
+    "https://www.prismoralsurgery.com/patient-information": "patient-information/index.html",
+    "https://www.prismoralsurgery.com/contact-us": "contact-us/index.html",
+    "https://www.prismoralsurgery.com/services/implants-bone-grafting": "services/implants-bone-grafting/index.html",
+    "https://www.prismoralsurgery.com/privacy-policy": "privacy-policy/index.html",
+    "https://www.prismoralsurgery.com/terms": "terms/index.html",
+    "https://www.prismoralsurgery.com/accessibility": "accessibility/index.html",
+    "https://www.prismoralsurgery.com/services/oral-surgery/alveoloplasty": "services/oral-surgery/alveoloplasty/index.html",
+    "https://www.prismoralsurgery.com/services/oral-surgery/apicoectomy": "services/oral-surgery/apicoectomy/index.html",
+    "https://www.prismoralsurgery.com/services/oral-surgery/canine-exposure": "services/oral-surgery/canine-exposure/index.html",
+    "https://www.prismoralsurgery.com/services/oral-surgery/frenectomy": "services/oral-surgery/frenectomy/index.html",
+    "https://www.prismoralsurgery.com/services/oral-surgery/general-anesthesia": "services/oral-surgery/general-anesthesia/index.html",
+    "https://www.prismoralsurgery.com/services/oral-surgery/iv-sedation": "services/oral-surgery/iv-sedation/index.html",
+    "https://www.prismoralsurgery.com/services/oral-surgery/nitrous-oxide-sedation": "services/oral-surgery/nitrous-oxide-sedation/index.html",
+    "https://www.prismoralsurgery.com/services/oral-surgery/oral-biopsy": "services/oral-surgery/oral-biopsy/index.html",
+    "https://www.prismoralsurgery.com/services/oral-surgery/pre-prosthetic-surgery": "services/oral-surgery/pre-prosthetic-surgery/index.html",
+    "https://www.prismoralsurgery.com/services/oral-surgery/tooth-extractions": "services/oral-surgery/tooth-extractions/index.html",
+    "https://www.prismoralsurgery.com/services/oral-surgery/wisdom-teeth-removal": "services/oral-surgery/wisdom-teeth-removal/index.html",
+    "https://www.prismoralsurgery.com/services/specialty-services/all-on-x": "services/specialty-services/all-on-x/index.html",
+    "https://www.prismoralsurgery.com/services/specialty-services/botox-for-tmd-2is4v": "services/specialty-services/botox-for-tmd-2is4v/index.html",
+    "https://www.prismoralsurgery.com/services/specialty-services/dental-implants": "services/specialty-services/dental-implants/index.html",
+    "https://www.prismoralsurgery.com/services/specialty-services/implant-supported-dentures": "services/specialty-services/implant-supported-dentures/index.html",
+    "https://www.prismoralsurgery.com/services/specialty-services/occlusal-guards-8u43l": "services/specialty-services/occlusal-guards-8u43l/index.html",
+    "https://www.prismoralsurgery.com/services/specialty-services/single-tooth-implant": "services/specialty-services/single-tooth-implant/index.html",
+    "https://www.prismoralsurgery.com/services/specialty-services/tmj-therapy": "services/specialty-services/tmj-therapy/index.html",
+    "https://www.prismoralsurgery.com/services/implants-bone-grafting/bone-grafting": "services/implants-bone-grafting/bone-grafting/index.html",
+    "https://www.prismoralsurgery.com/services/implants-bone-grafting/ridge-augmentation": "services/implants-bone-grafting/ridge-augmentation/index.html",
+    "https://www.prismoralsurgery.com/services/implants-bone-grafting/sinus-lifts": "services/implants-bone-grafting/sinus-lifts/index.html",
+    "https://www.prismoralsurgery.com/blog": "blog/index.html",
+    "https://www.prismoralsurgery.com/services/oral-surgery/%20iv-sedation": "services/oral-surgery/ iv-sedation/index.html",
+    "https://www.prismoralsurgery.com/services/cosmetic-dentistry/botox": "services/cosmetic-dentistry/botox/index.html",
+    "https://www.prismoralsurgery.com/services/other/sedation-dentistry": "services/other/sedation-dentistry/index.html",
+    "https://www.prismoralsurgery.com/services/other/general-anesthesia": "services/other/general-anesthesia/index.html",
+    "https://www.prismoralsurgery.com/oral-surgery/wisdom-teeth-removal": "oral-surgery/wisdom-teeth-removal/index.html"
+  },
+  "pageStatus": {
+    "https://www.prismoralsurgery.com/": 200,
+    "https://www.prismoralsurgery.com/about": 200,
+    "https://www.prismoralsurgery.com/about/meet-dr-jean-kim": 200,
+    "https://www.prismoralsurgery.com/services": 200,
+    "https://www.prismoralsurgery.com/services/oral-surgery": 200,
+    "https://www.prismoralsurgery.com/services/speciality-services": 200,
+    "https://www.prismoralsurgery.com/patient-information": 200,
+    "https://www.prismoralsurgery.com/contact-us": 200,
+    "https://www.prismoralsurgery.com/services/implants-bone-grafting": 200,
+    "https://www.prismoralsurgery.com/privacy-policy": 200,
+    "https://www.prismoralsurgery.com/terms": 200,
+    "https://www.prismoralsurgery.com/accessibility": 200,
+    "https://www.prismoralsurgery.com/services/oral-surgery/alveoloplasty": 200,
+    "https://www.prismoralsurgery.com/services/oral-surgery/apicoectomy": 200,
+    "https://www.prismoralsurgery.com/services/oral-surgery/canine-exposure": 200,
+    "https://www.prismoralsurgery.com/services/oral-surgery/frenectomy": 200,
+    "https://www.prismoralsurgery.com/services/oral-surgery/general-anesthesia": 200,
+    "https://www.prismoralsurgery.com/services/oral-surgery/iv-sedation": 200,
+    "https://www.prismoralsurgery.com/services/oral-surgery/nitrous-oxide-sedation": 200,
+    "https://www.prismoralsurgery.com/services/oral-surgery/oral-biopsy": 200,
+    "https://www.prismoralsurgery.com/services/oral-surgery/pre-prosthetic-surgery": 200,
+    "https://www.prismoralsurgery.com/services/oral-surgery/tooth-extractions": 200,
+    "https://www.prismoralsurgery.com/services/oral-surgery/wisdom-teeth-removal": 200,
+    "https://www.prismoralsurgery.com/services/specialty-services/all-on-x": 200,
+    "https://www.prismoralsurgery.com/services/specialty-services/botox-for-tmd-2is4v": 200,
+    "https://www.prismoralsurgery.com/services/specialty-services/dental-implants": 200,
+    "https://www.prismoralsurgery.com/services/specialty-services/implant-supported-dentures": 200,
+    "https://www.prismoralsurgery.com/services/specialty-services/occlusal-guards-8u43l": 200,
+    "https://www.prismoralsurgery.com/services/specialty-services/single-tooth-implant": 200,
+    "https://www.prismoralsurgery.com/services/specialty-services/tmj-therapy": 200,
+    "https://www.prismoralsurgery.com/services/implants-bone-grafting/bone-grafting": 200,
+    "https://www.prismoralsurgery.com/services/implants-bone-grafting/ridge-augmentation": 200,
+    "https://www.prismoralsurgery.com/services/implants-bone-grafting/sinus-lifts": 200,
+    "https://www.prismoralsurgery.com/blog": 404,
+    "https://www.prismoralsurgery.com/services/oral-surgery/%20iv-sedation": 200,
+    "https://www.prismoralsurgery.com/services/cosmetic-dentistry/botox": 404,
+    "https://www.prismoralsurgery.com/services/other/sedation-dentistry": 404,
+    "https://www.prismoralsurgery.com/services/other/general-anesthesia": 404,
+    "https://www.prismoralsurgery.com/oral-surgery/wisdom-teeth-removal": 404
+  },
+  "redirects": {
+    "https://www.prismoralsurgery.com/contact": "https://www.prismoralsurgery.com/contact-us"
+  },
+  "assets": {
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/css/prism-oral-surgery.webflow.shared.6a93c43d4.min.css": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/css/prism-oral-surgery.webflow.shared.6a93c43d4.min.css",
+      "contentType": "text/css",
+      "bytes": 29677
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/js/webflow.schunk.36b8fb49256177c8.js": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/js/webflow.schunk.36b8fb49256177c8.js",
+      "contentType": "text/javascript",
+      "bytes": 41429
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/css/prism-oral-surgery.webflow.6825a5e7f696993f2ea31a37-9e5b52e6a.min.css": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/css/prism-oral-surgery.webflow.6825a5e7f696993f2ea31a37-9e5b52e6a.min.css",
+      "contentType": "text/css",
+      "bytes": 54822
+    },
+    "https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js": {
+      "path": "_ext/ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js",
+      "contentType": "text/javascript",
+      "bytes": 13188
+    },
+    "https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6825a5e7f696993f2ea31a35": {
+      "path": "_ext/d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8__1b7b54ad.js",
+      "contentType": "application/javascript",
+      "bytes": 89476
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/js/webflow.schunk.082bf7b844c316cd.js": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/js/webflow.schunk.082bf7b844c316cd.js",
+      "contentType": "text/javascript",
+      "bytes": 241822
+    },
+    "https://cdn.prod.website-files.com/gsap/3.15.0/ScrollTrigger.min.js": {
+      "path": "_ext/cdn.prod.website-files.com/gsap/3.15.0/ScrollTrigger.min.js",
+      "contentType": "text/javascript",
+      "bytes": 44575
+    },
+    "https://cdn.prod.website-files.com/gsap/3.15.0/gsap.min.js": {
+      "path": "_ext/cdn.prod.website-files.com/gsap/3.15.0/gsap.min.js",
+      "contentType": "text/javascript",
+      "bytes": 72927
+    },
+    "https://use.typekit.net/rux3wkq.js": {
+      "path": "_ext/use.typekit.net/rux3wkq.js",
+      "contentType": "text/javascript",
+      "bytes": 16431
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/js/webflow.schunk.61b534daaaeddbc7.js": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/js/webflow.schunk.61b534daaaeddbc7.js",
+      "contentType": "text/javascript",
+      "bytes": 8640
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/js/webflow.6fb32b90.973f3f5ebe5a2319.js": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/js/webflow.6fb32b90.973f3f5ebe5a2319.js",
+      "contentType": "text/javascript",
+      "bytes": 46893
+    },
+    "https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700": {
+      "path": "_ext/fonts.googleapis.com/css__ebcd32dd.css",
+      "contentType": "text/css",
+      "bytes": 11585
+    },
+    "https://cdn.prod.website-files.com/gsap/3.15.0/SplitText.min.js": {
+      "path": "_ext/cdn.prod.website-files.com/gsap/3.15.0/SplitText.min.js",
+      "contentType": "text/javascript",
+      "bytes": 7732
+    },
+    "https://js.usebasin.com/v2.9.0.min.js": {
+      "path": "_ext/js.usebasin.com/v2.9.0.min.js",
+      "contentType": "text/javascript",
+      "bytes": 22594
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68286ce4d320006671aadfbe_Capa_1.avif": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68286ce4d320006671aadfbe_Capa_1.avif",
+      "contentType": "image/avif",
+      "bytes": 5937
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/683879dabdd2cf60a79d7c29_logonavnew.svg": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/683879dabdd2cf60a79d7c29_logonavnew.svg",
+      "contentType": "image/svg+xml",
+      "bytes": 148319
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/6836ba10d99cb6abd6cedc18_AdobeStock_919772485.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/6836ba10d99cb6abd6cedc18_AdobeStock_919772485.webp",
+      "contentType": "image/webp",
+      "bytes": 54510
+    },
+    "https://www.googletagmanager.com/gtm.js?id=GTM-MPKMBPWM": {
+      "path": "_ext/www.googletagmanager.com/gtm__46350344.js",
+      "contentType": "application/javascript",
+      "bytes": 373298
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/684bef6263e94cc50310225b_doc.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/684bef6263e94cc50310225b_doc.webp",
+      "contentType": "image/webp",
+      "bytes": 83252
+    },
+    "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2": {
+      "path": "_ext/fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2",
+      "contentType": "font/woff2",
+      "bytes": 48256
+    },
+    "https://cdn.patientloop.com/tracking-script.js": {
+      "path": "_ext/cdn.patientloop.com/tracking-script.js",
+      "contentType": "application/javascript",
+      "bytes": 19324
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68287d37b9374004c6ebe865_Rectangle%203%20(1).avif": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68287d37b9374004c6ebe865_Rectangle 3 (1).avif",
+      "contentType": "image/avif",
+      "bytes": 81556
+    },
+    "https://www.google.com/recaptcha/api.js?onload=onloadBasinCallback&render=onload": {
+      "path": "_ext/www.google.com/recaptcha/api__fc6e6970.js",
+      "contentType": "text/javascript",
+      "bytes": 1610
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68287fa910a6314a53ade000_Isolation_Mode.svg": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68287fa910a6314a53ade000_Isolation_Mode.svg",
+      "contentType": "image/svg+xml",
+      "bytes": 19999
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68287fa9b42d35f376798d0f_Dental%20Implants.svg": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68287fa9b42d35f376798d0f_Dental Implants.svg",
+      "contentType": "image/svg+xml",
+      "bytes": 4065
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68287fa9d8c30949b28b7103_372173104.svg": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68287fa9d8c30949b28b7103_372173104.svg",
+      "contentType": "image/svg+xml",
+      "bytes": 9820
+    },
+    "https://use.typekit.net/af/60c855/00000000000000007758a676/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3": {
+      "path": "_ext/use.typekit.net/af/60c855/00000000000000007758a676/31/l__ef3c5c13.woff2",
+      "contentType": "application/font-woff2",
+      "bytes": 25156
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/6839ac8e4c50098ad0084076_sleep%201.svg": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/6839ac8e4c50098ad0084076_sleep 1.svg",
+      "contentType": "image/svg+xml",
+      "bytes": 1577
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68287fab22e0bc7c7d81dac7_Vector.svg": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68287fab22e0bc7c7d81dac7_Vector.svg",
+      "contentType": "image/svg+xml",
+      "bytes": 6061
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68287fa843dad10ee54b60f9_Icons%20(1).svg": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68287fa843dad10ee54b60f9_Icons (1).svg",
+      "contentType": "image/svg+xml",
+      "bytes": 10551
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/684bed5763e94cc5030ed630_AdobeStock_171252546.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/684bed5763e94cc5030ed630_AdobeStock_171252546.webp",
+      "contentType": "image/webp",
+      "bytes": 23456
+    },
+    "https://www.gstatic.com/recaptcha/releases/BnqMGSY_YP4cCmbNINHpJPkd/recaptcha__en.js": {
+      "path": "_ext/www.gstatic.com/recaptcha/releases/BnqMGSY_YP4cCmbNINHpJPkd/recaptcha__en.js",
+      "contentType": "text/javascript",
+      "bytes": 844362
+    },
+    "https://p.typekit.net/p.gif?s=1&k=rux3wkq&ht=tk&h=www.prismoralsurgery.com&f=53890&a=85920292&js=1.21.0&app=typekit&e=js&_=1789713723960": {
+      "path": "_ext/p.typekit.net/p__4def105a.gif",
+      "contentType": "image/gif",
+      "bytes": 35
+    },
+    "https://www.googletagmanager.com/gtag/js?id=G-B06199XYWL&cx=c&gtm=4e69g1": {
+      "path": "_ext/www.googletagmanager.com/gtag/js__859c31f4.js",
+      "contentType": "application/javascript",
+      "bytes": 523733
+    },
+    "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy&co=aHR0cHM6Ly93d3cucHJpc21vcmFsc3VyZ2VyeS5jb206NDQz&hl=en&v=BnqMGSY_YP4cCmbNINHpJPkd&size=invisible&anchor-ms=20000&execute-ms=30000&cb=60u74lf58ib6": {
+      "path": "_ext/www.google.com/recaptcha/api2/anchor__57b7c313.html",
+      "contentType": "text/html",
+      "bytes": 54725
+    },
+    "https://cdn.patientloop.com/nuggets/d75e5c9fdb9a36fdb5450060a29047a41310397517604b327eba8e9bac81a00b": {
+      "path": "_ext/cdn.patientloop.com/nuggets/d75e5c9fdb9a36fdb5450060a29047a41310397517604b327eba8e9bac81a00b.json",
+      "contentType": "application/json",
+      "bytes": 336
+    },
+    "https://www.gstatic.com/recaptcha/releases/BnqMGSY_YP4cCmbNINHpJPkd/styles__ltr.css": {
+      "path": "_ext/www.gstatic.com/recaptcha/releases/BnqMGSY_YP4cCmbNINHpJPkd/styles__ltr.css",
+      "contentType": "text/css",
+      "bytes": 82980
+    },
+    "https://www.gstatic.com/recaptcha/api2/logo_48.png": {
+      "path": "_ext/www.gstatic.com/recaptcha/api2/logo_48.png",
+      "contentType": "image/png",
+      "bytes": 2228
+    },
+    "https://fonts.gstatic.com/s/roboto/v48/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2": {
+      "path": "_ext/fonts.gstatic.com/s/roboto/v48/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2",
+      "contentType": "font/woff2",
+      "bytes": 40128
+    },
+    "https://www.google.com/recaptcha/api2/webworker.js?hl=en&v=BnqMGSY_YP4cCmbNINHpJPkd": {
+      "path": "_ext/www.google.com/recaptcha/api2/webworker__2bccf53a.js",
+      "contentType": "text/javascript",
+      "bytes": 102
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68262f685454313133d0fcb4_AdobeStock_686742386.avif": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68262f685454313133d0fcb4_AdobeStock_686742386.avif",
+      "contentType": "image/avif",
+      "bytes": 27414
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68262f61ecbc41ccefa3426e_AdobeStock_133831970.avif": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68262f61ecbc41ccefa3426e_AdobeStock_133831970.avif",
+      "contentType": "image/avif",
+      "bytes": 18812
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/682851dbaa83ead0053b548e_Icons.svg": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/682851dbaa83ead0053b548e_Icons.svg",
+      "contentType": "image/svg+xml",
+      "bytes": 10611
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/6828f1317614b08886be987b_Polygon%202.svg": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/6828f1317614b08886be987b_Polygon 2.svg",
+      "contentType": "image/svg+xml",
+      "bytes": 193
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/6839ce09f85f55fb57f924cb_sleep%201%20(1).svg": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/6839ce09f85f55fb57f924cb_sleep 1 (1).svg",
+      "contentType": "image/svg+xml",
+      "bytes": 1569
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/6828521f70093a50ccc67809_Polygon%201.svg": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/6828521f70093a50ccc67809_Polygon 1.svg",
+      "contentType": "image/svg+xml",
+      "bytes": 173
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/682c978c62e207607d81e03f_674261aefecd871095b43846_Group%201423.svg": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/682c978c62e207607d81e03f_674261aefecd871095b43846_Group 1423.svg",
+      "contentType": "image/svg+xml",
+      "bytes": 4009
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/682c967ff4e111ae7bfb4a22_6743584be5c2f96c3d026f34_Group%201081.svg": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/682c967ff4e111ae7bfb4a22_6743584be5c2f96c3d026f34_Group 1081.svg",
+      "contentType": "image/svg+xml",
+      "bytes": 5467
+    },
+    "https://www.google.com/recaptcha/api2/bframe?hl=en&v=BnqMGSY_YP4cCmbNINHpJPkd&k=6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy&bft=0dAFcWeA5V2uwC6b9ZZY2ym62FYvc2f1NnaPlSN0v1zcKdSyXbHd-I4rjyFzXd8V-ZMoEZcXUF1CF-3JQ6XsmdJGMPfnAPgnqRUA": {
+      "path": "_ext/www.google.com/recaptcha/api2/bframe__ae53d2eb.html",
+      "contentType": "text/html",
+      "bytes": 17035
+    },
+    "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12095.384368301737!2d-74.3600074!3d40.7214045!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3afad209a9a9f%3A0xc6eb54ae7e8b1011!2s55%20Woodland%20Ave%2C%20Summit%2C%20NJ%2007901%2C%20USA!5e0!3m2!1sen!2s!4v1747499766874!5m2!1sen!2s": {
+      "path": "_ext/www.google.com/maps/embed__32c93e67.html",
+      "contentType": "text/html",
+      "bytes": 2249
+    },
+    "https://maps.gstatic.com/maps-api-v3/embed/js/66/4d/init_embed.js": {
+      "path": "_ext/maps.gstatic.com/maps-api-v3/embed/js/66/4d/init_embed.js",
+      "contentType": "text/javascript",
+      "bytes": 255704
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/6838795126818bd0e0d9e049_new%20logo.svg": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/6838795126818bd0e0d9e049_new logo.svg",
+      "contentType": "image/svg+xml",
+      "bytes": 171101
+    },
+    "https://maps.googleapis.com/maps/api/js?key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&paint_origin=&libraries=geometry,search&v=weekly&loading=async&language=en&experimentation=allowed&callback=onApiLoad": {
+      "path": "_ext/maps.googleapis.com/maps/api/js__a88259c5.js",
+      "contentType": "text/javascript",
+      "bytes": 15837
+    },
+    "https://www.google.com/recaptcha/api2/reload?k=6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy": {
+      "path": "_ext/www.google.com/recaptcha/api2/reload__62966cd3.json",
+      "contentType": "application/json",
+      "bytes": 5213
+    },
+    "https://maps.googleapis.com/maps-api-v3/api/js/66/4d/search.js": {
+      "path": "_ext/maps.googleapis.com/maps-api-v3/api/js/66/4d/search.js",
+      "contentType": "text/javascript",
+      "bytes": 2621
+    },
+    "https://maps.googleapis.com/maps-api-v3/api/js/66/4d/geometry.js": {
+      "path": "_ext/maps.googleapis.com/maps-api-v3/api/js/66/4d/geometry.js",
+      "contentType": "text/javascript",
+      "bytes": 6974
+    },
+    "https://maps.googleapis.com/maps-api-v3/api/js/66/4d/main.js": {
+      "path": "_ext/maps.googleapis.com/maps-api-v3/api/js/66/4d/main.js",
+      "contentType": "text/javascript",
+      "bytes": 300517
+    },
+    "https://www.gstatic.com/recaptcha/api2/refresh_2x.png": {
+      "path": "_ext/www.gstatic.com/recaptcha/api2/refresh_2x.png",
+      "contentType": "image/png",
+      "bytes": 600
+    },
+    "https://maps.googleapis.com/maps-api-v3/api/js/66/4d/common.js": {
+      "path": "_ext/maps.googleapis.com/maps-api-v3/api/js/66/4d/common.js",
+      "contentType": "text/javascript",
+      "bytes": 128855
+    },
+    "https://maps.googleapis.com/maps-api-v3/api/js/66/4d/util.js": {
+      "path": "_ext/maps.googleapis.com/maps-api-v3/api/js/66/4d/util.js",
+      "contentType": "text/javascript",
+      "bytes": 319781
+    },
+    "https://maps.googleapis.com/maps-api-v3/api/js/66/4d/map.js": {
+      "path": "_ext/maps.googleapis.com/maps-api-v3/api/js/66/4d/map.js",
+      "contentType": "text/javascript",
+      "bytes": 81283
+    },
+    "https://www.gstatic.com/recaptcha/api2/audio_2x.png": {
+      "path": "_ext/www.gstatic.com/recaptcha/api2/audio_2x.png",
+      "contentType": "image/png",
+      "bytes": 530
+    },
+    "https://maps.googleapis.com/maps/api/mapsjs/gen_204?csp_test=true": {
+      "path": "_ext/maps.googleapis.com/maps/api/mapsjs/gen_204__df92773c.json",
+      "contentType": "application/json",
+      "bytes": 3
+    },
+    "https://maps.googleapis.com/maps-api-v3/api/js/66/4d/controls.js": {
+      "path": "_ext/maps.googleapis.com/maps-api-v3/api/js/66/4d/controls.js",
+      "contentType": "text/javascript",
+      "bytes": 102378
+    },
+    "https://www.google.com/recaptcha/api2/payload?p=06AFcWeA7mPyuvZNZ9XPa_TRrXB_nbDecaU1Ad7amgY-CA3Kmpny7depZRpBFp299BznMsZgskRGrnd1xCMoxweN8yD-Zqln3hwqoe-E52TF37EudQJtOZe8MlaApNZ71LUttUMrnHnGPYY0lOG5LxMIGukqVTaIJyU-h2egEkL4LzLiyDExpFhhMAFWmQA9pLZSQfldUVmcuWlHi0aZT4-BJFq-0LNBXXlldCaiShP1KZE6B9rcCQxSA&k=6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy": {
+      "path": "_ext/www.google.com/recaptcha/api2/payload__4ce84f8b.jpg",
+      "contentType": "image/jpeg",
+      "bytes": 38115
+    },
+    "https://www.gstatic.com/recaptcha/api2/info_2x.png": {
+      "path": "_ext/www.gstatic.com/recaptcha/api2/info_2x.png",
+      "contentType": "image/png",
+      "bytes": 665
+    },
+    "https://maps.googleapis.com/maps-api-v3/api/js/66/4d/places_impl.js": {
+      "path": "_ext/maps.googleapis.com/maps-api-v3/api/js/66/4d/places_impl.js",
+      "contentType": "text/javascript",
+      "bytes": 13520
+    },
+    "https://maps.googleapis.com/maps-api-v3/api/js/66/4d/places.js": {
+      "path": "_ext/maps.googleapis.com/maps-api-v3/api/js/66/4d/places.js",
+      "contentType": "text/javascript",
+      "bytes": 480907
+    },
+    "https://maps.googleapis.com/maps-api-v3/api/js/66/4d/onion.js": {
+      "path": "_ext/maps.googleapis.com/maps-api-v3/api/js/66/4d/onion.js",
+      "contentType": "text/javascript",
+      "bytes": 28324
+    },
+    "https://maps.googleapis.com/maps-api-v3/api/js/66/4d/search_impl.js": {
+      "path": "_ext/maps.googleapis.com/maps-api-v3/api/js/66/4d/search_impl.js",
+      "contentType": "text/javascript",
+      "bytes": 3569
+    },
+    "https://fonts.googleapis.com/css?family=Google+Sans+Text:400&text=%E2%86%90%E2%86%92%E2%86%91%E2%86%93&lang=en": {
+      "path": "_ext/fonts.googleapis.com/css__dc842202.css",
+      "contentType": "text/css",
+      "bytes": 267
+    },
+    "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Google+Sans:400,500,700|Google+Sans+Text:400,500,700&lang=en": {
+      "path": "_ext/fonts.googleapis.com/css__04e3e480.css",
+      "contentType": "text/css",
+      "bytes": 82653
+    },
+    "https://maps.googleapis.com/maps-api-v3/api/js/66/4d/log.js": {
+      "path": "_ext/maps.googleapis.com/maps-api-v3/api/js/66/4d/log.js",
+      "contentType": "text/javascript",
+      "bytes": 28648
+    },
+    "https://maps.gstatic.com/mapfiles/openhand_8_8.cur": {
+      "path": "_ext/maps.gstatic.com/mapfiles/openhand_8_8.cur",
+      "contentType": "image/bmp",
+      "bytes": 326
+    },
+    "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2": {
+      "path": "_ext/fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2",
+      "contentType": "font/woff2",
+      "bytes": 43136
+    },
+    "https://maps.googleapis.com/$rpc/google.internal.maps.mapsjs.v1.MapsJsInternalService/InitMapsJwt": {
+      "path": "_ext/maps.googleapis.com/$rpc/google.internal.maps.mapsjs.v1.MapsJsInternalService/InitMapsJwt",
+      "contentType": "application/json+protobuf",
+      "bytes": 27
+    },
+    "https://maps.googleapis.com/$rpc/google.internal.maps.mapsjs.v1.MapsJsInternalService/GetViewportInfo": {
+      "path": "_ext/maps.googleapis.com/$rpc/google.internal.maps.mapsjs.v1.MapsJsInternalService/GetViewportInfo",
+      "contentType": "application/json+protobuf",
+      "bytes": 107552
+    },
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i9615!3i12319!4i256!2m3!1e0!2sm!3i795561386!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m16!299174093m15!14m14!1m9!1m2!1y9926971161765911199!2y14333643347460821009!2s%2Fg%2F11bw3_r63y!4m2!1x407213587!2x3551367607!8b1!15sgcid%3Asubpremise!2b0!3b0!6b0!8b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=94591": {
+      "path": "_ext/www.google.com/maps/vt__f369492f.webp",
+      "contentType": "image/webp",
+      "bytes": 17328
+    },
+    "https://www.google.com/maps/vt?pb=!1m4!1m3!1i15!2i9615!3i12320!1m4!1m3!1i15!2i9616!3i12320!1m4!1m3!1i15!2i9617!3i12320!1m4!1m3!1i15!2i9618!3i12320!2m3!1e0!2sm!3i795561494!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e3!12m2!5b1!6b1!27m16!299174093m15!14m14!1m9!1m2!1y9926971161765911199!2y14333643347460821009!2s%2Fg%2F11bw3_r63y!4m2!1x407213587!2x3551367607!8b1!15sgcid%3Asubpremise!2b0!3b0!6b0!8b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=73790": {
+      "path": "_ext/www.google.com/maps/vt__859044a5.json",
+      "contentType": "application/json",
+      "bytes": 3645
+    },
+    "https://www.google.com/maps/vt?pb=!1m4!1m3!1i15!2i9616!3i12317!1m4!1m3!1i15!2i9617!3i12317!1m4!1m3!1i15!2i9616!3i12318!1m4!1m3!1i15!2i9616!3i12319!1m4!1m3!1i15!2i9617!3i12318!1m4!1m3!1i15!2i9617!3i12319!1m4!1m3!1i15!2i9618!3i12317!1m4!1m3!1i15!2i9618!3i12318!1m4!1m3!1i15!2i9618!3i12319!1m4!1m3!1i15!2i9612!3i12320!1m4!1m3!1i15!2i9613!3i12320!1m4!1m3!1i15!2i9614!3i12320!2m3!1e0!2sm!3i795561494!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e3!12m2!5b1!6b1!27m16!299174093m15!14m14!1m9!1m2!1y9926971161765911199!2y14333643347460821009!2s%2Fg%2F11bw3_r63y!4m2!1x407213587!2x3551367607!8b1!15sgcid%3Asubpremise!2b0!3b0!6b0!8b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=111607": {
+      "path": "_ext/www.google.com/maps/vt__2c1848e8.json",
+      "contentType": "application/json",
+      "bytes": 11201
+    },
+    "https://maps.googleapis.com/$rpc/google.internal.maps.mapsjs.v1.MapsJsInternalService/GetPlaceWidgetMetadata": {
+      "path": "_ext/maps.googleapis.com/$rpc/google.internal.maps.mapsjs.v1.MapsJsInternalService/GetPlaceWidgetMetadata",
+      "contentType": "application/json+protobuf",
+      "bytes": 1413
+    },
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i9614!3i12318!4i256!2m3!1e0!2sm!3i795561386!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m16!299174093m15!14m14!1m9!1m2!1y9926971161765911199!2y14333643347460821009!2s%2Fg%2F11bw3_r63y!4m2!1x407213587!2x3551367607!8b1!15sgcid%3Asubpremise!2b0!3b0!6b0!8b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=97615": {
+      "path": "_ext/www.google.com/maps/vt__eb8c14b8.webp",
+      "contentType": "image/webp",
+      "bytes": 13834
+    },
+    "https://www.google.com/maps/vt?pb=!1m4!1m3!1i15!2i9612!3i12317!1m4!1m3!1i15!2i9613!3i12317!1m4!1m3!1i15!2i9612!3i12318!1m4!1m3!1i15!2i9612!3i12319!1m4!1m3!1i15!2i9613!3i12318!1m4!1m3!1i15!2i9613!3i12319!1m4!1m3!1i15!2i9614!3i12317!1m4!1m3!1i15!2i9615!3i12317!1m4!1m3!1i15!2i9614!3i12318!1m4!1m3!1i15!2i9614!3i12319!1m4!1m3!1i15!2i9615!3i12318!1m4!1m3!1i15!2i9615!3i12319!2m3!1e0!2sm!3i795561494!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e3!12m2!5b1!6b1!27m16!299174093m15!14m14!1m9!1m2!1y9926971161765911199!2y14333643347460821009!2s%2Fg%2F11bw3_r63y!4m2!1x407213587!2x3551367607!8b1!15sgcid%3Asubpremise!2b0!3b0!6b0!8b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=81484": {
+      "path": "_ext/www.google.com/maps/vt__119a0d5d.json",
+      "contentType": "application/json",
+      "bytes": 14574
+    },
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i9614!3i12319!4i256!2m3!1e0!2sm!3i795561386!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m16!299174093m15!14m14!1m9!1m2!1y9926971161765911199!2y14333643347460821009!2s%2Fg%2F11bw3_r63y!4m2!1x407213587!2x3551367607!8b1!15sgcid%3Asubpremise!2b0!3b0!6b0!8b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=97865": {
+      "path": "_ext/www.google.com/maps/vt__89ccb6ec.webp",
+      "contentType": "image/webp",
+      "bytes": 12268
+    },
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i9616!3i12319!4i256!2m3!1e0!2sm!3i795561134!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m16!299174093m15!14m14!1m9!1m2!1y9926971161765911199!2y14333643347460821009!2s%2Fg%2F11bw3_r63y!4m2!1x407213587!2x3551367607!8b1!15sgcid%3Asubpremise!2b0!3b0!6b0!8b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=94117": {
+      "path": "_ext/www.google.com/maps/vt__819ce1d0.webp",
+      "contentType": "image/webp",
+      "bytes": 11936
+    },
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i9616!3i12320!4i256!2m3!1e0!2sm!3i795561134!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m16!299174093m15!14m14!1m9!1m2!1y9926971161765911199!2y14333643347460821009!2s%2Fg%2F11bw3_r63y!4m2!1x407213587!2x3551367607!8b1!15sgcid%3Asubpremise!2b0!3b0!6b0!8b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=130904": {
+      "path": "_ext/www.google.com/maps/vt__3871c15d.webp",
+      "contentType": "image/webp",
+      "bytes": 13016
+    },
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i9615!3i12320!4i256!2m3!1e0!2sm!3i795561386!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m16!299174093m15!14m14!1m9!1m2!1y9926971161765911199!2y14333643347460821009!2s%2Fg%2F11bw3_r63y!4m2!1x407213587!2x3551367607!8b1!15sgcid%3Asubpremise!2b0!3b0!6b0!8b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=307": {
+      "path": "_ext/www.google.com/maps/vt__129d23be.webp",
+      "contentType": "image/webp",
+      "bytes": 14962
+    },
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i9615!3i12318!4i256!2m3!1e0!2sm!3i795561386!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m16!299174093m15!14m14!1m9!1m2!1y9926971161765911199!2y14333643347460821009!2s%2Fg%2F11bw3_r63y!4m2!1x407213587!2x3551367607!8b1!15sgcid%3Asubpremise!2b0!3b0!6b0!8b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=94341": {
+      "path": "_ext/www.google.com/maps/vt__4c50fdca.webp",
+      "contentType": "image/webp",
+      "bytes": 10930
+    },
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i9616!3i12318!4i256!2m3!1e0!2sm!3i795560990!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m16!299174093m15!14m14!1m9!1m2!1y9926971161765911199!2y14333643347460821009!2s%2Fg%2F11bw3_r63y!4m2!1x407213587!2x3551367607!8b1!15sgcid%3Asubpremise!2b0!3b0!6b0!8b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=62964": {
+      "path": "_ext/www.google.com/maps/vt__11c99761.webp",
+      "contentType": "image/webp",
+      "bytes": 10860
+    },
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i9614!3i12320!4i256!2m3!1e0!2sm!3i795561386!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m16!299174093m15!14m14!1m9!1m2!1y9926971161765911199!2y14333643347460821009!2s%2Fg%2F11bw3_r63y!4m2!1x407213587!2x3551367607!8b1!15sgcid%3Asubpremise!2b0!3b0!6b0!8b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=3581": {
+      "path": "_ext/www.google.com/maps/vt__9066c381.webp",
+      "contentType": "image/webp",
+      "bytes": 10998
+    },
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i9613!3i12320!4i256!2m3!1e0!2sm!3i795561386!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m16!299174093m15!14m14!1m9!1m2!1y9926971161765911199!2y14333643347460821009!2s%2Fg%2F11bw3_r63y!4m2!1x407213587!2x3551367607!8b1!15sgcid%3Asubpremise!2b0!3b0!6b0!8b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=6855": {
+      "path": "_ext/www.google.com/maps/vt__7b12b0d3.webp",
+      "contentType": "image/webp",
+      "bytes": 10562
+    },
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i9613!3i12319!4i256!2m3!1e0!2sm!3i795561386!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m16!299174093m15!14m14!1m9!1m2!1y9926971161765911199!2y14333643347460821009!2s%2Fg%2F11bw3_r63y!4m2!1x407213587!2x3551367607!8b1!15sgcid%3Asubpremise!2b0!3b0!6b0!8b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=101139": {
+      "path": "_ext/www.google.com/maps/vt__4e20d4ec.webp",
+      "contentType": "image/webp",
+      "bytes": 8666
+    },
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i9613!3i12318!4i256!2m3!1e0!2sm!3i795561386!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m16!299174093m15!14m14!1m9!1m2!1y9926971161765911199!2y14333643347460821009!2s%2Fg%2F11bw3_r63y!4m2!1x407213587!2x3551367607!8b1!15sgcid%3Asubpremise!2b0!3b0!6b0!8b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=100889": {
+      "path": "_ext/www.google.com/maps/vt__40d0e7ab.webp",
+      "contentType": "image/webp",
+      "bytes": 10734
+    },
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i9613!3i12317!4i256!2m3!1e0!2sm!3i795561494!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m16!299174093m15!14m14!1m9!1m2!1y9926971161765911199!2y14333643347460821009!2s%2Fg%2F11bw3_r63y!4m2!1x407213587!2x3551367607!8b1!15sgcid%3Asubpremise!2b0!3b0!6b0!8b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=87304": {
+      "path": "_ext/www.google.com/maps/vt__c200d240.webp",
+      "contentType": "image/webp",
+      "bytes": 14674
+    },
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i9614!3i12317!4i256!2m3!1e0!2sm!3i795561386!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m16!299174093m15!14m14!1m9!1m2!1y9926971161765911199!2y14333643347460821009!2s%2Fg%2F11bw3_r63y!4m2!1x407213587!2x3551367607!8b1!15sgcid%3Asubpremise!2b0!3b0!6b0!8b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=97365": {
+      "path": "_ext/www.google.com/maps/vt__642fa379.webp",
+      "contentType": "image/webp",
+      "bytes": 13956
+    },
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i9615!3i12317!4i256!2m3!1e0!2sm!3i795561386!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m16!299174093m15!14m14!1m9!1m2!1y9926971161765911199!2y14333643347460821009!2s%2Fg%2F11bw3_r63y!4m2!1x407213587!2x3551367607!8b1!15sgcid%3Asubpremise!2b0!3b0!6b0!8b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=94091": {
+      "path": "_ext/www.google.com/maps/vt__9afcca61.webp",
+      "contentType": "image/webp",
+      "bytes": 8898
+    },
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i9616!3i12317!4i256!2m3!1e0!2sm!3i795561386!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m16!299174093m15!14m14!1m9!1m2!1y9926971161765911199!2y14333643347460821009!2s%2Fg%2F11bw3_r63y!4m2!1x407213587!2x3551367607!8b1!15sgcid%3Asubpremise!2b0!3b0!6b0!8b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=90817": {
+      "path": "_ext/www.google.com/maps/vt__1a3f72ab.webp",
+      "contentType": "image/webp",
+      "bytes": 9108
+    },
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i9617!3i12317!4i256!2m3!1e0!2sm!3i795561314!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m16!299174093m15!14m14!1m9!1m2!1y9926971161765911199!2y14333643347460821009!2s%2Fg%2F11bw3_r63y!4m2!1x407213587!2x3551367607!8b1!15sgcid%3Asubpremise!2b0!3b0!6b0!8b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=36899": {
+      "path": "_ext/www.google.com/maps/vt__01cedbfd.webp",
+      "contentType": "image/webp",
+      "bytes": 8942
+    },
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i9617!3i12318!4i256!2m3!1e0!2sm!3i795561314!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m16!299174093m15!14m14!1m9!1m2!1y9926971161765911199!2y14333643347460821009!2s%2Fg%2F11bw3_r63y!4m2!1x407213587!2x3551367607!8b1!15sgcid%3Asubpremise!2b0!3b0!6b0!8b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=37149": {
+      "path": "_ext/www.google.com/maps/vt__62c04097.webp",
+      "contentType": "image/webp",
+      "bytes": 13718
+    },
+    "https://places.googleapis.com/$rpc/google.maps.places.v1.Places/GetPlace": {
+      "path": "_ext/places.googleapis.com/$rpc/google.maps.places.v1.Places/GetPlace",
+      "contentType": "application/json+protobuf",
+      "bytes": 1123
+    },
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i9617!3i12319!4i256!2m3!1e0!2sm!3i795561314!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m16!299174093m15!14m14!1m9!1m2!1y9926971161765911199!2y14333643347460821009!2s%2Fg%2F11bw3_r63y!4m2!1x407213587!2x3551367607!8b1!15sgcid%3Asubpremise!2b0!3b0!6b0!8b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=37399": {
+      "path": "_ext/www.google.com/maps/vt__0e2f190e.webp",
+      "contentType": "image/webp",
+      "bytes": 13312
+    },
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i9617!3i12320!4i256!2m3!1e0!2sm!3i795561314!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m16!299174093m15!14m14!1m9!1m2!1y9926971161765911199!2y14333643347460821009!2s%2Fg%2F11bw3_r63y!4m2!1x407213587!2x3551367607!8b1!15sgcid%3Asubpremise!2b0!3b0!6b0!8b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=74186": {
+      "path": "_ext/www.google.com/maps/vt__bb0e61a2.webp",
+      "contentType": "image/webp",
+      "bytes": 10122
+    },
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i9612!3i12320!4i256!2m3!1e0!2sm!3i795561314!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m16!299174093m15!14m14!1m9!1m2!1y9926971161765911199!2y14333643347460821009!2s%2Fg%2F11bw3_r63y!4m2!1x407213587!2x3551367607!8b1!15sgcid%3Asubpremise!2b0!3b0!6b0!8b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=90556": {
+      "path": "_ext/www.google.com/maps/vt__4a83c9b8.webp",
+      "contentType": "image/webp",
+      "bytes": 10490
+    },
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i9612!3i12319!4i256!2m3!1e0!2sm!3i795561314!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m16!299174093m15!14m14!1m9!1m2!1y9926971161765911199!2y14333643347460821009!2s%2Fg%2F11bw3_r63y!4m2!1x407213587!2x3551367607!8b1!15sgcid%3Asubpremise!2b0!3b0!6b0!8b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=53769": {
+      "path": "_ext/www.google.com/maps/vt__2fa22780.webp",
+      "contentType": "image/webp",
+      "bytes": 9592
+    },
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i9612!3i12318!4i256!2m3!1e0!2sm!3i795560990!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m16!299174093m15!14m14!1m9!1m2!1y9926971161765911199!2y14333643347460821009!2s%2Fg%2F11bw3_r63y!4m2!1x407213587!2x3551367607!8b1!15sgcid%3Asubpremise!2b0!3b0!6b0!8b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=76060": {
+      "path": "_ext/www.google.com/maps/vt__63c23b8f.webp",
+      "contentType": "image/webp",
+      "bytes": 11302
+    },
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i9612!3i12317!4i256!2m3!1e0!2sm!3i795561494!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m16!299174093m15!14m14!1m9!1m2!1y9926971161765911199!2y14333643347460821009!2s%2Fg%2F11bw3_r63y!4m2!1x407213587!2x3551367607!8b1!15sgcid%3Asubpremise!2b0!3b0!6b0!8b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=90578": {
+      "path": "_ext/www.google.com/maps/vt__5227adc7.webp",
+      "contentType": "image/webp",
+      "bytes": 9738
+    },
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i9618!3i12317!4i256!2m3!1e0!2sm!3i795561314!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m16!299174093m15!14m14!1m9!1m2!1y9926971161765911199!2y14333643347460821009!2s%2Fg%2F11bw3_r63y!4m2!1x407213587!2x3551367607!8b1!15sgcid%3Asubpremise!2b0!3b0!6b0!8b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=33625": {
+      "path": "_ext/www.google.com/maps/vt__da052a21.webp",
+      "contentType": "image/webp",
+      "bytes": 9366
+    },
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i9618!3i12319!4i256!2m3!1e0!2sm!3i795561386!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m16!299174093m15!14m14!1m9!1m2!1y9926971161765911199!2y14333643347460821009!2s%2Fg%2F11bw3_r63y!4m2!1x407213587!2x3551367607!8b1!15sgcid%3Asubpremise!2b0!3b0!6b0!8b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=84769": {
+      "path": "_ext/www.google.com/maps/vt__066a0f42.webp",
+      "contentType": "image/webp",
+      "bytes": 13102
+    },
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i9618!3i12318!4i256!2m3!1e0!2sm!3i795561386!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m16!299174093m15!14m14!1m9!1m2!1y9926971161765911199!2y14333643347460821009!2s%2Fg%2F11bw3_r63y!4m2!1x407213587!2x3551367607!8b1!15sgcid%3Asubpremise!2b0!3b0!6b0!8b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=84519": {
+      "path": "_ext/www.google.com/maps/vt__1662197d.webp",
+      "contentType": "image/webp",
+      "bytes": 13302
+    },
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i9618!3i12320!4i256!2m3!1e0!2sm!3i795561386!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m16!299174093m15!14m14!1m9!1m2!1y9926971161765911199!2y14333643347460821009!2s%2Fg%2F11bw3_r63y!4m2!1x407213587!2x3551367607!8b1!15sgcid%3Asubpremise!2b0!3b0!6b0!8b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=121556": {
+      "path": "_ext/www.google.com/maps/vt__a10bd5ca.webp",
+      "contentType": "image/webp",
+      "bytes": 12708
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/css/prism-oral-surgery.webflow.6825ef4e490cf3ad348f863c-5d721bf25.min.css": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/css/prism-oral-surgery.webflow.6825ef4e490cf3ad348f863c-5d721bf25.min.css",
+      "contentType": "text/css",
+      "bytes": 46513
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/js/webflow.schunk.9ec6946a3e7d98de.js": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/js/webflow.schunk.9ec6946a3e7d98de.js",
+      "contentType": "text/javascript",
+      "bytes": 43978
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/js/webflow.846dbc5d.4a5845bbea3da4c8.js": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/js/webflow.846dbc5d.4a5845bbea3da4c8.js",
+      "contentType": "text/javascript",
+      "bytes": 1880
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68262f62faccb0e6fb539b73_AdobeStock_166138842.avif": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68262f62faccb0e6fb539b73_AdobeStock_166138842.avif",
+      "contentType": "image/avif",
+      "bytes": 63393
+    },
+    "https://p.typekit.net/p.gif?s=1&k=rux3wkq&ht=tk&h=www.prismoralsurgery.com&f=53890&a=85920292&js=1.21.0&app=typekit&e=js&_=1789713730262": {
+      "path": "_ext/p.typekit.net/p__57bd5af6.gif",
+      "contentType": "image/gif",
+      "bytes": 35
+    },
+    "https://fonts.gstatic.com/s/googlesanstext/v29/5aUu9-KzpRiLCAt4Unrc-xIKmCU5qEp2iw.woff2": {
+      "path": "_ext/fonts.gstatic.com/s/googlesanstext/v29/5aUu9-KzpRiLCAt4Unrc-xIKmCU5qEp2iw.woff2",
+      "contentType": "font/woff2",
+      "bytes": 22276
+    },
+    "https://fonts.gstatic.com/s/googlesanstext/v29/5aUp9-KzpRiLCAt4Unrc-xIKmCU5oLlVnmhjtg.woff2": {
+      "path": "_ext/fonts.gstatic.com/s/googlesanstext/v29/5aUp9-KzpRiLCAt4Unrc-xIKmCU5oLlVnmhjtg.woff2",
+      "contentType": "font/woff2",
+      "bytes": 23688
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/css/prism-oral-surgery.webflow.6825ef8e53f9e0f2520af045-9f1efbc22.min.css": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/css/prism-oral-surgery.webflow.6825ef8e53f9e0f2520af045-9f1efbc22.min.css",
+      "contentType": "text/css",
+      "bytes": 46749
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68592acc2c06250958b88b47_columbia.avif": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68592acc2c06250958b88b47_columbia.avif",
+      "contentType": "image/avif",
+      "bytes": 12624
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/685927aea60aae6b2ebc68b3_certified.avif": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/685927aea60aae6b2ebc68b3_certified.avif",
+      "contentType": "image/avif",
+      "bytes": 28639
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/685928437508e794c6716b2d_resedency.avif": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/685928437508e794c6716b2d_resedency.avif",
+      "contentType": "image/avif",
+      "bytes": 7192
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68592b446bd2d3ff14ae6724_barnaard.avif": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68592b446bd2d3ff14ae6724_barnaard.avif",
+      "contentType": "image/avif",
+      "bytes": 40170
+    },
+    "https://p.typekit.net/p.gif?s=1&k=rux3wkq&ht=tk&h=www.prismoralsurgery.com&f=53890&a=85920292&js=1.21.0&app=typekit&e=js&_=1789713734434": {
+      "path": "_ext/p.typekit.net/p__c41f1d65.gif",
+      "contentType": "image/gif",
+      "bytes": 35
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68262f646b2fd29bfc859698_AdobeStock_428238505.avif": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68262f646b2fd29bfc859698_AdobeStock_428238505.avif",
+      "contentType": "image/avif",
+      "bytes": 34135
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/682c9cc0f8cdbe6241256f97_AdobeStock_255769975.avif": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/682c9cc0f8cdbe6241256f97_AdobeStock_255769975.avif",
+      "contentType": "image/avif",
+      "bytes": 33419
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/682c9d6a54713b9291227049_AdobeStock_262116427.avif": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/682c9d6a54713b9291227049_AdobeStock_262116427.avif",
+      "contentType": "image/avif",
+      "bytes": 35524
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/682c9d1721be706276679ca3_AdobeStock_58967162.avif": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/682c9d1721be706276679ca3_AdobeStock_58967162.avif",
+      "contentType": "image/avif",
+      "bytes": 55529
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68591c7da578710e9d2c60c5_aaooms-dark.avif": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68591c7da578710e9d2c60c5_aaooms-dark.avif",
+      "contentType": "image/avif",
+      "bytes": 31509
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/684bf45748e88bef18daa209_IMG_0317.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/684bf45748e88bef18daa209_IMG_0317.webp",
+      "contentType": "image/webp",
+      "bytes": 353220
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68591d97902079f033b1c1b3_aboms-dark.avif": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68591d97902079f033b1c1b3_aboms-dark.avif",
+      "contentType": "image/avif",
+      "bytes": 28792
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/css/prism-oral-surgery.webflow.6825efa30e695993f1c05760-9e0fe6583.min.css": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/css/prism-oral-surgery.webflow.6825efa30e695993f1c05760-9e0fe6583.min.css",
+      "contentType": "text/css",
+      "bytes": 44789
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/js/webflow.aae0c9cc.4151dd204599991d.js": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/js/webflow.aae0c9cc.4151dd204599991d.js",
+      "contentType": "text/javascript",
+      "bytes": 1868
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68262f68f4e210f11db25a5a_AdobeStock_891198522.avif": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68262f68f4e210f11db25a5a_AdobeStock_891198522.avif",
+      "contentType": "image/avif",
+      "bytes": 48449
+    },
+    "https://p.typekit.net/p.gif?s=1&k=rux3wkq&ht=tk&h=www.prismoralsurgery.com&f=53890&a=85920292&js=1.21.0&app=typekit&e=js&_=1789713738903": {
+      "path": "_ext/p.typekit.net/p__58425b34.gif",
+      "contentType": "image/gif",
+      "bytes": 35
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68262f644367eac325ea3e7d_AdobeStock_137710285.avif": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68262f644367eac325ea3e7d_AdobeStock_137710285.avif",
+      "contentType": "image/avif",
+      "bytes": 49953
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68262f665368ba40d9b18f4d_AdobeStock_500193730.avif": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68262f665368ba40d9b18f4d_AdobeStock_500193730.avif",
+      "contentType": "image/avif",
+      "bytes": 26833
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/685942f6144598dd61a114df_Bone%20Grafting.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/685942f6144598dd61a114df_Bone Grafting.webp",
+      "contentType": "image/webp",
+      "bytes": 58600
+    },
+    "https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/attributes.js": {
+      "path": "_ext/cdn.jsdelivr.net/npm/@finsweet/attributes@2/attributes.js",
+      "contentType": "application/javascript",
+      "bytes": 3656
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/css/prism-oral-surgery.webflow.6825efd7fa1c84af5c346027-721dd8869.min.css": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/css/prism-oral-surgery.webflow.6825efd7fa1c84af5c346027-721dd8869.min.css",
+      "contentType": "text/css",
+      "bytes": 44429
+    },
+    "https://cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/6847fd400bbc018224407b9e_682cda3691f391264c829a18_AdobeStock_273300983.jpeg": {
+      "path": "_ext/cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/6847fd400bbc018224407b9e_682cda3691f391264c829a18_AdobeStock_273300983.jpeg",
+      "contentType": "image/jpeg",
+      "bytes": 134979
+    },
+    "https://cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/6847fd3face7197af71bd6f6_682da8ba50941f8e45f21079_AdobeStock_344133786.jpeg": {
+      "path": "_ext/cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/6847fd3face7197af71bd6f6_682da8ba50941f8e45f21079_AdobeStock_344133786.jpeg",
+      "contentType": "image/jpeg",
+      "bytes": 74817
+    },
+    "https://cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684a9fe576a5198cdd00fdf4_AdobeStock_1280215578.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684a9fe576a5198cdd00fdf4_AdobeStock_1280215578.webp",
+      "contentType": "image/webp",
+      "bytes": 86522
+    },
+    "https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-J3PPETVR.js": {
+      "path": "_ext/cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-J3PPETVR.js",
+      "contentType": "application/javascript",
+      "bytes": 679
+    },
+    "https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-VDEO3AAR.js": {
+      "path": "_ext/cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-VDEO3AAR.js",
+      "contentType": "application/javascript",
+      "bytes": 1247
+    },
+    "https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-ADKL4AJZ.js": {
+      "path": "_ext/cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-ADKL4AJZ.js",
+      "contentType": "application/javascript",
+      "bytes": 1575
+    },
+    "https://cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa3de1651dfe25d8fb089_AdobeStock_266736389_Preview.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa3de1651dfe25d8fb089_AdobeStock_266736389_Preview.webp",
+      "contentType": "image/webp",
+      "bytes": 28962
+    },
+    "https://cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa4b558dc2a6161d196fe_AdobeStock_196054358.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa4b558dc2a6161d196fe_AdobeStock_196054358.webp",
+      "contentType": "image/webp",
+      "bytes": 61168
+    },
+    "https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-WIALCYDY.js": {
+      "path": "_ext/cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-WIALCYDY.js",
+      "contentType": "application/javascript",
+      "bytes": 610
+    },
+    "https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-OF4NI3Y7.js": {
+      "path": "_ext/cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-OF4NI3Y7.js",
+      "contentType": "application/javascript",
+      "bytes": 197
+    },
+    "https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-N2ZCN6XY.js": {
+      "path": "_ext/cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-N2ZCN6XY.js",
+      "contentType": "application/javascript",
+      "bytes": 1235
+    },
+    "https://cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa275d0911ae50b2cdcbd_AdobeStock_400757502.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa275d0911ae50b2cdcbd_AdobeStock_400757502.webp",
+      "contentType": "image/webp",
+      "bytes": 110806
+    },
+    "https://p.typekit.net/p.gif?s=1&k=rux3wkq&ht=tk&h=www.prismoralsurgery.com&f=53890&a=85920292&js=1.21.0&app=typekit&e=js&_=1789713743198": {
+      "path": "_ext/p.typekit.net/p__154c5af1.gif",
+      "contentType": "image/gif",
+      "bytes": 35
+    },
+    "https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-CB6LZ537.js": {
+      "path": "_ext/cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-CB6LZ537.js",
+      "contentType": "application/javascript",
+      "bytes": 351
+    },
+    "https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-L4B2V5MO.js": {
+      "path": "_ext/cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-L4B2V5MO.js",
+      "contentType": "application/javascript",
+      "bytes": 713
+    },
+    "https://cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684a9f15af5da8ef4fbafddd_IV%20Sedation-p-1600.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684a9f15af5da8ef4fbafddd_IV Sedation-p-1600.webp",
+      "contentType": "image/webp",
+      "bytes": 55690
+    },
+    "https://cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/6847fd400bbc018224407b5c_682da9b5d4b756d2231c0357_AdobeStock_67766775.jpeg": {
+      "path": "_ext/cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/6847fd400bbc018224407b5c_682da9b5d4b756d2231c0357_AdobeStock_67766775.jpeg",
+      "contentType": "image/jpeg",
+      "bytes": 102947
+    },
+    "https://cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/6847eb70ce3e058f984f62c4_68304bcef065814f01efa0c4_AdobeStock_335342437.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/6847eb70ce3e058f984f62c4_68304bcef065814f01efa0c4_AdobeStock_335342437.webp",
+      "contentType": "image/webp",
+      "bytes": 32638
+    },
+    "https://cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa28c1ae1a325814a98ac_Nitrous%20Oxide-p-1600.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa28c1ae1a325814a98ac_Nitrous Oxide-p-1600.webp",
+      "contentType": "image/webp",
+      "bytes": 48210
+    },
+    "https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-XRTLPMPO.js": {
+      "path": "_ext/cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-XRTLPMPO.js",
+      "contentType": "application/javascript",
+      "bytes": 656
+    },
+    "https://cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa18550467d2bca17fe2a_AdobeStock_264395936.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa18550467d2bca17fe2a_AdobeStock_264395936.webp",
+      "contentType": "image/webp",
+      "bytes": 61232
+    },
+    "https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-ZI7TAH2K.js": {
+      "path": "_ext/cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-ZI7TAH2K.js",
+      "contentType": "application/javascript",
+      "bytes": 1523
+    },
+    "https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-K46K3RI5.js": {
+      "path": "_ext/cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-K46K3RI5.js",
+      "contentType": "application/javascript",
+      "bytes": 605
+    },
+    "https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-GGDEANQW.js": {
+      "path": "_ext/cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-GGDEANQW.js",
+      "contentType": "application/javascript",
+      "bytes": 320
+    },
+    "https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/src-T7SM3ONB.js": {
+      "path": "_ext/cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/src-T7SM3ONB.js",
+      "contentType": "application/javascript",
+      "bytes": 95783
+    },
+    "https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-WL5KIXHF.js": {
+      "path": "_ext/cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-WL5KIXHF.js",
+      "contentType": "application/javascript",
+      "bytes": 402
+    },
+    "https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-7CAOOJVW.js": {
+      "path": "_ext/cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-7CAOOJVW.js",
+      "contentType": "application/javascript",
+      "bytes": 333
+    },
+    "https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-T2PNG2TC.js": {
+      "path": "_ext/cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-T2PNG2TC.js",
+      "contentType": "application/javascript",
+      "bytes": 507
+    },
+    "https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-WO4GQJHX.js": {
+      "path": "_ext/cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-WO4GQJHX.js",
+      "contentType": "application/javascript",
+      "bytes": 112
+    },
+    "https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-ZZRTGM4V.js": {
+      "path": "_ext/cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-ZZRTGM4V.js",
+      "contentType": "application/javascript",
+      "bytes": 2049
+    },
+    "https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-UAA7M346.js": {
+      "path": "_ext/cdn.jsdelivr.net/npm/@finsweet/attributes@2/dist/chunk-UAA7M346.js",
+      "contentType": "application/javascript",
+      "bytes": 1285
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/css/prism-oral-surgery.webflow.6825f04df04084557b5717dc-976c17e30.min.css": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/css/prism-oral-surgery.webflow.6825f04df04084557b5717dc-976c17e30.min.css",
+      "contentType": "text/css",
+      "bytes": 44425
+    },
+    "https://cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa829d77a9c786626e9e2_Dental%20Implants-p-1600.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa829d77a9c786626e9e2_Dental Implants-p-1600.webp",
+      "contentType": "image/webp",
+      "bytes": 36880
+    },
+    "https://cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa83d007ae22886ae8c47_All-on-4%20Dental%20Implants.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa83d007ae22886ae8c47_All-on-4 Dental Implants.webp",
+      "contentType": "image/webp",
+      "bytes": 39386
+    },
+    "https://cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa792dff316be9c9a7d6c_AdobeStock_552221120.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa792dff316be9c9a7d6c_AdobeStock_552221120.webp",
+      "contentType": "image/webp",
+      "bytes": 72916
+    },
+    "https://p.typekit.net/p.gif?s=1&k=rux3wkq&ht=tk&h=www.prismoralsurgery.com&f=53890&a=85920292&js=1.21.0&app=typekit&e=js&_=1789713747664": {
+      "path": "_ext/p.typekit.net/p__baec6ddd.gif",
+      "contentType": "image/gif",
+      "bytes": 35
+    },
+    "https://cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/6847ec363a1dba4121772f2b_682da33b8008de02359eee09_AdobeStock_475976349.jpeg": {
+      "path": "_ext/cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/6847ec363a1dba4121772f2b_682da33b8008de02359eee09_AdobeStock_475976349.jpeg",
+      "contentType": "image/jpeg",
+      "bytes": 1130005
+    },
+    "https://cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/6847ffcdace7197af71da332_68304f3fadfb4223824372c2_AdobeStock_513322525.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/6847ffcdace7197af71da332_68304f3fadfb4223824372c2_AdobeStock_513322525.webp",
+      "contentType": "image/webp",
+      "bytes": 56778
+    },
+    "https://cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/6847ec7a0d2206b0ffb1fea5_682da2752525fd261595edc6_AdobeStock_165738243.jpeg": {
+      "path": "_ext/cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/6847ec7a0d2206b0ffb1fea5_682da2752525fd261595edc6_AdobeStock_165738243.jpeg",
+      "contentType": "image/jpeg",
+      "bytes": 1362253
+    },
+    "https://cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa73388f4192789272dea_AdobeStock_470333732.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa73388f4192789272dea_AdobeStock_470333732.webp",
+      "contentType": "image/webp",
+      "bytes": 45538
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/css/prism-oral-surgery.webflow.6825f0614659973cf753e67c-491efcf5c.min.css": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/css/prism-oral-surgery.webflow.6825f0614659973cf753e67c-491efcf5c.min.css",
+      "contentType": "text/css",
+      "bytes": 44279
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/682c604f484a152197f2ea3f_AdobeStock_297288719.avif": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/682c604f484a152197f2ea3f_AdobeStock_297288719.avif",
+      "contentType": "image/avif",
+      "bytes": 67719
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68262f6a5e84870fe6193e9f_AdobeStock_1359460666.avif": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68262f6a5e84870fe6193e9f_AdobeStock_1359460666.avif",
+      "contentType": "image/avif",
+      "bytes": 40126
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/685260e2c9fd166defb4692c_Care%20Credit.svg": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/685260e2c9fd166defb4692c_Care Credit.svg",
+      "contentType": "image/svg+xml",
+      "bytes": 12704
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/685261275856c6ca4c5a0eb0_Cherry.svg": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/685261275856c6ca4c5a0eb0_Cherry.svg",
+      "contentType": "image/svg+xml",
+      "bytes": 7273
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/682c64807983e925fab787d1_Rectangle%207.avif": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/682c64807983e925fab787d1_Rectangle 7.avif",
+      "contentType": "image/avif",
+      "bytes": 5109
+    },
+    "https://p.typekit.net/p.gif?s=1&k=rux3wkq&ht=tk&h=www.prismoralsurgery.com&f=53890&a=85920292&js=1.21.0&app=typekit&e=js&_=1789713752154": {
+      "path": "_ext/p.typekit.net/p__691964b1.gif",
+      "contentType": "image/gif",
+      "bytes": 35
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/682c6480d86e8674566478ee_Rectangle%207%20(1).avif": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/682c6480d86e8674566478ee_Rectangle 7 (1).avif",
+      "contentType": "image/avif",
+      "bytes": 12360
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/682c64807461c9577a8038b4_Rectangle%207%20(2).avif": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/682c64807461c9577a8038b4_Rectangle 7 (2).avif",
+      "contentType": "image/avif",
+      "bytes": 10838
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/682c6480b8c4292b35ff07e1_Rectangle%208%20(2).avif": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/682c6480b8c4292b35ff07e1_Rectangle 8 (2).avif",
+      "contentType": "image/avif",
+      "bytes": 3686
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/682c648006f8c1b476681e74_Rectangle%208%20(1).avif": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/682c648006f8c1b476681e74_Rectangle 8 (1).avif",
+      "contentType": "image/avif",
+      "bytes": 4667
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/684bddbe1e4d1a27ea2cde93_Metlife.svg": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/684bddbe1e4d1a27ea2cde93_Metlife.svg",
+      "contentType": "image/svg+xml",
+      "bytes": 5463
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/684bdff8d36310d8c94a4b83_DNoA.avif": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/684bdff8d36310d8c94a4b83_DNoA.avif",
+      "contentType": "image/avif",
+      "bytes": 5810
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/684be05288dd3e9f2fe81604_GEha.avif": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/684be05288dd3e9f2fe81604_GEha.avif",
+      "contentType": "image/avif",
+      "bytes": 3689
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/684be0e6171c0a11201b472a_Sun%20Life%20Insurance.svg": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/684be0e6171c0a11201b472a_Sun Life Insurance.svg",
+      "contentType": "image/svg+xml",
+      "bytes": 15176
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/684be51a2c245392e80fb68b_concor.avif": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/684be51a2c245392e80fb68b_concor.avif",
+      "contentType": "image/avif",
+      "bytes": 7034
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/css/prism-oral-surgery.webflow.6825f06fcaff9a4fe8f89f5c-36ee389d8.min.css": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/css/prism-oral-surgery.webflow.6825f06fcaff9a4fe8f89f5c-36ee389d8.min.css",
+      "contentType": "text/css",
+      "bytes": 45464
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68262f66f74d3777eb290144_AdobeStock_548474292.avif": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68262f66f74d3777eb290144_AdobeStock_548474292.avif",
+      "contentType": "image/avif",
+      "bytes": 27554
+    },
+    "https://p.typekit.net/p.gif?s=1&k=rux3wkq&ht=tk&h=www.prismoralsurgery.com&f=53890&a=85920292&js=1.21.0&app=typekit&e=js&_=1789713756691": {
+      "path": "_ext/p.typekit.net/p__6209dabf.gif",
+      "contentType": "image/gif",
+      "bytes": 35
+    },
+    "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy&co=aHR0cHM6Ly93d3cucHJpc21vcmFsc3VyZ2VyeS5jb206NDQz&hl=en&v=BnqMGSY_YP4cCmbNINHpJPkd&size=invisible&anchor-ms=20000&execute-ms=30000&cb=mjgexfdfkv4c": {
+      "path": "_ext/www.google.com/recaptcha/api2/anchor__38b2297f.html",
+      "contentType": "text/html",
+      "bytes": 55155
+    },
+    "https://www.google.com/recaptcha/api2/bframe?hl=en&v=BnqMGSY_YP4cCmbNINHpJPkd&k=6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy&bft=0dAFcWeA70pO2KLhO-MilVoTbUgrHY50X91nmnriuXkoT1arOyETXMFhzIXMu1CMr8jE1la4aZIVkJ7ms5aaiwGUePCNrJthcNDQ": {
+      "path": "_ext/www.google.com/recaptcha/api2/bframe__8ed2aa17.html",
+      "contentType": "text/html",
+      "bytes": 17035
+    },
+    "https://www.google.com/recaptcha/api2/payload?p=06AFcWeA4SwRE9FooRxi2hFrKWR5R-qoa7XLC6FzDnrs0OCOdKn3EbWhdmsYOq0xmXXd2dCRz_dr1uhXvb19aNNdoXLGn3Y8p58M6ewedxEMV0DaHWI8EqdESV69gSpFpGR-OsnfnT1ed24w933fLVRZLgXVd8sbNaO-Yk1v3x71-5JYx1fAdFWPgDezN5tzwB8uYdJeBJlzfWpfref8XZN_GDQVN10QLViPurkdUYNNnOz-9dNp-1sY8&k=6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy": {
+      "path": "_ext/www.google.com/recaptcha/api2/payload__e0f57e78.jpg",
+      "contentType": "image/jpeg",
+      "bytes": 53878
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/css/prism-oral-surgery.webflow.68593d7e5730cd147b6c9710-fefc2dc18.min.css": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/css/prism-oral-surgery.webflow.68593d7e5730cd147b6c9710-fefc2dc18.min.css",
+      "contentType": "text/css",
+      "bytes": 44429
+    },
+    "https://cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/6847fd3f5f6a79600de4a140_682dac04ce06b109733137f8_AdobeStock_256239848.jpeg": {
+      "path": "_ext/cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/6847fd3f5f6a79600de4a140_682dac04ce06b109733137f8_AdobeStock_256239848.jpeg",
+      "contentType": "image/jpeg",
+      "bytes": 97319
+    },
+    "https://cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/68593767737efb7ba7f5141d_684aa5a3b717a660a9c2275f_AdobeStock_1504698193.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/68593767737efb7ba7f5141d_684aa5a3b717a660a9c2275f_AdobeStock_1504698193.webp",
+      "contentType": "image/webp",
+      "bytes": 49510
+    },
+    "https://cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/6847fd3fcee0a65ecccf484f_682da9cac4fdac530a577a2f_AdobeStock_144851129.jpeg": {
+      "path": "_ext/cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/6847fd3fcee0a65ecccf484f_682da9cac4fdac530a577a2f_AdobeStock_144851129.jpeg",
+      "contentType": "image/jpeg",
+      "bytes": 125394
+    },
+    "https://p.typekit.net/p.gif?s=1&k=rux3wkq&ht=tk&h=www.prismoralsurgery.com&f=53890&a=85920292&js=1.21.0&app=typekit&e=js&_=1789713761220": {
+      "path": "_ext/p.typekit.net/p__0ddd5caf.gif",
+      "contentType": "image/gif",
+      "bytes": 35
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/css/prism-oral-surgery.webflow.69cbd9cd81aaf694e3cae1b0-dc1d11cb5.min.css": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/css/prism-oral-surgery.webflow.69cbd9cd81aaf694e3cae1b0-dc1d11cb5.min.css",
+      "contentType": "text/css",
+      "bytes": 40265
+    },
+    "https://p.typekit.net/p.gif?s=1&k=rux3wkq&ht=tk&h=www.prismoralsurgery.com&f=53890&a=85920292&js=1.21.0&app=typekit&e=js&_=1789713765512": {
+      "path": "_ext/p.typekit.net/p__1ee287ba.gif",
+      "contentType": "image/gif",
+      "bytes": 35
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/css/prism-oral-surgery.webflow.69cbdb1d3dfba5826700e523-dc1d11cb5.min.css": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/css/prism-oral-surgery.webflow.69cbdb1d3dfba5826700e523-dc1d11cb5.min.css",
+      "contentType": "text/css",
+      "bytes": 40265
+    },
+    "https://p.typekit.net/p.gif?s=1&k=rux3wkq&ht=tk&h=www.prismoralsurgery.com&f=53890&a=85920292&js=1.21.0&app=typekit&e=js&_=1789713769598": {
+      "path": "_ext/p.typekit.net/p__a210d9de.gif",
+      "contentType": "image/gif",
+      "bytes": 35
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/css/prism-oral-surgery.webflow.69cbdb9946b8c8b78648aa09-dc1d11cb5.min.css": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/css/prism-oral-surgery.webflow.69cbdb9946b8c8b78648aa09-dc1d11cb5.min.css",
+      "contentType": "text/css",
+      "bytes": 40265
+    },
+    "https://p.typekit.net/p.gif?s=1&k=rux3wkq&ht=tk&h=www.prismoralsurgery.com&f=53890&a=85920292&js=1.21.0&app=typekit&e=js&_=1789713773578": {
+      "path": "_ext/p.typekit.net/p__a73154e6.gif",
+      "contentType": "image/gif",
+      "bytes": 35
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/css/prism-oral-surgery.webflow.682cdfb76a88231498817e4a-082d48346.min.css": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/css/prism-oral-surgery.webflow.682cdfb76a88231498817e4a-082d48346.min.css",
+      "contentType": "text/css",
+      "bytes": 42344
+    },
+    "https://p.typekit.net/p.gif?s=1&k=rux3wkq&ht=tk&h=www.prismoralsurgery.com&f=53890&a=85920292&js=1.21.0&app=typekit&e=js&_=1789713777139": {
+      "path": "_ext/p.typekit.net/p__af7e13db.gif",
+      "contentType": "image/gif",
+      "bytes": 35
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/6828bc9f465b1c09e1371ab2_phone.svg": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/6828bc9f465b1c09e1371ab2_phone.svg",
+      "contentType": "image/svg+xml",
+      "bytes": 1742
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/6828bc9e96b71bb55dff60e1_envelope.svg": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/6828bc9e96b71bb55dff60e1_envelope.svg",
+      "contentType": "image/svg+xml",
+      "bytes": 410
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/6828bc7fec7dc180f81c3b2f_map.svg": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/6828bc7fec7dc180f81c3b2f_map.svg",
+      "contentType": "image/svg+xml",
+      "bytes": 905
+    },
+    "https://p.typekit.net/p.gif?s=1&k=rux3wkq&ht=tk&h=www.prismoralsurgery.com&f=53890&a=85920292&js=1.21.0&app=typekit&e=js&_=1789713781157": {
+      "path": "_ext/p.typekit.net/p__6ea1d6a4.gif",
+      "contentType": "image/gif",
+      "bytes": 35
+    },
+    "https://p.typekit.net/p.gif?s=1&k=rux3wkq&ht=tk&h=www.prismoralsurgery.com&f=53890&a=85920292&js=1.21.0&app=typekit&e=js&_=1789713784978": {
+      "path": "_ext/p.typekit.net/p__0d425ac2.gif",
+      "contentType": "image/gif",
+      "bytes": 35
+    },
+    "https://p.typekit.net/p.gif?s=1&k=rux3wkq&ht=tk&h=www.prismoralsurgery.com&f=53890&a=85920292&js=1.21.0&app=typekit&e=js&_=1789713789434": {
+      "path": "_ext/p.typekit.net/p__2f4641af.gif",
+      "contentType": "image/gif",
+      "bytes": 35
+    },
+    "https://p.typekit.net/p.gif?s=1&k=rux3wkq&ht=tk&h=www.prismoralsurgery.com&f=53890&a=85920292&js=1.21.0&app=typekit&e=js&_=1789713793395": {
+      "path": "_ext/p.typekit.net/p__86f058db.gif",
+      "contentType": "image/gif",
+      "bytes": 35
+    },
+    "https://cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684a9f15af5da8ef4fbafddd_IV%20Sedation.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684a9f15af5da8ef4fbafddd_IV Sedation.webp",
+      "contentType": "image/webp",
+      "bytes": 95538
+    },
+    "https://p.typekit.net/p.gif?s=1&k=rux3wkq&ht=tk&h=www.prismoralsurgery.com&f=53890&a=85920292&js=1.21.0&app=typekit&e=js&_=1789713797477": {
+      "path": "_ext/p.typekit.net/p__c0e5137f.gif",
+      "contentType": "image/gif",
+      "bytes": 35
+    },
+    "https://cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa28c1ae1a325814a98ac_Nitrous%20Oxide.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa28c1ae1a325814a98ac_Nitrous Oxide.webp",
+      "contentType": "image/webp",
+      "bytes": 48290
+    },
+    "https://p.typekit.net/p.gif?s=1&k=rux3wkq&ht=tk&h=www.prismoralsurgery.com&f=53890&a=85920292&js=1.21.0&app=typekit&e=js&_=1789713801387": {
+      "path": "_ext/p.typekit.net/p__d0543b68.gif",
+      "contentType": "image/gif",
+      "bytes": 35
+    },
+    "https://p.typekit.net/p.gif?s=1&k=rux3wkq&ht=tk&h=www.prismoralsurgery.com&f=53890&a=85920292&js=1.21.0&app=typekit&e=js&_=1789713805501": {
+      "path": "_ext/p.typekit.net/p__b7a3c3dc.gif",
+      "contentType": "image/gif",
+      "bytes": 35
+    },
+    "https://p.typekit.net/p.gif?s=1&k=rux3wkq&ht=tk&h=www.prismoralsurgery.com&f=53890&a=85920292&js=1.21.0&app=typekit&e=js&_=1789713809183": {
+      "path": "_ext/p.typekit.net/p__7d1ffb94.gif",
+      "contentType": "image/gif",
+      "bytes": 35
+    },
+    "https://p.typekit.net/p.gif?s=1&k=rux3wkq&ht=tk&h=www.prismoralsurgery.com&f=53890&a=85920292&js=1.21.0&app=typekit&e=js&_=1789713813131": {
+      "path": "_ext/p.typekit.net/p__8d34cca8.gif",
+      "contentType": "image/gif",
+      "bytes": 35
+    },
+    "https://p.typekit.net/p.gif?s=1&k=rux3wkq&ht=tk&h=www.prismoralsurgery.com&f=53890&a=85920292&js=1.21.0&app=typekit&e=js&_=1789713816957": {
+      "path": "_ext/p.typekit.net/p__0cd9595d.gif",
+      "contentType": "image/gif",
+      "bytes": 35
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/css/prism-oral-surgery.webflow.682ce02a2c1812be55a9de81-8d748a7ae.min.css": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/css/prism-oral-surgery.webflow.682ce02a2c1812be55a9de81-8d748a7ae.min.css",
+      "contentType": "text/css",
+      "bytes": 42388
+    },
+    "https://p.typekit.net/p.gif?s=1&k=rux3wkq&ht=tk&h=www.prismoralsurgery.com&f=53890&a=85920292&js=1.21.0&app=typekit&e=js&_=1789713821988": {
+      "path": "_ext/p.typekit.net/p__bb11e00a.gif",
+      "contentType": "image/gif",
+      "bytes": 35
+    },
+    "https://p.typekit.net/p.gif?s=1&k=rux3wkq&ht=tk&h=www.prismoralsurgery.com&f=53890&a=85920292&js=1.21.0&app=typekit&e=js&_=1789713826393": {
+      "path": "_ext/p.typekit.net/p__13ae18e2.gif",
+      "contentType": "image/gif",
+      "bytes": 35
+    },
+    "https://cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa829d77a9c786626e9e2_Dental%20Implants.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa829d77a9c786626e9e2_Dental Implants.webp",
+      "contentType": "image/webp",
+      "bytes": 38812
+    },
+    "https://p.typekit.net/p.gif?s=1&k=rux3wkq&ht=tk&h=www.prismoralsurgery.com&f=53890&a=85920292&js=1.21.0&app=typekit&e=js&_=1789713830136": {
+      "path": "_ext/p.typekit.net/p__35f6d802.gif",
+      "contentType": "image/gif",
+      "bytes": 35
+    },
+    "https://p.typekit.net/p.gif?s=1&k=rux3wkq&ht=tk&h=www.prismoralsurgery.com&f=53890&a=85920292&js=1.21.0&app=typekit&e=js&_=1789713834462": {
+      "path": "_ext/p.typekit.net/p__e126f3c4.gif",
+      "contentType": "image/gif",
+      "bytes": 35
+    },
+    "https://p.typekit.net/p.gif?s=1&k=rux3wkq&ht=tk&h=www.prismoralsurgery.com&f=53890&a=85920292&js=1.21.0&app=typekit&e=js&_=1789713838407": {
+      "path": "_ext/p.typekit.net/p__7bcc22e7.gif",
+      "contentType": "image/gif",
+      "bytes": 35
+    },
+    "https://p.typekit.net/p.gif?s=1&k=rux3wkq&ht=tk&h=www.prismoralsurgery.com&f=53890&a=85920292&js=1.21.0&app=typekit&e=js&_=1789713842522": {
+      "path": "_ext/p.typekit.net/p__331fcc87.gif",
+      "contentType": "image/gif",
+      "bytes": 35
+    },
+    "https://p.typekit.net/p.gif?s=1&k=rux3wkq&ht=tk&h=www.prismoralsurgery.com&f=53890&a=85920292&js=1.21.0&app=typekit&e=js&_=1789713846327": {
+      "path": "_ext/p.typekit.net/p__70e7bc4c.gif",
+      "contentType": "image/gif",
+      "bytes": 35
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/css/prism-oral-surgery.webflow.6859368f725aa21473ab8c63-1a6edb3bb.min.css": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/css/prism-oral-surgery.webflow.6859368f725aa21473ab8c63-1a6edb3bb.min.css",
+      "contentType": "text/css",
+      "bytes": 42344
+    },
+    "https://p.typekit.net/p.gif?s=1&k=rux3wkq&ht=tk&h=www.prismoralsurgery.com&f=53890&a=85920292&js=1.21.0&app=typekit&e=js&_=1789713850335": {
+      "path": "_ext/p.typekit.net/p__ef3ba55e.gif",
+      "contentType": "image/gif",
+      "bytes": 35
+    },
+    "https://p.typekit.net/p.gif?s=1&k=rux3wkq&ht=tk&h=www.prismoralsurgery.com&f=53890&a=85920292&js=1.21.0&app=typekit&e=js&_=1789713854134": {
+      "path": "_ext/p.typekit.net/p__37745f30.gif",
+      "contentType": "image/gif",
+      "bytes": 35
+    },
+    "https://p.typekit.net/p.gif?s=1&k=rux3wkq&ht=tk&h=www.prismoralsurgery.com&f=53890&a=85920292&js=1.21.0&app=typekit&e=js&_=1789713858389": {
+      "path": "_ext/p.typekit.net/p__f9b92410.gif",
+      "contentType": "image/gif",
+      "bytes": 35
+    },
+    "https://cdn.prod.website-files.com/static/page-not-found.211a85e40c.svg": {
+      "path": "_ext/cdn.prod.website-files.com/static/page-not-found.211a85e40c.svg",
+      "contentType": "image/svg+xml",
+      "bytes": 754
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/css/prism-oral-surgery.webflow.6825a5e7f696993f2ea31a3a-587909358.min.css": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/css/prism-oral-surgery.webflow.6825a5e7f696993f2ea31a3a-587909358.min.css",
+      "contentType": "text/css",
+      "bytes": 27300
+    },
+    "https://cdn.prod.website-files.com/gsap/3.14.2/gsap.min.js": {
+      "path": "_ext/cdn.prod.website-files.com/gsap/3.14.2/gsap.min.js",
+      "contentType": "text/javascript",
+      "bytes": 72779
+    },
+    "https://cdn.prod.website-files.com/gsap/3.14.2/SplitText.min.js": {
+      "path": "_ext/cdn.prod.website-files.com/gsap/3.14.2/SplitText.min.js",
+      "contentType": "text/javascript",
+      "bytes": 7779
+    },
+    "https://cdn.prod.website-files.com/gsap/3.14.2/ScrollTrigger.min.js": {
+      "path": "_ext/cdn.prod.website-files.com/gsap/3.14.2/ScrollTrigger.min.js",
+      "contentType": "text/javascript",
+      "bytes": 44235
+    },
+    "https://p.typekit.net/p.gif?s=1&k=rux3wkq&ht=tk&h=www.prismoralsurgery.com&f=53890&a=85920292&js=1.21.0&app=typekit&e=js&_=1789713862260": {
+      "path": "_ext/p.typekit.net/p__719884de.gif",
+      "contentType": "image/gif",
+      "bytes": 35
+    },
+    "https://p.typekit.net/p.gif?s=1&k=rux3wkq&ht=tk&h=www.prismoralsurgery.com&f=53890&a=85920292&js=1.21.0&app=typekit&e=js&_=1789713865395": {
+      "path": "_ext/p.typekit.net/p__5e467378.gif",
+      "contentType": "image/gif",
+      "bytes": 35
+    },
+    "https://p.typekit.net/p.gif?s=1&k=rux3wkq&ht=tk&h=www.prismoralsurgery.com&f=53890&a=85920292&js=1.21.0&app=typekit&e=js&_=1789713869421": {
+      "path": "_ext/p.typekit.net/p__0eb2e93b.gif",
+      "contentType": "image/gif",
+      "bytes": 35
+    },
+    "https://p.typekit.net/p.gif?s=1&k=rux3wkq&ht=tk&h=www.prismoralsurgery.com&f=53890&a=85920292&js=1.21.0&app=typekit&e=js&_=1789713872423": {
+      "path": "_ext/p.typekit.net/p__2792c9c0.gif",
+      "contentType": "image/gif",
+      "bytes": 35
+    },
+    "https://p.typekit.net/p.gif?s=1&k=rux3wkq&ht=tk&h=www.prismoralsurgery.com&f=53890&a=85920292&js=1.21.0&app=typekit&e=js&_=1789713875814": {
+      "path": "_ext/p.typekit.net/p__3cf8b9a7.gif",
+      "contentType": "image/gif",
+      "bytes": 35
+    },
+    "https://p.typekit.net/p.gif?s=1&k=rux3wkq&ht=tk&h=www.prismoralsurgery.com&f=53890&a=85920292&js=1.21.0&app=typekit&e=js&_=1789713879090": {
+      "path": "_ext/p.typekit.net/p__053e6d1d.gif",
+      "contentType": "image/gif",
+      "bytes": 35
+    },
+    "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy&co=aHR0cHM6Ly93d3cucHJpc21vcmFsc3VyZ2VyeS5jb206NDQz&hl=en&v=BnqMGSY_YP4cCmbNINHpJPkd&size=invisible&anchor-ms=20000&execute-ms=30000&cb=3ow206i9dsnq": {
+      "path": "_ext/www.google.com/recaptcha/api2/anchor__040f82b5.html",
+      "contentType": "text/html",
+      "bytes": 55134
+    },
+    "https://p.typekit.net/p.gif?s=1&k=rux3wkq&ht=tk&h=www.prismoralsurgery.com&f=53890&a=85920292&js=1.21.0&app=typekit&e=js&_=1789713879970": {
+      "path": "_ext/p.typekit.net/p__2b733114.gif",
+      "contentType": "image/gif",
+      "bytes": 35
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68262f664e03448682da8c6b_AdobeStock_453782917.avif": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68262f664e03448682da8c6b_AdobeStock_453782917.avif",
+      "contentType": "image/avif",
+      "bytes": 14175
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68262f61dac702d7b0815f9b_AdobeStock_215224577.avif": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68262f61dac702d7b0815f9b_AdobeStock_215224577.avif",
+      "contentType": "image/avif",
+      "bytes": 36431
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/6836ba10d99cb6abd6cedc18_AdobeStock_919772485-p-500.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/6836ba10d99cb6abd6cedc18_AdobeStock_919772485-p-500.webp",
+      "contentType": "image/webp",
+      "bytes": 10644
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/6836ba10d99cb6abd6cedc18_AdobeStock_919772485-p-800.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/6836ba10d99cb6abd6cedc18_AdobeStock_919772485-p-800.webp",
+      "contentType": "image/webp",
+      "bytes": 18964
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/6836ba10d99cb6abd6cedc18_AdobeStock_919772485-p-1080.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/6836ba10d99cb6abd6cedc18_AdobeStock_919772485-p-1080.webp",
+      "contentType": "image/webp",
+      "bytes": 26976
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68262f664e03448682da8c6b_AdobeStock_453782917-p-500.avif": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68262f664e03448682da8c6b_AdobeStock_453782917-p-500.avif",
+      "contentType": "image/avif",
+      "bytes": 8330
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68262f61dac702d7b0815f9b_AdobeStock_215224577-p-500.avif": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68262f61dac702d7b0815f9b_AdobeStock_215224577-p-500.avif",
+      "contentType": "image/avif",
+      "bytes": 11174
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68262f61dac702d7b0815f9b_AdobeStock_215224577-p-800.avif": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68262f61dac702d7b0815f9b_AdobeStock_215224577-p-800.avif",
+      "contentType": "image/avif",
+      "bytes": 23088
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68262f685454313133d0fcb4_AdobeStock_686742386-p-500.avif": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68262f685454313133d0fcb4_AdobeStock_686742386-p-500.avif",
+      "contentType": "image/avif",
+      "bytes": 9696
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68262f685454313133d0fcb4_AdobeStock_686742386-p-800.avif": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68262f685454313133d0fcb4_AdobeStock_686742386-p-800.avif",
+      "contentType": "image/avif",
+      "bytes": 19438
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68262f61ecbc41ccefa3426e_AdobeStock_133831970-p-500.avif": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68262f61ecbc41ccefa3426e_AdobeStock_133831970-p-500.avif",
+      "contentType": "image/avif",
+      "bytes": 9622
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68262f61ecbc41ccefa3426e_AdobeStock_133831970-p-800.avif": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68262f61ecbc41ccefa3426e_AdobeStock_133831970-p-800.avif",
+      "contentType": "image/avif",
+      "bytes": 17422
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/6825daa5c472e6cfc9d2892e_favicon.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/6825daa5c472e6cfc9d2892e_favicon.webp",
+      "contentType": "image/webp",
+      "bytes": 680
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/6825dab48404073eae28187d_webclip.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/6825dab48404073eae28187d_webclip.webp",
+      "contentType": "image/webp",
+      "bytes": 6870
+    },
+    "https://use.typekit.net/af/60c855/00000000000000007758a676/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3": {
+      "path": "_ext/use.typekit.net/af/60c855/00000000000000007758a676/31/d__ef3c5c13",
+      "contentType": "application/font-woff",
+      "bytes": 25572
+    },
+    "https://use.typekit.net/af/60c855/00000000000000007758a676/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3": {
+      "path": "_ext/use.typekit.net/af/60c855/00000000000000007758a676/31/a__ef3c5c13",
+      "contentType": "font/opentype",
+      "bytes": 36720
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/6825a5e7f696993f2ea31a58_placeholder-image.svg": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/6825a5e7f696993f2ea31a58_placeholder-image.svg",
+      "contentType": "image/svg+xml",
+      "bytes": 1017
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/684bef6263e94cc50310225b_doc-p-500.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/684bef6263e94cc50310225b_doc-p-500.webp",
+      "contentType": "image/webp",
+      "bytes": 20286
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/684bef6263e94cc50310225b_doc-p-800.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/684bef6263e94cc50310225b_doc-p-800.webp",
+      "contentType": "image/webp",
+      "bytes": 39134
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68262f646b2fd29bfc859698_AdobeStock_428238505-p-500.avif": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68262f646b2fd29bfc859698_AdobeStock_428238505-p-500.avif",
+      "contentType": "image/avif",
+      "bytes": 13658
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68262f646b2fd29bfc859698_AdobeStock_428238505-p-800.avif": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68262f646b2fd29bfc859698_AdobeStock_428238505-p-800.avif",
+      "contentType": "image/avif",
+      "bytes": 26492
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/682c9cc0f8cdbe6241256f97_AdobeStock_255769975-p-500.avif": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/682c9cc0f8cdbe6241256f97_AdobeStock_255769975-p-500.avif",
+      "contentType": "image/avif",
+      "bytes": 16368
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/682c9cc0f8cdbe6241256f97_AdobeStock_255769975-p-800.avif": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/682c9cc0f8cdbe6241256f97_AdobeStock_255769975-p-800.avif",
+      "contentType": "image/avif",
+      "bytes": 29558
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/682c9d1721be706276679ca3_AdobeStock_58967162-p-500.avif": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/682c9d1721be706276679ca3_AdobeStock_58967162-p-500.avif",
+      "contentType": "image/avif",
+      "bytes": 21850
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/682c9d1721be706276679ca3_AdobeStock_58967162-p-800.avif": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/682c9d1721be706276679ca3_AdobeStock_58967162-p-800.avif",
+      "contentType": "image/avif",
+      "bytes": 42450
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/682c9d6a54713b9291227049_AdobeStock_262116427-p-500.avif": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/682c9d6a54713b9291227049_AdobeStock_262116427-p-500.avif",
+      "contentType": "image/avif",
+      "bytes": 11986
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/682c9d6a54713b9291227049_AdobeStock_262116427-p-800.avif": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/682c9d6a54713b9291227049_AdobeStock_262116427-p-800.avif",
+      "contentType": "image/avif",
+      "bytes": 25046
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/684bf45748e88bef18daa209_IMG_0317-p-500.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/684bf45748e88bef18daa209_IMG_0317-p-500.webp",
+      "contentType": "image/webp",
+      "bytes": 88908
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/684bf45748e88bef18daa209_IMG_0317-p-800.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/684bf45748e88bef18daa209_IMG_0317-p-800.webp",
+      "contentType": "image/webp",
+      "bytes": 194888
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/684bf45748e88bef18daa209_IMG_0317-p-1080.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/684bf45748e88bef18daa209_IMG_0317-p-1080.webp",
+      "contentType": "image/webp",
+      "bytes": 302060
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68262f644367eac325ea3e7d_AdobeStock_137710285-p-500.avif": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68262f644367eac325ea3e7d_AdobeStock_137710285-p-500.avif",
+      "contentType": "image/avif",
+      "bytes": 19736
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68262f644367eac325ea3e7d_AdobeStock_137710285-p-800.avif": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68262f644367eac325ea3e7d_AdobeStock_137710285-p-800.avif",
+      "contentType": "image/avif",
+      "bytes": 35242
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/685942f6144598dd61a114df_Bone%20Grafting-p-500.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/685942f6144598dd61a114df_Bone Grafting-p-500.webp",
+      "contentType": "image/webp",
+      "bytes": 14802
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/685942f6144598dd61a114df_Bone%20Grafting-p-800.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/685942f6144598dd61a114df_Bone Grafting-p-800.webp",
+      "contentType": "image/webp",
+      "bytes": 26840
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/685942f6144598dd61a114df_Bone%20Grafting-p-1080.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/685942f6144598dd61a114df_Bone Grafting-p-1080.webp",
+      "contentType": "image/webp",
+      "bytes": 39324
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68262f665368ba40d9b18f4d_AdobeStock_500193730-p-500.avif": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68262f665368ba40d9b18f4d_AdobeStock_500193730-p-500.avif",
+      "contentType": "image/avif",
+      "bytes": 11780
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68262f665368ba40d9b18f4d_AdobeStock_500193730-p-800.avif": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68262f665368ba40d9b18f4d_AdobeStock_500193730-p-800.avif",
+      "contentType": "image/avif",
+      "bytes": 21252
+    },
+    "https://cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684a9fe576a5198cdd00fdf4_AdobeStock_1280215578-p-500.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684a9fe576a5198cdd00fdf4_AdobeStock_1280215578-p-500.webp",
+      "contentType": "image/webp",
+      "bytes": 8770
+    },
+    "https://cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684a9fe576a5198cdd00fdf4_AdobeStock_1280215578-p-800.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684a9fe576a5198cdd00fdf4_AdobeStock_1280215578-p-800.webp",
+      "contentType": "image/webp",
+      "bytes": 21156
+    },
+    "https://cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684a9fe576a5198cdd00fdf4_AdobeStock_1280215578-p-1080.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684a9fe576a5198cdd00fdf4_AdobeStock_1280215578-p-1080.webp",
+      "contentType": "image/webp",
+      "bytes": 30292
+    },
+    "https://cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa3de1651dfe25d8fb089_AdobeStock_266736389_Preview-p-500.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa3de1651dfe25d8fb089_AdobeStock_266736389_Preview-p-500.webp",
+      "contentType": "image/webp",
+      "bytes": 10308
+    },
+    "https://cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa3de1651dfe25d8fb089_AdobeStock_266736389_Preview-p-800.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa3de1651dfe25d8fb089_AdobeStock_266736389_Preview-p-800.webp",
+      "contentType": "image/webp",
+      "bytes": 16764
+    },
+    "https://cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa4b558dc2a6161d196fe_AdobeStock_196054358-p-500.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa4b558dc2a6161d196fe_AdobeStock_196054358-p-500.webp",
+      "contentType": "image/webp",
+      "bytes": 11638
+    },
+    "https://cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa4b558dc2a6161d196fe_AdobeStock_196054358-p-800.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa4b558dc2a6161d196fe_AdobeStock_196054358-p-800.webp",
+      "contentType": "image/webp",
+      "bytes": 20846
+    },
+    "https://cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa4b558dc2a6161d196fe_AdobeStock_196054358-p-1080.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa4b558dc2a6161d196fe_AdobeStock_196054358-p-1080.webp",
+      "contentType": "image/webp",
+      "bytes": 29708
+    },
+    "https://cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa18550467d2bca17fe2a_AdobeStock_264395936-p-500.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa18550467d2bca17fe2a_AdobeStock_264395936-p-500.webp",
+      "contentType": "image/webp",
+      "bytes": 10152
+    },
+    "https://cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa18550467d2bca17fe2a_AdobeStock_264395936-p-800.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa18550467d2bca17fe2a_AdobeStock_264395936-p-800.webp",
+      "contentType": "image/webp",
+      "bytes": 19456
+    },
+    "https://cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa18550467d2bca17fe2a_AdobeStock_264395936-p-1080.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa18550467d2bca17fe2a_AdobeStock_264395936-p-1080.webp",
+      "contentType": "image/webp",
+      "bytes": 27712
+    },
+    "https://cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa275d0911ae50b2cdcbd_AdobeStock_400757502-p-500.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa275d0911ae50b2cdcbd_AdobeStock_400757502-p-500.webp",
+      "contentType": "image/webp",
+      "bytes": 21200
+    },
+    "https://cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa275d0911ae50b2cdcbd_AdobeStock_400757502-p-800.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa275d0911ae50b2cdcbd_AdobeStock_400757502-p-800.webp",
+      "contentType": "image/webp",
+      "bytes": 41332
+    },
+    "https://cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa275d0911ae50b2cdcbd_AdobeStock_400757502-p-1080.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa275d0911ae50b2cdcbd_AdobeStock_400757502-p-1080.webp",
+      "contentType": "image/webp",
+      "bytes": 55626
+    },
+    "https://cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa28c1ae1a325814a98ac_Nitrous%20Oxide-p-500.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa28c1ae1a325814a98ac_Nitrous Oxide-p-500.webp",
+      "contentType": "image/webp",
+      "bytes": 10850
+    },
+    "https://cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa28c1ae1a325814a98ac_Nitrous%20Oxide-p-800.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa28c1ae1a325814a98ac_Nitrous Oxide-p-800.webp",
+      "contentType": "image/webp",
+      "bytes": 20660
+    },
+    "https://cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa28c1ae1a325814a98ac_Nitrous%20Oxide-p-1080.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa28c1ae1a325814a98ac_Nitrous Oxide-p-1080.webp",
+      "contentType": "image/webp",
+      "bytes": 31166
+    },
+    "https://cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684a9f15af5da8ef4fbafddd_IV%20Sedation-p-500.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684a9f15af5da8ef4fbafddd_IV Sedation-p-500.webp",
+      "contentType": "image/webp",
+      "bytes": 12584
+    },
+    "https://cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684a9f15af5da8ef4fbafddd_IV%20Sedation-p-800.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684a9f15af5da8ef4fbafddd_IV Sedation-p-800.webp",
+      "contentType": "image/webp",
+      "bytes": 22252
+    },
+    "https://cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684a9f15af5da8ef4fbafddd_IV%20Sedation-p-1080.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684a9f15af5da8ef4fbafddd_IV Sedation-p-1080.webp",
+      "contentType": "image/webp",
+      "bytes": 33502
+    },
+    "https://cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa829d77a9c786626e9e2_Dental%20Implants-p-500.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa829d77a9c786626e9e2_Dental Implants-p-500.webp",
+      "contentType": "image/webp",
+      "bytes": 8682
+    },
+    "https://cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa829d77a9c786626e9e2_Dental%20Implants-p-800.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa829d77a9c786626e9e2_Dental Implants-p-800.webp",
+      "contentType": "image/webp",
+      "bytes": 15988
+    },
+    "https://cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa829d77a9c786626e9e2_Dental%20Implants-p-1080.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa829d77a9c786626e9e2_Dental Implants-p-1080.webp",
+      "contentType": "image/webp",
+      "bytes": 24050
+    },
+    "https://cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa83d007ae22886ae8c47_All-on-4%20Dental%20Implants-p-500.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa83d007ae22886ae8c47_All-on-4 Dental Implants-p-500.webp",
+      "contentType": "image/webp",
+      "bytes": 10858
+    },
+    "https://cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa83d007ae22886ae8c47_All-on-4%20Dental%20Implants-p-800.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa83d007ae22886ae8c47_All-on-4 Dental Implants-p-800.webp",
+      "contentType": "image/webp",
+      "bytes": 19898
+    },
+    "https://cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa83d007ae22886ae8c47_All-on-4%20Dental%20Implants-p-1080.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa83d007ae22886ae8c47_All-on-4 Dental Implants-p-1080.webp",
+      "contentType": "image/webp",
+      "bytes": 27618
+    },
+    "https://cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa792dff316be9c9a7d6c_AdobeStock_552221120-p-500.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa792dff316be9c9a7d6c_AdobeStock_552221120-p-500.webp",
+      "contentType": "image/webp",
+      "bytes": 11680
+    },
+    "https://cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa792dff316be9c9a7d6c_AdobeStock_552221120-p-800.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa792dff316be9c9a7d6c_AdobeStock_552221120-p-800.webp",
+      "contentType": "image/webp",
+      "bytes": 24610
+    },
+    "https://cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa792dff316be9c9a7d6c_AdobeStock_552221120-p-1080.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa792dff316be9c9a7d6c_AdobeStock_552221120-p-1080.webp",
+      "contentType": "image/webp",
+      "bytes": 35124
+    },
+    "https://cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa73388f4192789272dea_AdobeStock_470333732-p-500.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa73388f4192789272dea_AdobeStock_470333732-p-500.webp",
+      "contentType": "image/webp",
+      "bytes": 8802
+    },
+    "https://cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa73388f4192789272dea_AdobeStock_470333732-p-800.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa73388f4192789272dea_AdobeStock_470333732-p-800.webp",
+      "contentType": "image/webp",
+      "bytes": 15622
+    },
+    "https://cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa73388f4192789272dea_AdobeStock_470333732-p-1080.webp": {
+      "path": "_ext/cdn.prod.website-files.com/6825f5a008f07d05354b2ba3/684aa73388f4192789272dea_AdobeStock_470333732-p-1080.webp",
+      "contentType": "image/webp",
+      "bytes": 22640
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68262f6a5e84870fe6193e9f_AdobeStock_1359460666-p-500.avif": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68262f6a5e84870fe6193e9f_AdobeStock_1359460666-p-500.avif",
+      "contentType": "image/avif",
+      "bytes": 11072
+    },
+    "https://cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68262f6a5e84870fe6193e9f_AdobeStock_1359460666-p-800.avif": {
+      "path": "_ext/cdn.prod.website-files.com/6825a5e7f696993f2ea31a35/68262f6a5e84870fe6193e9f_AdobeStock_1359460666-p-800.avif",
+      "contentType": "image/avif",
+      "bytes": 24466
+    }
+  },
+  "failed": [],
+  "unvisited": 0
+}

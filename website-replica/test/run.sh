@@ -29,6 +29,8 @@ ls "$OUT"/img/bg__*.png >/dev/null 2>&1 || { echo "MISSING img/bg__<hash>.png (q
 expect_grep index.html 'id="rendered">Rendered by JS'      # JS-rendered DOM captured
 expect_grep index.html 'href="about/index.html"'            # same-site page links relative
 expect_grep index.html 'href="services.html#pricing"'       # hash preserved
+expect_grep index.html 'href="#top"'                        # fragment-only links stay as they are
+expect_grep index.html 'href="#">'                          # (rewriting them to index.html breaks Webflow's current-page detection)
 expect_grep index.html 'href="team/index.html"'             # redirecting link resolved
 expect_grep index.html 'href="docs/brochure.pdf"'           # linked asset fetched
 expect_grep index.html 'href="css/style__'                  # query-string stylesheet
@@ -62,6 +64,8 @@ expect_grep2() { grep -q -- "$2" "$OUT2/$1" || { echo "EXPECTED '$2' in $1 (dir 
 expect_grep2 index.html 'href="about/"'                   # dir/index.html -> dir/
 expect_grep2 index.html 'href="services.html#pricing"'     # non-index pages unchanged
 expect_grep2 about/index.html 'href="../"'                 # link back to the root page
+expect_grep2 index.html 'href="#top"'                      # fragment-only links untouched in dir mode too
+[ "$(grep -o 'href="./"' "$OUT2/index.html" | wc -l)" -eq 1 ] || { echo "expected exactly one ./ link in dir mode (the / link); fragment hrefs must not become ./"; fail=1; }
 grep -q 'href="about/index.html"' "$OUT2/index.html" && { echo "UNEXPECTED index.html link in dir mode"; fail=1; }
 node verify.mjs "$OUT2" 8125 || fail=1
 [ $fail -eq 0 ] && echo "ALL CHECKS PASSED" || { echo "SOME CHECKS FAILED"; exit 1; }

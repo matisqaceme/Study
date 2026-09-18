@@ -85,6 +85,7 @@ function localPathFor(urlStr, { isPage = false, contentType = '' } = {}) {
 const assets = new Map();   // normalized url -> out-relative path
 const assetMeta = new Map(); // out-relative path -> { url, contentType, bytes }
 const pages = new Map();    // normalized url -> out-relative path
+const pageStatus = new Map(); // normalized url -> HTTP status the page was served with (a 404 page is still mirrored, so dead links on the live site behave the same offline)
 const redirects = new Map(); // requested page url -> final url
 const failed = [];
 const assetQueue = new Map(); // url -> planned path, for assets referenced but not loaded by the browser (favicons, unused srcset candidates, linked PDFs)
@@ -233,6 +234,7 @@ function rewriteInPage({ assetMap, pageMap, pageDir, strip, dirLinks, sourceUrl 
   document.querySelectorAll('link[href]').forEach((el) => { const v = el.getAttribute('href'); const r = mapOrAbsolute(v); if (r !== v) el.setAttribute('href', r); });
   document.querySelectorAll('a[href], area[href]').forEach((el) => {
     const v = el.getAttribute('href'); if (!v || /^(javascript|mailto|tel|sms):/i.test(v.trim())) return;
+    if (v.trim() === '' || v.trim().startsWith('#')) return; // already points at this document; rewriting it to the page path makes builders (Webflow) flag it as the current page
     const a = abs(v); if (!a) return;
     if (pageMap[a]) el.setAttribute('href', pageHref(pageMap[a]) + hashOf(v));
     else if (assetMap[a]) el.setAttribute('href', rel(assetMap[a]));
@@ -268,6 +270,7 @@ async function crawlPage(context, url) {
   const page = await context.newPage();
   try {
     const resp = await page.goto(url, { waitUntil: 'load', timeout: 60000 });
+    const status = resp ? resp.status() : 0;
     const finalUrl = normalize(page.url());
     if (finalUrl !== url) redirects.set(url, finalUrl);
     if (!sameSite(finalUrl)) return [];
@@ -296,8 +299,8 @@ async function crawlPage(context, url) {
     const assetMap = Object.fromEntries(assets);
     const html = await page.evaluate(rewriteInPage, { assetMap, pageMap, pageDir: path.posix.dirname(rel), strip: STRIP_SCRIPTS, dirLinks: DIR_LINKS, sourceUrl: finalUrl });
     await writeOut(rel, html);
-    pages.set(finalUrl, rel);
-    console.log(`page  ${finalUrl} -> ${rel}`);
+    pages.set(finalUrl, rel); pageStatus.set(finalUrl, status);
+    console.log(`page  ${finalUrl} -> ${rel}${status >= 400 ? ` [HTTP ${status}]` : ''}`);
     return nextPages;
   } catch (e) {
     failed.push({ url, error: e.message.split('\n')[0] });
@@ -371,12 +374,13 @@ async function main() {
   await writeRedirectStubs();
   const manifest = {
     source: START.href, crawledAt: new Date().toISOString(), pageCount: pages.size, assetCount: assets.size,
-    pages: Object.fromEntries(pages), redirects: Object.fromEntries(redirects),
+    pages: Object.fromEntries(pages), pageStatus: Object.fromEntries(pageStatus), redirects: Object.fromEntries(redirects),
     assets: Object.fromEntries([...assetMeta].map(([rel, m]) => [m.url, { path: rel, contentType: m.contentType, bytes: m.bytes }])),
     failed, unvisited: queue.length,
   };
   await fs.writeFile(path.join(OUT, 'manifest.json'), JSON.stringify(manifest, null, 2));
-  console.log(`\ndone: ${pages.size} pages, ${assets.size} assets, ${failed.length} failures${queue.length ? `, ${queue.length} pages left (raise --max-pages)` : ''}\noutput: ${OUT}`);
+  const errorPages = [...pageStatus].filter(([, s]) => s >= 400).length;
+  console.log(`\ndone: ${pages.size} pages${errorPages ? ` (${errorPages} served with HTTP 4xx/5xx, see manifest.pageStatus)` : ''}, ${assets.size} assets, ${failed.length} failures${queue.length ? `, ${queue.length} pages left (raise --max-pages)` : ''}\noutput: ${OUT}`);
   if (failed.length) console.log('failures:', failed.slice(0, 20));
 }
 
