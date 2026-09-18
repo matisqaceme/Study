@@ -2,11 +2,14 @@
   "name": "website-replica",
   "private": true,
   "type": "module",
-  "description": "Rendered static mirror of a website (crawl, rewrite, verify, serve).",
+  "description": "Rendered static mirrors of websites (crawl, rewrite, verify, serve). Captures live under sites/<host>/.",
   "scripts": {
-    "crawl": "node crawl.mjs https://www.owldental.ie/ site --wait=2000 --links=dir",
-    "verify": "node verify.mjs site",
-    "serve": "node serve.mjs site 8080",
+    "crawl": "node crawl.mjs https://www.owldental.ie/ sites/owldental.ie --wait=2000 --links=dir --scripts=strip",
+    "crawl:prism": "node crawl.mjs https://www.prismoralsurgery.com/ sites/prismoralsurgery.com --wait=2000 --links=dir",
+    "verify": "node verify.mjs sites/owldental.ie",
+    "verify:prism": "node verify.mjs sites/prismoralsurgery.com",
+    "serve": "node serve.mjs sites/owldental.ie 8080",
+    "serve:prism": "node serve.mjs sites/prismoralsurgery.com 8080",
     "test": "bash test/run.sh"
   },
   "devDependencies": {

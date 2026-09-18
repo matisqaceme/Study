@@ -31,7 +31,9 @@ page.on('request', (r) => { requests++; if (!r.url().startsWith(ORIGIN)) externa
 page.on('requestfailed', (r) => problems.push({ page: page.url(), url: r.url(), error: r.failure()?.errorText, type: r.resourceType() }));
 page.on('response', (r) => { if (r.status() >= 400) problems.push({ page: page.url(), url: r.url(), error: `HTTP ${r.status()}`, type: r.request().resourceType() }); });
 
-const files = await listHtml(DIR);
+// HTML under _ext/ is a third-party iframe document (map embeds, widgets) the mirror saved as an asset; it is exercised
+// through the pages that embed it, and opened standalone it lacks the query string its own script expects.
+const files = (await listHtml(DIR)).filter((f) => !path.relative(DIR, f).split(path.sep).includes('_ext'));
 for (const f of files) {
   const url = `${ORIGIN}/${path.relative(DIR, f).split(path.sep).join('/')}`;
   await page.goto(url, { waitUntil: 'networkidle', timeout: 30000 }).catch((e) => problems.push({ page: url, error: e.message.split('\n')[0] }));
@@ -39,7 +41,9 @@ for (const f of files) {
 await browser.close(); server.close();
 
 const BACKGROUND = new Set(['fetch', 'xhr', 'ping', 'beacon', 'websocket', 'eventsource', 'other']);
-const isBroken = (p) => !p.url || p.url.startsWith(ORIGIN) || !BACKGROUND.has(p.type);
+// A media element cancelling its own download (net::ERR_ABORTED on a <video>/<audio> request) is the browser's normal
+// behaviour for autoplaying/looping media, not a missing file.
+const isBroken = (p) => !(p.type === 'media' && p.error === 'net::ERR_ABORTED') && (!p.url || p.url.startsWith(ORIGIN) || !BACKGROUND.has(p.type));
 const broken = problems.filter(isBroken);
 const thirdParty = problems.filter((p) => !isBroken(p));
 const grouped = new Map();
