@@ -73,6 +73,14 @@ function stripThirdParty($) {
   $('noscript').each((_, n) => { if (/googletagmanager/.test($(n).html() || '')) $(n).remove(); });
   $('link[rel="preconnect"], link[rel="dns-prefetch"]').each((_, l) => { if (/patientloop|usebasin|typekit|googletagmanager/.test(l.attribs.href || '')) $(l).remove(); });
   $('[class*="pl-booking"], [data-pl-booking]').removeAttr('data-pl-booking');
+  // Builder fingerprints: generator tag, Webflow site/page ids, CDN preconnects, Google font loader (Inter is self-hosted below).
+  $('meta[name="generator"]').remove();
+  $('link[rel="preconnect"], link[rel="dns-prefetch"]').each((_, l) => { if (/website-files|googleapis|gstatic/.test(l.attribs.href || '')) $(l).remove(); });
+  $('*').each((_, e) => { for (const a of Object.keys(e.attribs || {})) if (/^data-wf-/.test(a)) delete e.attribs[a]; });
+  $('link[rel="preconnect"], link[rel="dns-prefetch"]').each((_, l) => { if (/cloudfront|website-files|googleapis|gstatic/.test(l.attribs.href || '')) $(l).remove(); });
+  $('script[src*="webfont"]').remove();
+  $('style').each((_, st) => { const css = $(st).html() || ''; if (/webflow/i.test(css)) $(st).html(css.replace(/\/\*[^*]*webflow[^*]*\*\//gi, '')); }); // builder-named CSS comments
+  $('script:not([src])').each((_, s) => { if (/WebFont\.load/.test($(s).html() || '')) $(s).remove(); });
 }
 
 function headMeta($, { title, description, pagePath }) {
@@ -81,9 +89,8 @@ function headMeta($, { title, description, pagePath }) {
   $('meta[property="og:title"], meta[name="twitter:title"], meta[property="twitter:title"]').attr('content', title);
   $('meta[property="og:description"], meta[name="twitter:description"], meta[property="twitter:description"]').attr('content', description);
   $('meta[property="og:image"], meta[name="twitter:image"], meta[property="twitter:image"]').attr('content', `${P.domain}${owlImg('hero-wexford.jpg')}`);
-  $('html').attr('data-wf-domain', 'www.owldental.ie');
   $.root().contents().each((_, n) => { if (n.type === 'comment') $(n).remove(); });
-  $.root().prepend(`<!-- ${P.name}: built from the Prism Oral Surgery design by rebrand/owldental/build.mjs on ${new Date().toISOString().slice(0, 10)} -->\n`);
+  $.root().prepend(`<!-- ${P.name}, static site build ${new Date().toISOString().slice(0, 10)} -->\n`);
   $('meta[property="og:url"], link[rel="canonical"]').remove();
   $('link[rel="icon"], link[rel="shortcut icon"]').attr('href', owlImg('favicon-32.png'));
   $('link[rel="apple-touch-icon"]').attr('href', owlImg('favicon-256.png'));
@@ -204,6 +211,7 @@ function forms($) { // Basin + reCAPTCHA -> Netlify Forms, without the SMS and l
     el.find('input[type="hidden"]').remove();
     el.find('[class*="recaptcha"]').remove();
     el.find('input[type="checkbox"]').closest('label, div').remove();
+    el.closest('.w-form').removeClass('w-form'); // keep the builder runtime from intercepting the submit; Netlify needs the native POST
     el.prepend('<input type="hidden" name="form-name" value="appointment"><p class="owl-hidden"><label>Don’t fill this out: <input name="bot-field"></label></p>');
     el.find('input[type="submit"], .button[type="submit"]').attr('value', 'Send').attr('data-wait', 'Sending…');
   });
@@ -244,7 +252,7 @@ function priceHtml(rows) {
 
 // ---------------------------------------------------------------- pages
 const pages = []; // { dir, html }
-function emit(dir, $) { sweepText($); relativize($, dir); pages.push({ dir, html: $.html() }); }
+function emit(dir, $) { sweepText($); pages.push({ dir, $ }); }
 
 function buildHome() {
   const $ = tpl('');
@@ -383,30 +391,86 @@ fs.mkdirSync(OUT, { recursive: true });
 buildHome(); buildAbout(); buildServices(); for (const t of T) buildTreatment(t); buildPricelist(); buildContact(); buildThanks();
 try { build404(); } catch (e) { console.warn('no 404 page:', e.message); }
 
-for (const { dir, html } of pages) {
+// ---- assets: everything a page or stylesheet references moves to /assets/<kind>/<clean-name>, so the copy carries no
+// trace of where the design came from and nothing is fetched from a third party at runtime (Google's Inter included).
+const FONT_CACHE = path.join(ASSETS, 'fonts-cache'); fs.mkdirSync(FONT_CACHE, { recursive: true });
+const sha = (t) => { let h = 0; for (const c of t) h = (h * 31 + c.charCodeAt(0)) >>> 0; return h.toString(16).padStart(8, '0'); };
+async function fetchCached(url) { // web fonts referenced by the captured Google Fonts CSS
+  const f = path.join(FONT_CACHE, sha(url) + path.posix.extname(new URL(url).pathname));
+  if (!fs.existsSync(f)) { const r = await fetch(url); if (!r.ok) throw new Error(`${r.status} ${url}`); fs.writeFileSync(f, Buffer.from(await r.arrayBuffer())); }
+  return f;
+}
+const kindOf = (ext) => /\.css$/i.test(ext) ? 'css' : /\.(js|mjs)$/i.test(ext) ? 'js' : /\.(woff2?|ttf|otf|eot)$/i.test(ext) ? 'fonts' : /\.(png|jpe?g|gif|webp|avif|svg|ico)$/i.test(ext) ? 'img' : 'files';
+const magicExt = (buf) => { const h = buf.subarray(0, 4).toString('latin1'); return h === 'wOF2' ? '.woff2' : h === 'wOFF' ? '.woff' : h === 'OTTO' ? '.otf' : h === '\0\x01\0\0' || h === 'true' ? '.ttf' : ''; };
+let interN = 0, seasonsN = 0;
+const cleanName = (rootPath, bytes) => {
+  let base = decodeURIComponent(path.posix.basename(rootPath)).replace(/__[0-9a-f]{8}(?=\.|$)/, '');
+  while (/^[0-9a-f]{24}_/.test(base)) base = base.replace(/^[0-9a-f]{24}_/, '');
+  if (/fonts\.gstatic\.com/.test(rootPath)) return `inter-${++interN}${path.posix.extname(base) || '.woff2'}`;
+  if (/typekit\.net/.test(rootPath)) return `the-seasons-${++seasonsN}${path.posix.extname(base) || (bytes ? magicExt(bytes) : '')}`;
+  if (!path.posix.extname(base) && bytes && magicExt(bytes)) base += magicExt(bytes);
+  const gsap = rootPath.match(/\/gsap\/(\d+\.\d+\.\d+)\/([A-Za-z]+)\.min\.js$/); if (gsap) return `${gsap[2].toLowerCase()}-${gsap[1]}.min.js`; // two GSAP versions are in use
+  base = base
+    .replace(/^prism-oral-surgery\./i, '')
+    .replace(/^webflow\.[0-9a-f]*([0-9a-f]{8})-[0-9a-f]+\.min\.css$/i, 'page-$1.css') // per-page stylesheet
+    .replace(/^webflow\.shared\.[0-9a-f]+\.min\.css$/i, 'shared.css')
+    .replace(/^webflow\.schunk\.([0-9a-f]{6})[0-9a-f]*\.js$/i, 'chunk-$1.js')
+    .replace(/^webflow\.([0-9a-f]{8})\.[0-9a-f]+\.js$/i, 'page-$1.js') // per-page script
+    .replace(/^css\.css$/i, 'fonts.css')
+    .replace(/^jquery-[\d.]+\.min\.[0-9a-f]+\.js$/i, 'jquery.js')
+    .replace(/webflow/gi, 'site').replace(/prism-oral-surgery\.?/gi, 'site').replace(/\.[0-9a-f]{8,}(?=\.)/g, '').replace(/[^\w.-]+/g, '-').replace(/-+/g, '-').replace(/^-|-(?=\.)/g, '').toLowerCase();
+  return base;
+};
+const contentKey = new Map(); // sha of file bytes -> new root path, so the same library saved under two names lands once
+const relocated = new Map(); // old root path (or absolute url) -> new root path
+const used = new Set();
+const assign = (key, hintName, bytes) => {
+  if (relocated.has(key)) return relocated.get(key);
+  let name = cleanName(hintName, bytes), n = 1; const ext = path.posix.extname(name); const kind = kindOf(ext); const stem = ext ? name.slice(0, -ext.length) : name;
+  while (used.has(`${kind}/${name}`)) name = `${stem}-${++n}${ext}`;
+  used.add(`${kind}/${name}`); const np = `/assets/${kind}/${name}`; relocated.set(key, np); return np;
+};
+const sourceOf = (rootPath) => rootPath.startsWith('/_ext/') ? path.join(SRC, decodeURIComponent(rootPath)) : rootPath.startsWith(OWL + '/') ? path.join(ASSETS, path.posix.basename(rootPath)) : null;
+const cssRefs = (css) => [...css.matchAll(/url\(\s*['"]?([^'")]+)['"]?\s*\)/g)].map((m) => m[1]).filter((u) => !/^(data:|#)/.test(u));
+
+// 1. Collect root-relative references from every page (Owl images keep their /assets/owl/ path).
+const pageRefs = new Set();
+for (const { $ } of pages) mapUrls($, (v) => { if (v.startsWith('/_ext/')) pageRefs.add(v.split(/[?#]/)[0]); return v; });
+// 2. Process each referenced file; stylesheets pull in fonts and images, which are relocated too (transitively).
+const pending = [...pageRefs]; const written = new Set();
+async function processFile(rootPath) {
+  if (written.has(rootPath)) return; written.add(rootPath);
+  const src = sourceOf(rootPath); if (!src || !fs.existsSync(src)) { console.warn('missing asset', rootPath); return; }
+  const bytes = fs.readFileSync(src); const ck = kindOf(path.posix.extname(rootPath)) + ':' + sha(bytes.toString('latin1'));
+  if (contentKey.has(ck)) { relocated.set(rootPath, contentKey.get(ck)); return; }
+  const np = assign(rootPath, rootPath, bytes); contentKey.set(ck, np); const dest = path.join(OUT, np); fs.mkdirSync(path.dirname(dest), { recursive: true });
+  if (kindOf(path.posix.extname(rootPath)) === 'css' || /\.css$/i.test(np)) {
+    let css = fs.readFileSync(src, 'utf8'); const dir = path.posix.dirname(rootPath);
+    for (const ref of new Set(cssRefs(css))) {
+      let target;
+      // anything a stylesheet still pulls from a third party is fetched once and served locally
+      if (/^https?:\/\//.test(ref)) { const local = await fetchCached(ref); target = assign(ref, ref, fs.readFileSync(local)); const d = path.join(OUT, target); fs.mkdirSync(path.dirname(d), { recursive: true }); fs.copyFileSync(local, d); }
+      else { const abs = path.posix.resolve(dir, ref.split(/[?#]/)[0]); await processFile(abs); target = relocated.get(abs); if (!target) continue; }
+      const rel = path.posix.relative(path.posix.dirname(np), target);
+      css = css.split(`url(${ref})`).join(`url(${rel})`).split(`url("${ref}")`).join(`url("${rel}")`).split(`url('${ref}')`).join(`url('${rel}')`);
+    }
+    css = css.replace(/webflow-icons/g, 'ui-icons').replace(/w-webflow-badge/g, 'w-badge-hidden'); // builder names inside its own stylesheet
+    fs.writeFileSync(dest, css);
+  } else fs.copyFileSync(src, dest);
+}
+for (const r of pending) await processFile(r);
+// Owl's own images and favicons
+fs.mkdirSync(path.join(OUT, 'assets/owl'), { recursive: true });
+for (const f of fs.readdirSync(ASSETS)) if (fs.statSync(path.join(ASSETS, f)).isFile()) fs.copyFileSync(path.join(ASSETS, f), path.join(OUT, 'assets/owl', f));
+// 3. Point pages at the new locations, make links relative, write.
+for (const { dir, $ } of pages) {
+  mapUrls($, (v) => { const m = v.match(/^([^?#]*)(.*)$/); return relocated.has(m[1]) ? relocated.get(m[1]) + m[2] : v; });
+  // inline <style> blocks with absolute Google font URLs (captured pages inline them on some templates)
+  for (const el of $('style').toArray()) { let css = $(el).html() || ''; if (!/https?:\/\//.test(css)) continue; for (const ref of new Set(cssRefs(css))) { if (!/^https?:\/\/fonts\.gstatic\.com/.test(ref)) continue; const local = await fetchCached(ref); const target = assign(ref, ref, fs.readFileSync(local)); const d = path.join(OUT, target); fs.mkdirSync(path.dirname(d), { recursive: true }); fs.copyFileSync(local, d); css = css.split(ref).join(target); } $(el).html(css); }
+  relativize($, dir);
   const file = path.join(OUT, dir, dir.endsWith('404') ? '../404.html' : 'index.html');
   fs.mkdirSync(path.dirname(file), { recursive: true });
-  fs.writeFileSync(file, html);
+  fs.writeFileSync(file, $.html());
 }
-// Owl assets
-fs.mkdirSync(path.join(OUT, 'assets/owl'), { recursive: true });
-for (const f of fs.readdirSync(ASSETS)) fs.copyFileSync(path.join(ASSETS, f), path.join(OUT, 'assets/owl', f));
-// Prism assets: copy _ext, then prune whatever no page or stylesheet references (transitively through CSS).
-const referenced = new Set();
-const noteRefs = (text, baseDir) => {
-  for (const m of text.matchAll(/(?:href|src|poster)="([^"]+)"|url\(\s*['"]?([^'")]+)['"]?\s*\)|srcset="([^"]+)"/g)) {
-    const raw = m[1] ?? m[2] ?? (m[3] ? m[3].split(/,\s+/).map((c) => c.trim().split(/\s+/)[0]) : null);
-    for (const v of [].concat(raw ?? [])) { if (!v || SKIP_URL.test(v)) continue; const clean = v.split(/[?#]/)[0]; const abs = clean.startsWith('/') ? clean.slice(1) : path.posix.normalize(path.posix.join(baseDir, clean)); referenced.add(decodeURIComponent(abs)); }
-  }
-};
-for (const { dir, html } of pages) noteRefs(html, dir);
-const copyTree = (from, to) => { for (const e of fs.readdirSync(from, { withFileTypes: true })) { const s = path.join(from, e.name), d = path.join(to, e.name); if (e.isDirectory()) { fs.mkdirSync(d, { recursive: true }); copyTree(s, d); } else fs.copyFileSync(s, d); } };
-copyTree(path.join(SRC, '_ext'), path.join(OUT, '_ext'));
-// CSS files pull in fonts/images: follow those references too, from the CSS file's own directory.
-let grew = true;
-while (grew) { grew = false; for (const r of [...referenced]) if (/\.css$/.test(r) && fs.existsSync(path.join(OUT, r)) && !referenced.has(r + '#seen')) { referenced.add(r + '#seen'); noteRefs(fs.readFileSync(path.join(OUT, r), 'utf8'), path.posix.dirname(r)); grew = true; } }
-let kept = 0, pruned = 0;
-const prune = (dir) => { for (const e of fs.readdirSync(dir, { withFileTypes: true })) { const p = path.join(dir, e.name); if (e.isDirectory()) { prune(p); if (!fs.readdirSync(p).length) fs.rmdirSync(p); } else { const rel = path.relative(OUT, p).split(path.sep).join('/'); if (referenced.has(rel)) kept++; else { fs.unlinkSync(p); pruned++; } } } };
-prune(path.join(OUT, '_ext'));
 fs.writeFileSync(path.join(OUT, '_redirects'), '/404  /404.html  404\n');
-console.log(`built ${pages.length} pages into ${path.relative(process.cwd(), OUT)}; Prism assets kept ${kept}, pruned ${pruned}`);
+console.log(`built ${pages.length} pages into ${path.relative(process.cwd(), OUT)}; ${relocated.size} assets relocated under /assets/`);
