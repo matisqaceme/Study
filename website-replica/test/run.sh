@@ -70,4 +70,21 @@ expect_grep2 index.html 'href="#top"'                      # fragment-only links
 [ "$(grep -o 'href="./"' "$OUT2/index.html" | wc -l)" -eq 1 ] || { echo "expected exactly one ./ link in dir mode (the / link); fragment hrefs must not become ./"; fail=1; }
 grep -q 'href="about/index.html"' "$OUT2/index.html" && { echo "UNEXPECTED index.html link in dir mode"; fail=1; }
 node verify.mjs "$OUT2" 8125 || fail=1
+
+# --device: crawl as a phone; link-variants.mjs joins the two captures with a user-agent switch.
+node crawl.mjs "http://127.0.0.1:$PORT/" "$OUT2/m" --wait=300 --links=dir --scripts=strip --device="iPhone 13" >/dev/null
+grep -q '"device": "iPhone 13"' "$OUT2/m/manifest.json" || { echo "device not recorded in manifest"; fail=1; }
+grep -q 'name="ua" content="[^"]*iPhone' "$OUT2/m/index.html" || { echo "mobile crawl did not send the device user agent"; fail=1; }
+grep -q 'name="ua" content="[^"]*iPhone' "$OUT2/index.html" && { echo "desktop crawl sent a mobile user agent"; fail=1; }
+grep -q 'rel="preload" as="script"' "$OUT2/index.html" || { echo "script preload dropped from a scripts-kept page"; fail=1; }
+grep -q 'rel="preload" as="script"' "$OUT2/m/index.html" && { echo "script preload left in a --scripts=strip page"; fail=1; }
+node link-variants.mjs "$OUT2" m >/dev/null
+grep -q "data-variant-switch>(function(){var m=" "$OUT2/index.html" || { echo "desktop page lacks the variant switch"; fail=1; }
+grep -q "data-variant-switch>(function(){var m=" "$OUT2/about/index.html" || { echo "desktop subpage lacks the variant switch"; fail=1; }
+grep -q "data-variant-switch>(function(){var m=" "$OUT2/m/about/index.html" || { echo "mobile page lacks the variant switch"; fail=1; }
+grep -q "location.replace('/m'" "$OUT2/index.html" || { echo "desktop switch does not point at /m"; fail=1; }
+grep -q "p.slice(2)" "$OUT2/m/index.html" || { echo "mobile switch does not point back at the desktop path"; fail=1; }
+node link-variants.mjs "$OUT2" m >/dev/null   # idempotent
+[ "$(grep -o 'data-variant-switch' "$OUT2/index.html" | wc -l)" -eq 1 ] || { echo "variant switch injected twice"; fail=1; }
+node verify.mjs "$OUT2" 8126 || fail=1
 [ $fail -eq 0 ] && echo "ALL CHECKS PASSED" || { echo "SOME CHECKS FAILED"; exit 1; }

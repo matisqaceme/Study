@@ -3,7 +3,7 @@
  * crawl.mjs - rendered static mirror of a website using Playwright + Chromium.
  *
  * Usage:
- *   node crawl.mjs <start-url> [outDir] [--max-pages=500] [--wait=1500] [--scripts=keep|strip] [--links=file|dir]
+ *   node crawl.mjs <start-url> [outDir] [--max-pages=500] [--wait=1500] [--scripts=keep|strip] [--links=file|dir] [--device="iPhone 13"]
  *
  * 1. Crawls every same-site page reachable from the start URL (plus sitemap.xml).
  * 2. Renders each page in headless Chromium, scrolls to trigger lazy loading, snapshots the DOM.
@@ -11,7 +11,7 @@
  * 4. Rewrites URLs in HTML and CSS to relative local paths so the copy works from any static host.
  * 5. Writes manifest.json (pages, assets, redirects, failures) next to the output.
  */
-import { chromium } from 'playwright';
+import { chromium, devices } from 'playwright';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import crypto from 'node:crypto';
@@ -22,7 +22,7 @@ const flags = Object.fromEntries(
   argv.filter((a) => a.startsWith('--')).map((a) => { const [k, v] = a.slice(2).split('='); return [k, v ?? 'true']; }),
 );
 if (!positional[0]) {
-  console.error('usage: node crawl.mjs <start-url> [outDir] [--max-pages=N] [--wait=ms] [--scripts=keep|strip] [--links=file|dir]');
+  console.error('usage: node crawl.mjs <start-url> [outDir] [--max-pages=N] [--wait=ms] [--scripts=keep|strip] [--links=file|dir] [--device="iPhone 13"]');
   process.exit(2);
 }
 
@@ -35,6 +35,10 @@ const STRIP_SCRIPTS = flags.scripts === 'strip';
 // --links=dir:  page links point at "dir/" like the live site does. Needed for builders whose runtime inspects
 //               link hrefs (Webflow marks every "*/index.html" link as the current page when the URL ends in "/").
 const DIR_LINKS = flags.links === 'dir';
+// --device: crawl as a phone or tablet (a Playwright device descriptor: user agent, viewport, touch, pixel ratio).
+// Sites that serve a separate mobile layout by user agent (Wix does) need a second capture made this way.
+const DEVICE = flags.device ? devices[flags.device] : null;
+if (flags.device && !DEVICE) { console.error(`unknown device "${flags.device}"; try one of: ${Object.keys(devices).slice(0, 12).join(', ')}, ...`); process.exit(2); }
 const SITE_HOST = START.hostname.replace(/^www\./, '');
 const UA = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36';
 
@@ -221,7 +225,7 @@ function rewriteInPage({ assetMap, pageMap, pageDir, strip, dirLinks, sourceUrl 
     .replace(/@import\s+(['"])([^'"]+)\1/g, (m, qch, u) => { const r = mapAsset(u); return r ? `@import ${qch}${r}${qch}` : m; });
 
   document.querySelectorAll('base').forEach((b) => b.remove());
-  if (strip) document.querySelectorAll('script, link[rel="modulepreload"]').forEach((s) => s.remove());
+  if (strip) document.querySelectorAll('script, link[rel="modulepreload"], link[rel="preload"][as="script"], link[rel="preload"][as="fetch"]').forEach((s) => s.remove()); // no scripts, so nothing will consume these preloads
 
   for (const attr of ['src', 'poster', 'data-src', 'data-lazy-src', 'data-bg', 'data-background', 'data-background-image']) {
     document.querySelectorAll(`[${attr}]`).forEach((el) => {
@@ -366,7 +370,7 @@ async function writeRedirectStubs() {
 async function main() {
   await fs.mkdir(OUT, { recursive: true });
   const browser = await chromium.launch({ executablePath: process.env.CHROMIUM_PATH || undefined }); // set CHROMIUM_PATH to use a system Chromium
-  const context = await browser.newContext({ viewport: { width: 1440, height: 900 }, userAgent: UA, serviceWorkers: 'block' });
+  const context = await browser.newContext({ ...(DEVICE ?? { viewport: { width: 1440, height: 900 }, userAgent: UA }), serviceWorkers: 'block' });
   attachResponseCapture(context);
 
   const startUrl = normalize(START.href);
@@ -383,7 +387,7 @@ async function main() {
   await rewriteCssFiles();
   await writeRedirectStubs();
   const manifest = {
-    source: START.href, crawledAt: new Date().toISOString(), pageCount: pages.size, assetCount: assets.size,
+    source: START.href, crawledAt: new Date().toISOString(), device: flags.device ?? 'desktop 1440x900', pageCount: pages.size, assetCount: assets.size,
     pages: Object.fromEntries(pages), pageStatus: Object.fromEntries(pageStatus), redirects: Object.fromEntries(redirects),
     assets: Object.fromEntries([...assetMeta].map(([rel, m]) => [m.url, { path: rel, contentType: m.contentType, bytes: m.bytes }])),
     failed, unvisited: queue.length,

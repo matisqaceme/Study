@@ -20,6 +20,14 @@ compression noise in the hero photo (see below). Reproduce it with `npm run craw
 node crawl.mjs https://www.owldental.ie/ sites/owldental.ie --wait=2000 --links=dir --scripts=strip
 ```
 
+The site is also captured as a phone (`npm run crawl:mobile`, i.e. the same command with
+`--device="iPhone 13"` into `sites/owldental.ie/m`), because Wix serves a different HTML document to
+phones, chosen by User-Agent on the server: a hamburger menu, a phone bar, a single column at 320px.
+Without it a phone gets the 980px desktop page zoomed and cropped. `npm run link:mobile`
+(`node link-variants.mjs sites/owldental.ie m`) then puts a one-line inline script first in every page
+of both trees that sends a phone/tablet user agent from `/x/` to `/m/x/` and a desktop one back, the
+same decision Wix's server makes. That script is the one thing in the copy that is not from the site.
+
 `--scripts=strip` is required. Wix renders every page server-side, so the snapshot is complete
 without JavaScript; with the site's scripts kept, the Wix runtime crashes on hydration from a
 different origin (17 uncaught errors per page: React chunk ordering and a same-origin web worker it
@@ -76,7 +84,10 @@ npm run verify                    # opens every page offline and reports anythin
 npm run serve                     # http://127.0.0.1:8080/ (serve:prism)
 ```
 
-`crawl.mjs` options: `node crawl.mjs <url> [outDir] [--max-pages=500] [--wait=1500] [--scripts=keep|strip] [--links=file|dir]`.
+`crawl.mjs` options: `node crawl.mjs <url> [outDir] [--max-pages=500] [--wait=1500] [--scripts=keep|strip] [--links=file|dir] [--device="iPhone 13"]`.
+`--device` takes any Playwright device name and crawls with its user agent, viewport, pixel ratio and
+touch support; use it for a second capture when the site serves a different page to phones, then join
+the two with `node link-variants.mjs <desktopDir> <mobileSubdir>`.
 Use `--scripts=strip` if the site's own JavaScript breaks the offline copy (common with Wix and
 other builders whose runtime phones home). `--links=dir` writes page links as `dir/` instead of
 `dir/index.html`, matching the live site's URLs; it needs a static host that serves `index.html` for
@@ -173,4 +184,5 @@ standalone.
 
 `npm test` serves a small fixture site with two origins, crawls it, asserts the output
 (rendered DOM, relative links, hash anchors, redirect resolution, query-string assets,
-cross-origin CSS, favicons, srcset candidates, `--links=dir` output), and runs the offline verifier.
+cross-origin CSS, favicons, srcset candidates, `--links=dir` output, `--device` captures joined by
+`link-variants.mjs`), and runs the offline verifier.

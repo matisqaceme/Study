@@ -5,6 +5,8 @@
   "description": "Rendered static mirrors of websites (crawl, rewrite, verify, serve). Captures live under sites/<host>/.",
   "scripts": {
     "crawl": "node crawl.mjs https://www.owldental.ie/ sites/owldental.ie --wait=2000 --links=dir --scripts=strip",
+    "crawl:mobile": "node crawl.mjs https://www.owldental.ie/ sites/owldental.ie/m --wait=2000 --links=dir --scripts=strip --device=\"iPhone 13\"",
+    "link:mobile": "node link-variants.mjs sites/owldental.ie m",
     "crawl:prism": "node crawl.mjs https://www.prismoralsurgery.com/ sites/prismoralsurgery.com --wait=2000 --links=dir",
     "verify": "node verify.mjs sites/owldental.ie",
     "verify:prism": "node verify.mjs sites/prismoralsurgery.com",
