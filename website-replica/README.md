@@ -21,7 +21,9 @@ node crawl.mjs https://www.owldental.ie/ sites/owldental.ie --wait=2000 --links=
 ```
 
 The site is also captured as a phone (`npm run crawl:mobile`, i.e. the same command with
-`--device="iPhone 13"` into `sites/owldental.ie/m`), because Wix serves a different HTML document to
+`--device="iPhone 13"` into `sites/owldental.ie/m`: 7 pages, 227 assets, 0 failures, and the iPhone
+homepage screenshot differs from the live one only in the script-added "back to top" button), because
+Wix serves a different HTML document to
 phones, chosen by User-Agent on the server: a hamburger menu, a phone bar, a single column at 320px.
 Without it a phone gets the 980px desktop page zoomed and cropped. `npm run link:mobile`
 (`node link-variants.mjs sites/owldental.ie m`) then puts a one-line inline script first in every page
