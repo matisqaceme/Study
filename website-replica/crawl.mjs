@@ -3,7 +3,7 @@
  * crawl.mjs - rendered static mirror of a website using Playwright + Chromium.
  *
  * Usage:
- *   node crawl.mjs <start-url> [outDir] [--max-pages=500] [--wait=1500] [--scripts=keep|strip]
+ *   node crawl.mjs <start-url> [outDir] [--max-pages=500] [--wait=1500] [--scripts=keep|strip] [--links=file|dir]
  *
  * 1. Crawls every same-site page reachable from the start URL (plus sitemap.xml).
  * 2. Renders each page in headless Chromium, scrolls to trigger lazy loading, snapshots the DOM.
@@ -22,7 +22,7 @@ const flags = Object.fromEntries(
   argv.filter((a) => a.startsWith('--')).map((a) => { const [k, v] = a.slice(2).split('='); return [k, v ?? 'true']; }),
 );
 if (!positional[0]) {
-  console.error('usage: node crawl.mjs <start-url> [outDir] [--max-pages=N] [--wait=ms] [--scripts=keep|strip]');
+  console.error('usage: node crawl.mjs <start-url> [outDir] [--max-pages=N] [--wait=ms] [--scripts=keep|strip] [--links=file|dir]');
   process.exit(2);
 }
 
@@ -31,6 +31,10 @@ const OUT = path.resolve(positional[1] ?? 'site');
 const MAX_PAGES = Number(flags['max-pages'] ?? 500);
 const SETTLE_MS = Number(flags.wait ?? 1500);
 const STRIP_SCRIPTS = flags.scripts === 'strip';
+// --links=file: page links point at "dir/index.html" (opens straight from disk).
+// --links=dir:  page links point at "dir/" like the live site does. Needed for builders whose runtime inspects
+//               link hrefs (Webflow marks every "*/index.html" link as the current page when the URL ends in "/").
+const DIR_LINKS = flags.links === 'dir';
 const SITE_HOST = START.hostname.replace(/^www\./, '');
 const UA = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36';
 
@@ -152,13 +156,18 @@ function collectUrls() {
 }
 
 /** Runs inside the page: rewrite every URL we have a local copy of to a relative path, then serialize. */
-function rewriteInPage({ assetMap, pageMap, pageDir, strip, sourceUrl }) {
+function rewriteInPage({ assetMap, pageMap, pageDir, strip, dirLinks, sourceUrl }) {
   const base = document.baseURI;
   const rel = (to) => {
     const seg = (p) => p.split('/').filter((x) => x && x !== '.');
     const a = seg(pageDir), b = seg(to);
     let i = 0; while (i < a.length && i < b.length && a[i] === b[i]) i++;
     return [...Array(a.length - i).fill('..'), ...b.slice(i)].join('/');
+  };
+  const pageHref = (to) => {
+    let r = rel(to);
+    if (dirLinks && /(^|\/)index\.html$/.test(r)) r = r.slice(0, -'index.html'.length) || './';
+    return r || '.';
   };
   const abs = (v) => { try { const u = new URL(v, base); u.hash = ''; return u.href; } catch { return null; } };
   const hashOf = (v) => { try { return new URL(v, base).hash; } catch { return ''; } };
@@ -186,8 +195,9 @@ function rewriteInPage({ assetMap, pageMap, pageDir, strip, sourceUrl }) {
   document.querySelectorAll('link[href]').forEach((el) => { const r = mapAsset(el.getAttribute('href')); if (r) el.setAttribute('href', r); });
   document.querySelectorAll('a[href], area[href]').forEach((el) => {
     const v = el.getAttribute('href'); if (!v || /^(javascript|mailto|tel|sms):/i.test(v.trim())) return;
+    if (v.trim() === '' || v.trim().startsWith('#')) return; // already points at this document; rewriting it to the page path makes builders (Webflow) flag it as the current page
     const a = abs(v); if (!a) return;
-    if (pageMap[a]) el.setAttribute('href', (rel(pageMap[a]) || '.') + hashOf(v));
+    if (pageMap[a]) el.setAttribute('href', pageHref(pageMap[a]) + hashOf(v));
     else if (assetMap[a]) el.setAttribute('href', rel(assetMap[a]));
   });
   document.querySelectorAll('form[action]').forEach((el) => { const a = abs(el.getAttribute('action')); if (a) el.setAttribute('action', a); }); // submits still hit the real backend
@@ -247,7 +257,7 @@ async function crawlPage(context, url) {
     pageMap[finalUrl] = rel; pageMap[url] = rel;
     const assetMap = Object.fromEntries(assets);
     for (const [a, r] of assetQueue) assetMap[a] = r;
-    const html = await page.evaluate(rewriteInPage, { assetMap, pageMap, pageDir: path.posix.dirname(rel), strip: STRIP_SCRIPTS, sourceUrl: finalUrl });
+    const html = await page.evaluate(rewriteInPage, { assetMap, pageMap, pageDir: path.posix.dirname(rel), strip: STRIP_SCRIPTS, dirLinks: DIR_LINKS, sourceUrl: finalUrl });
     await writeOut(rel, html);
     pages.set(finalUrl, rel); pageStatus.set(finalUrl, status);
     console.log(`page  ${finalUrl} -> ${rel}${status >= 400 ? ` [HTTP ${status}]` : ''}`);

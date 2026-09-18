@@ -1,14 +1,22 @@
 # website-replica
 
-One-command static replica of https://www.prismoralsurgery.com for research use. Only run this
-against a site you own or have written permission to copy.
+One-command static replica of a website for research use. Only run this against a site you own or
+have written permission to copy.
 
 ## Status
 
-Captured on 2026-09-18 into `site/` (committed). The live site is built with **Webflow** and served
-through Cloudflare. The capture holds 39 pages and 332 assets with 0 fetch failures; `verify.mjs`
-reports 0 broken requests, and full-page screenshots of the homepage, the contact page and a service
-page at 1440px are pixel-identical to the live site. See `site/manifest.json` for the full inventory.
+`site/` holds the capture of **https://www.prismoralsurgery.com** made on 2026-09-18. The live site
+is built with **Webflow** and served through Cloudflare. The capture has 39 pages and 326 assets with
+0 fetch failures; `verify.mjs` reports 0 broken requests, and full-page screenshots at 1440px of the
+homepage, the About page, the contact page and a service page are pixel-identical to the live site
+when served from a static host. See `site/manifest.json` for the full inventory. Reproduce it with:
+
+```bash
+node crawl.mjs https://www.prismoralsurgery.com/ site --wait=2000 --links=dir
+```
+
+`npm run crawl` currently points at https://www.owldental.ie (set by a later commit on this branch)
+and would overwrite `site/`.
 
 The 39 pages are the 33 sitemap URLs, `/contact` (a redirect to `/contact-us`, kept as a stub),
 `/services/oral-surgery/%20iv-sedation` (a mis-typed link on the homepage that Webflow still serves;
@@ -18,13 +26,21 @@ Webflow's "Not Found" page: `/blog` (nav and footer on every page), `/oral-surge
 pages), and `/services/cosmetic-dentistry/botox` (Dr. Kim's page). Those 404 pages are mirrored as-is
 so the dead links behave the same offline; `manifest.pageStatus` lists them.
 
-Capturing from a cloud session needs **Network access** set to **Full** (or Custom with the site plus
-its CDNs). If Chromium then fails every page with `ERR_CERT_AUTHORITY_INVALID` while `curl` works, the
-sandbox's TLS-inspecting proxy CA is trusted by curl/Node but not by Chromium, which reads the NSS store:
+The capture uses `--links=dir` so page links match the live URLs (`--links=file` writes
+`dir/index.html` links instead). Webflow sites need `dir`: Webflow's runtime marks every
+`*/index.html` link as the current page when the URL ends in `/`, which on this site turned 2 to 4
+highlighted nav links into 70 to 90.
+
+Capturing needs **Full** network access in a cloud session (the default **Trusted** level only allows
+package registries and GitHub). Docs: https://code.claude.com/docs/en/cloud-environments#network-access.
+In a cloud session outbound HTTPS is re-terminated by the agent proxy, and Chromium does not read
+the CA environment variables, so import the proxy CA into Chromium's NSS store first (the symptom is
+`ERR_CERT_AUTHORITY_INVALID` on every page while `curl` works):
 
 ```bash
 apt-get install -y libnss3-tools
-certutil -d sql:$HOME/.pki/nssdb -A -t "C,," -n "agent proxy CA" -i /root/.ccr/agent-proxy-ca.crt
+mkdir -p ~/.pki/nssdb && [ -f ~/.pki/nssdb/cert9.db ] || certutil -d sql:$HOME/.pki/nssdb -N --empty-password
+certutil -d sql:$HOME/.pki/nssdb -A -n ccr-agent-proxy -t "C,," -i /root/.ccr/agent-proxy-ca.crt
 ```
 
 ## Run
@@ -33,14 +49,17 @@ certutil -d sql:$HOME/.pki/nssdb -A -t "C,," -n "agent proxy CA" -i /root/.ccr/a
 cd website-replica
 npm install
 npx playwright install chromium   # skip if a matching Chromium is already installed
-npm run crawl                     # -> site/ and site/manifest.json
+npm run crawl                     # -> site/ and site/manifest.json (uses --links=dir, see below)
 npm run verify                    # opens every page offline and reports anything missing
 npm run serve                     # http://127.0.0.1:8080/
 ```
 
-`crawl.mjs` options: `node crawl.mjs <url> [outDir] [--max-pages=500] [--wait=1500] [--scripts=keep|strip]`.
+`crawl.mjs` options: `node crawl.mjs <url> [outDir] [--max-pages=500] [--wait=1500] [--scripts=keep|strip] [--links=file|dir]`.
 Use `--scripts=strip` if the site's own JavaScript breaks the offline copy (common with Wix and
-other builders whose runtime phones home). Set `CHROMIUM_PATH=/path/to/chrome` to use a system browser.
+other builders whose runtime phones home). `--links=dir` writes page links as `dir/` instead of
+`dir/index.html`, matching the live site's URLs; it needs a static host that serves `index.html` for
+directories (any real host, and `serve.mjs`), so the copy no longer opens straight from disk.
+Set `CHROMIUM_PATH=/path/to/chrome` to use a system browser.
 
 `mirror.sh` is a wget-only fallback. It captures server-sent HTML, not the rendered DOM, and only
 same-host assets.
@@ -55,7 +74,8 @@ same-host assets.
 4. Also fetches assets the browser never requested: favicons, unused `srcset` candidates,
    `url()` references in unused CSS rules, and same-site files linked from `<a>` (PDFs etc.).
 5. Rewrites URLs in HTML and CSS to relative paths so the copy works from any static host or
-   straight from disk. Redirected URLs get a stub page so old links still resolve.
+   straight from disk. Fragment-only links (`href="#"`, `href="#top"`) are left alone. Redirected
+   URLs get a stub page so old links still resolve.
 6. Writes `site/manifest.json` listing every page (with the HTTP status it was served with), asset,
    redirect, and failure.
 
@@ -69,7 +89,7 @@ same-host assets.
   per-request is captured only as the one response the crawler saw.
 - **Timing.** Sliders, animations, and A/B content are frozen at the moment of capture.
 
-### In this capture specifically
+### In the prismoralsurgery.com capture specifically
 
 - **Contact form** (footer of every page): posts to Basin (`usebasin.com/f/3bc24a39f0dd`) and is
   protected by Google reCAPTCHA, which loads live. Offline, the reCAPTCHA badge is the only visible
@@ -100,4 +120,4 @@ run, because they fail the same way on the live site or are outside what a stati
 
 `npm test` serves a small fixture site with two origins, crawls it, asserts the output
 (rendered DOM, relative links, hash anchors, redirect resolution, query-string assets,
-cross-origin CSS, favicons, srcset candidates), and runs the offline verifier.
+cross-origin CSS, favicons, srcset candidates, `--links=dir` output), and runs the offline verifier.
