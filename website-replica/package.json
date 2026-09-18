@@ -4,7 +4,7 @@
   "type": "module",
   "description": "Rendered static mirror of a website (crawl, rewrite, verify, serve).",
   "scripts": {
-    "crawl": "node crawl.mjs https://www.prismoralsurgery.com/ site",
+    "crawl": "node crawl.mjs https://www.prismoralsurgery.com/ site --wait=2000 --links=dir",
     "verify": "node verify.mjs site",
     "serve": "node serve.mjs site 8080",
     "test": "bash test/run.sh"

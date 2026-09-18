@@ -5,14 +5,20 @@ against a site you own or have written permission to copy.
 
 ## Status
 
-The replica has **not been captured yet**. The cloud session that built this tooling runs under the
-environment's default **Trusted** network access level, which only allows package registries and
-GitHub. Direct fetches, WebFetch, and archive.org were all refused for `www.prismoralsurgery.com`.
+`site/` holds the captured replica (see `site/manifest.json` for the capture date, page list, asset
+list, and failures). The site is built on **Webflow**; it was captured with `--links=dir` because
+Webflow's runtime marks every `*/index.html` link as the current page when the URL ends in `/`.
 
-To capture from a cloud session: edit the environment, set **Network access** to **Full** (or
-**Custom** and add `www.prismoralsurgery.com` plus `*.prismoralsurgery.com`; also add any CDN hosts
-the site loads assets from, or just use Full), then run the commands below. Docs:
-https://code.claude.com/docs/en/cloud-environments#network-access
+Capturing needs **Full** network access in a cloud session (the default **Trusted** level only allows
+package registries and GitHub). Docs: https://code.claude.com/docs/en/cloud-environments#network-access.
+In a cloud session outbound HTTPS is re-terminated by the agent proxy, and Chromium does not read
+the CA environment variables, so import the proxy CA into Chromium's NSS store first:
+
+```bash
+apt-get install -y libnss3-tools
+mkdir -p ~/.pki/nssdb && certutil -d sql:$HOME/.pki/nssdb -N --empty-password
+certutil -d sql:$HOME/.pki/nssdb -A -n ccr-agent-proxy -t "C,," -i /root/.ccr/agent-proxy-ca.crt
+```
 
 ## Run
 
@@ -20,14 +26,17 @@ https://code.claude.com/docs/en/cloud-environments#network-access
 cd website-replica
 npm install
 npx playwright install chromium   # skip if a matching Chromium is already installed
-npm run crawl                     # -> site/ and site/manifest.json
+npm run crawl                     # -> site/ and site/manifest.json (uses --links=dir, see below)
 npm run verify                    # opens every page offline and reports anything missing
 npm run serve                     # http://127.0.0.1:8080/
 ```
 
-`crawl.mjs` options: `node crawl.mjs <url> [outDir] [--max-pages=500] [--wait=1500] [--scripts=keep|strip]`.
+`crawl.mjs` options: `node crawl.mjs <url> [outDir] [--max-pages=500] [--wait=1500] [--scripts=keep|strip] [--links=file|dir]`.
 Use `--scripts=strip` if the site's own JavaScript breaks the offline copy (common with Wix and
-other builders whose runtime phones home). Set `CHROMIUM_PATH=/path/to/chrome` to use a system browser.
+other builders whose runtime phones home). `--links=dir` writes page links as `dir/` instead of
+`dir/index.html`, matching the live site's URLs; it needs a static host that serves `index.html` for
+directories (any real host, and `serve.mjs`), so the copy no longer opens straight from disk.
+Set `CHROMIUM_PATH=/path/to/chrome` to use a system browser.
 
 `mirror.sh` is a wget-only fallback. It captures server-sent HTML, not the rendered DOM, and only
 same-host assets.

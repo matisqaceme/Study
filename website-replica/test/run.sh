@@ -50,4 +50,14 @@ ls "$OUT"/img/logo__*.svg >/dev/null 2>&1 || { echo "MISSING srcset 2x candidate
 [ "$(grep -c "http://127.0.0.1:$PORT" "$OUT/index.html")" -le 2 ] || { echo "too many absolute self-references left in index.html"; fail=1; }
 
 node verify.mjs "$OUT" 8124 || fail=1
+
+# --links=dir: page links become directory URLs like the live site's (Webflow and similar builders inspect hrefs).
+OUT2=$TMP/out-dir
+node crawl.mjs "http://127.0.0.1:$PORT/" "$OUT2" --wait=300 --links=dir >/dev/null
+expect_grep2() { grep -q -- "$2" "$OUT2/$1" || { echo "EXPECTED '$2' in $1 (dir mode)"; fail=1; }; }
+expect_grep2 index.html 'href="about/"'                   # dir/index.html -> dir/
+expect_grep2 index.html 'href="services.html#pricing"'     # non-index pages unchanged
+expect_grep2 about/index.html 'href="../"'                 # link back to the root page
+grep -q 'href="about/index.html"' "$OUT2/index.html" && { echo "UNEXPECTED index.html link in dir mode"; fail=1; }
+node verify.mjs "$OUT2" 8125 || fail=1
 [ $fail -eq 0 ] && echo "ALL CHECKS PASSED" || { echo "SOME CHECKS FAILED"; exit 1; }
