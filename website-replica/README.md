@@ -75,6 +75,19 @@ mkdir -p ~/.pki/nssdb && [ -f ~/.pki/nssdb/cert9.db ] || certutil -d sql:$HOME/.
 certutil -d sql:$HOME/.pki/nssdb -A -n ccr-agent-proxy -t "C,," -i /root/.ccr/agent-proxy-ca.crt
 ```
 
+## Owl Dental on the Prism design (`sites/owldental-on-prism/`)
+
+`node rebrand/owldental/build.mjs` rebuilds this site from the Prism capture: every Prism page used as a
+template is rewritten with Owl Dental's content (`rebrand/owldental/content.mjs`, all of it taken from
+the live owldental.ie), the Prism pages Owl has no equivalent for are dropped, and Prism's Google Tag
+Manager, PatientLoop booking, Basin form backend, reCAPTCHA and Typekit script are removed. Owl's
+photos (`rebrand/owldental/assets/`, fetched from Wix at higher resolution than the live site serves)
+replace Prism's; a few of Prism's generic stock photos and service icons stay where Owl has nothing
+equivalent. Pages: home, about (with the six-person team slider Prism keeps hidden), treatments
+overview, seven treatment pages with prices, pricelist, contact with a Netlify Forms appointment form,
+thank-you and 404. Fonts are the Prism capture's local `the-seasons` files plus Inter from Google.
+`verify.mjs` reports 0 broken requests; the result is 5 MB and responsive out of the box.
+
 ## Run
 
 ```bash
