@@ -144,8 +144,27 @@ function collectUrls() {
   for (const attr of ['src', 'poster', 'data-src', 'data-lazy-src', 'data-bg', 'data-background', 'data-background-image']) {
     document.querySelectorAll(`[${attr}]`).forEach((el) => { if (!(el.tagName === 'IFRAME' && attr === 'src')) add(el.getAttribute(attr)); });
   }
+  // srcset per the HTML spec: a URL runs to the next whitespace (so it may contain commas, as Wix image URLs do);
+  // descriptors run to the next top-level comma.
+  const parseSrcset = (v) => {
+    const out = []; const s = v || ''; let i = 0;
+    while (i < s.length) {
+      while (i < s.length && /[\s,]/.test(s[i])) i++;
+      if (i >= s.length) break;
+      let start = i; while (i < s.length && !/\s/.test(s[i])) i++;
+      let url = s.slice(start, i); let desc = '';
+      if (/,$/.test(url)) url = url.replace(/,+$/, '');
+      else {
+        let depth = 0; start = i;
+        while (i < s.length) { const c = s[i]; if (c === '(') depth++; else if (c === ')') depth--; else if (c === ',' && depth === 0) break; i++; }
+        desc = s.slice(start, i).trim(); i++;
+      }
+      if (url) out.push({ url, desc });
+    }
+    return out;
+  };
   for (const attr of ['srcset', 'data-srcset', 'data-lazy-srcset']) {
-    document.querySelectorAll(`[${attr}]`).forEach((el) => el.getAttribute(attr).split(',').forEach((c) => add(c.trim().split(/\s+/)[0])));
+    document.querySelectorAll(`[${attr}]`).forEach((el) => parseSrcset(el.getAttribute(attr)).forEach((c) => add(c.url)));
   }
   document.querySelectorAll('link[href]').forEach((el) => { if (/stylesheet|icon|preload|prefetch|manifest/i.test(el.rel)) add(el.getAttribute('href')); });
   const cssUrls = (css) => { for (const m of (css || '').matchAll(/url\(\s*(['"]?)([^'")]+)\1\s*\)/g)) add(m[2]); for (const m of (css || '').matchAll(/@import\s+(['"])([^'"]+)\1/g)) add(m[2]); };
@@ -171,10 +190,30 @@ function rewriteInPage({ assetMap, pageMap, pageDir, strip, dirLinks, sourceUrl 
   const abs = (v) => { try { const u = new URL(v, base); u.hash = ''; return u.href; } catch { return null; } };
   const hashOf = (v) => { try { return new URL(v, base).hash; } catch { return ''; } };
   const mapAsset = (v) => { if (!v || /^(data|blob|javascript|mailto|tel):/i.test(v.trim())) return null; const a = abs(v); return a && assetMap[a] ? rel(assetMap[a]) : null; };
-  const rewriteSrcset = (v) => v.split(',').map((part) => {
-    const m = part.trim().match(/^(\S+)(\s+.+)?$/); if (!m) return part;
-    const mapped = mapAsset(m[1]); return mapped ? mapped + (m[2] ?? '') : part.trim();
-  }).join(', ');
+  // A reference we have no local copy of (fetch failed, or it was never seen) becomes absolute so it still works online
+  // once the page has moved directories; hash-only links stay as they are.
+  const absolute = (v) => { if (!v || /^(#|data:|blob:|javascript:|mailto:|tel:|sms:|about:)/i.test(v.trim())) return null; try { return new URL(v.trim(), base).href; } catch { return null; } };
+  const mapOrAbsolute = (v) => mapAsset(v) ?? absolute(v) ?? v;
+  // srcset per the HTML spec: a URL runs to the next whitespace (so it may contain commas, as Wix image URLs do);
+  // descriptors run to the next top-level comma.
+  const parseSrcset = (v) => {
+    const out = []; const s = v || ''; let i = 0;
+    while (i < s.length) {
+      while (i < s.length && /[\s,]/.test(s[i])) i++;
+      if (i >= s.length) break;
+      let start = i; while (i < s.length && !/\s/.test(s[i])) i++;
+      let url = s.slice(start, i); let desc = '';
+      if (/,$/.test(url)) url = url.replace(/,+$/, '');
+      else {
+        let depth = 0; start = i;
+        while (i < s.length) { const c = s[i]; if (c === '(') depth++; else if (c === ')') depth--; else if (c === ',' && depth === 0) break; i++; }
+        desc = s.slice(start, i).trim(); i++;
+      }
+      if (url) out.push({ url, desc });
+    }
+    return out;
+  };
+  const rewriteSrcset = (v) => parseSrcset(v).map(({ url, desc }) => mapOrAbsolute(url) + (desc ? ` ${desc}` : '')).join(', ');
   const rewriteCssText = (css) => css
     .replace(/url\(\s*(['"]?)([^'")]+)\1\s*\)/g, (m, qch, u) => { const r = mapAsset(u); return r ? `url(${qch}${r}${qch})` : m; })
     .replace(/@import\s+(['"])([^'"]+)\1/g, (m, qch, u) => { const r = mapAsset(u); return r ? `@import ${qch}${r}${qch}` : m; });
@@ -185,18 +224,19 @@ function rewriteInPage({ assetMap, pageMap, pageDir, strip, dirLinks, sourceUrl 
   for (const attr of ['src', 'poster', 'data-src', 'data-lazy-src', 'data-bg', 'data-background', 'data-background-image']) {
     document.querySelectorAll(`[${attr}]`).forEach((el) => {
       if (el.tagName === 'IFRAME' && attr === 'src') return; // third-party embeds stay live
-      const r = mapAsset(el.getAttribute(attr)); if (r) el.setAttribute(attr, r);
+      const v = el.getAttribute(attr); const r = mapOrAbsolute(v); if (r !== v) el.setAttribute(attr, r);
     });
   }
   for (const attr of ['srcset', 'data-srcset', 'data-lazy-srcset']) {
     document.querySelectorAll(`[${attr}]`).forEach((el) => el.setAttribute(attr, rewriteSrcset(el.getAttribute(attr))));
   }
-  document.querySelectorAll('link[href]').forEach((el) => { const r = mapAsset(el.getAttribute('href')); if (r) el.setAttribute('href', r); });
+  document.querySelectorAll('link[href]').forEach((el) => { const v = el.getAttribute('href'); const r = mapOrAbsolute(v); if (r !== v) el.setAttribute('href', r); });
   document.querySelectorAll('a[href], area[href]').forEach((el) => {
     const v = el.getAttribute('href'); if (!v || /^(javascript|mailto|tel|sms):/i.test(v.trim())) return;
     const a = abs(v); if (!a) return;
     if (pageMap[a]) el.setAttribute('href', pageHref(pageMap[a]) + hashOf(v));
     else if (assetMap[a]) el.setAttribute('href', rel(assetMap[a]));
+    else { const r = absolute(v); if (r && r !== v) el.setAttribute('href', r); }
   });
   document.querySelectorAll('form[action]').forEach((el) => { const a = abs(el.getAttribute('action')); if (a) el.setAttribute('action', a); }); // submits still hit the real backend
   document.querySelectorAll('[style*="url("]').forEach((el) => el.setAttribute('style', rewriteCssText(el.getAttribute('style'))));
@@ -250,10 +290,10 @@ async function crawlPage(context, url) {
       else if (sameSite(n) && looksLikeAsset(n)) queueAsset(n);
     }
     for (const r of refs) if (isHttp(r)) queueAsset(normalize(r));
+    await fetchQueuedAssets(context); // resolve referenced-but-unloaded assets now, so only assets we actually have get local paths
     const rel = localPathFor(finalUrl, { isPage: true });
     pageMap[finalUrl] = rel; pageMap[url] = rel;
     const assetMap = Object.fromEntries(assets);
-    for (const [a, r] of assetQueue) assetMap[a] = r;
     const html = await page.evaluate(rewriteInPage, { assetMap, pageMap, pageDir: path.posix.dirname(rel), strip: STRIP_SCRIPTS, dirLinks: DIR_LINKS, sourceUrl: finalUrl });
     await writeOut(rel, html);
     pages.set(finalUrl, rel);
@@ -266,15 +306,16 @@ async function crawlPage(context, url) {
   } finally { await page.close(); }
 }
 
+const unfetchable = new Set(); // queued asset urls that failed once; never retried, never rewritten to local paths
 async function fetchQueuedAssets(context) {
   for (const url of assetQueue.keys()) {
-    if (assets.has(url)) continue;
+    if (assets.has(url) || unfetchable.has(url)) continue;
     try {
       const r = await context.request.get(url, { timeout: 60000 });
-      if (!r.ok()) { failed.push({ url, error: `HTTP ${r.status()}` }); continue; }
+      if (!r.ok()) { unfetchable.add(url); failed.push({ url, error: `HTTP ${r.status()}` }); continue; }
       await saveAsset(url, await r.body(), r.headers()['content-type'] ?? '');
       console.log(`asset ${url}`);
-    } catch (e) { failed.push({ url, error: e.message.split('\n')[0] }); }
+    } catch (e) { unfetchable.add(url); failed.push({ url, error: e.message.split('\n')[0] }); }
   }
 }
 

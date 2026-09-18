@@ -47,7 +47,11 @@ expect_grep index.html 'href="img/favicon.ico"'           # favicon (never fetch
 expect_grep index.html 'url(img/bg.png)'                  # unused <style> url() captured
 expect_grep index.html 'srcset="img/logo.svg 1x, img/logo__'  # every srcset candidate captured
 ls "$OUT"/img/logo__*.svg >/dev/null 2>&1 || { echo "MISSING srcset 2x candidate"; fail=1; }
-[ "$(grep -c "http://127.0.0.1:$PORT" "$OUT/index.html")" -le 2 ] || { echo "too many absolute self-references left in index.html"; fail=1; }
+[ "$(ls "$OUT"/img/logo__*.svg | wc -l)" -ge 4 ] || { echo "srcset URLs containing commas were not captured whole"; fail=1; }
+refuse_grep index.html 'h_2,q_3 1x'                        # comma-in-URL candidate rewritten as one unit
+refuse_grep index.html 'data-src="img/missing.png"'        # a reference the crawler could not fetch is not pointed at a nonexistent local file
+expect_grep index.html "data-src=\"http://127.0.0.1:$PORT/img/missing.png\""   # ...it becomes absolute so it still works online
+[ "$(grep -c "http://127.0.0.1:$PORT" "$OUT/index.html")" -le 3 ] || { echo "too many absolute self-references left in index.html"; fail=1; }
 
 node verify.mjs "$OUT" 8124 || fail=1
 
