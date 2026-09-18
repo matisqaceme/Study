@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Fixture Home</title>
+<base href="/">
+<link rel="stylesheet" href="/css/style.css?v=3">
+<link rel="stylesheet" href="http://localhost:__PORT__/ext/ext.css">
+<link rel="icon" href="/img/favicon.ico">
+<style>.inline-bg { background: url(/img/bg.png); }</style>
+</head>
+<body>
+<nav>
+  <a href="/">Home</a>
+  <a href="/about/">About</a>
+  <a href="about">About (no slash)</a>
+  <a href="/services.html#pricing">Services</a>
+  <a href="/team">Team (redirects)</a>
+  <a href="/docs/brochure.pdf">Brochure</a>
+  <a href="https://example.com/">External</a>
+  <a href="mailto:hi@example.com">Mail</a>
+</nav>
+<div class="hero inline-bg" style="background-image:url('/img/bg.png?x=1')">
+  <img src="/img/logo.svg" alt="logo" srcset="/img/logo.svg 1x, /img/logo.svg?2x 2x">
+</div>
+<div id="app">not rendered</div>
+<form action="/contact" method="post"><input name="q"><button>Send</button></form>
+<div style="height:3000px"></div>
+<img loading="lazy" src="/img/photo.png" alt="lazy photo">
+<script src="/js/app.js"></script>
+</body>
+</html>

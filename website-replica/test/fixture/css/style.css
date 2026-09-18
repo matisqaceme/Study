@@ -1,0 +1,3 @@
+@font-face { font-family: "Fix"; src: url("../fonts/f.woff2") format("woff2"); }
+body { font-family: "Fix", sans-serif; }
+.hero { background: url(/img/bg.png?x=1) no-repeat; min-height: 200px; }
