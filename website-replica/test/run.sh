@@ -46,6 +46,8 @@ grep -q 'url(../img/bg__' "$OUT"/css/style__*.css || { echo "css query-string ur
 grep -q 'url("../img/photo.png")' "$OUT/_ext/localhost/ext/ext.css" || { echo "cross-origin css url not rewritten"; fail=1; }
 expect_file "_ext/localhost/img/photo.png"                # root-relative url() inside cross-origin CSS resolves against that origin
 expect_grep index.html 'href="img/favicon.ico"'           # favicon (never fetched by headless Chromium) still captured
+[ ! -f "$OUT/about" ] && [ ! -f "$OUT/about.html" ] || { echo "a <link rel=prefetch> to a page was saved as an asset file"; fail=1; }
+expect_grep index.html 'rel="prefetch" href="about/index.html"'   # ...it points at the captured page instead
 expect_grep index.html 'url(img/bg.png)'                  # unused <style> url() captured
 expect_grep index.html 'srcset="img/logo.svg 1x, img/logo__'  # every srcset candidate captured
 ls "$OUT"/img/logo__*.svg >/dev/null 2>&1 || { echo "MISSING srcset 2x candidate"; fail=1; }

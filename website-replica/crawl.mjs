@@ -88,8 +88,8 @@ const pages = new Map();    // normalized url -> out-relative path
 const pageStatus = new Map(); // normalized url -> HTTP status the page was served with (a 404 page is still mirrored, so dead links on the live site behave the same offline)
 const redirects = new Map(); // requested page url -> final url
 const failed = [];
-const assetQueue = new Map(); // url -> planned path, for assets referenced but not loaded by the browser (favicons, unused srcset candidates, linked PDFs)
-const queueAsset = (url) => { if (!assets.has(url) && !assetQueue.has(url)) assetQueue.set(url, localPathFor(url)); };
+const assetQueue = new Set(); // assets referenced but not loaded by the browser (favicons, unused srcset candidates, linked PDFs); crawlable page URLs (e.g. <link rel=prefetch> to a page) never go here
+const queueAsset = (url) => { if (!assets.has(url) && !isCrawlablePage(url)) assetQueue.add(url); };
 
 async function writeOut(rel, data) {
   const abs = path.join(OUT, rel);
@@ -100,7 +100,7 @@ async function writeOut(rel, data) {
 async function saveAsset(url, body, contentType) {
   url = normalize(url);
   if (assets.has(url)) return assets.get(url);
-  const rel = assetQueue.get(url) ?? localPathFor(url, { contentType });
+  const rel = localPathFor(url, { contentType }); // named by content type, so an extension-less HTML asset never collides with a page directory
   assets.set(url, rel);
   assetMeta.set(rel, { url, contentType: mime(contentType), bytes: body.length });
   try { await writeOut(rel, body); } catch (e) { failed.push({ url, error: `write: ${e.message}` }); }
@@ -121,6 +121,7 @@ function attachResponseCapture(context) {
     let body;
     try { body = await res.body(); } catch { return; }
     const ct = res.headers()['content-type'] ?? '';
+    if (mime(ct).includes('html') && isCrawlablePage(normalize(url))) return; // a page the browser prefetched: the crawl captures it as a page, not an asset
     const rel = await saveAsset(url, body, ct);
     for (let r = req.redirectedFrom(); r; r = r.redirectedFrom()) assets.set(normalize(r.url()), rel); // alias redirect chain
   });
@@ -231,7 +232,11 @@ function rewriteInPage({ assetMap, pageMap, pageDir, strip, dirLinks, sourceUrl 
   for (const attr of ['srcset', 'data-srcset', 'data-lazy-srcset']) {
     document.querySelectorAll(`[${attr}]`).forEach((el) => el.setAttribute(attr, rewriteSrcset(el.getAttribute(attr))));
   }
-  document.querySelectorAll('link[href]').forEach((el) => { const v = el.getAttribute('href'); const r = mapOrAbsolute(v); if (r !== v) el.setAttribute('href', r); });
+  document.querySelectorAll('link[href]').forEach((el) => {
+    const v = el.getAttribute('href'); const a = abs(v);
+    const r = a && pageMap[a] ? pageHref(pageMap[a]) : mapOrAbsolute(v); // <link rel=prefetch> etc. may point at a page
+    if (r !== v) el.setAttribute('href', r);
+  });
   document.querySelectorAll('a[href], area[href]').forEach((el) => {
     const v = el.getAttribute('href'); if (!v || /^(javascript|mailto|tel|sms):/i.test(v.trim())) return;
     if (v.trim() === '' || v.trim().startsWith('#')) return; // already points at this document; rewriting it to the page path makes builders (Webflow) flag it as the current page
@@ -292,7 +297,12 @@ async function crawlPage(context, url) {
       if (isCrawlablePage(n)) { pageMap[n] = localPathFor(n, { isPage: true }); nextPages.push(n); }
       else if (sameSite(n) && looksLikeAsset(n)) queueAsset(n);
     }
-    for (const r of refs) if (isHttp(r)) queueAsset(normalize(r));
+    for (const r of refs) {
+      if (!isHttp(r)) continue;
+      const n = normalize(r);
+      if (isCrawlablePage(n)) { if (!pageMap[n]) { pageMap[n] = localPathFor(n, { isPage: true }); nextPages.push(n); } } // e.g. <link rel="prefetch"> to another page
+      else queueAsset(n);
+    }
     await fetchQueuedAssets(context); // resolve referenced-but-unloaded assets now, so only assets we actually have get local paths
     const rel = localPathFor(finalUrl, { isPage: true });
     pageMap[finalUrl] = rel; pageMap[url] = rel;
@@ -311,7 +321,7 @@ async function crawlPage(context, url) {
 
 const unfetchable = new Set(); // queued asset urls that failed once; never retried, never rewritten to local paths
 async function fetchQueuedAssets(context) {
-  for (const url of assetQueue.keys()) {
+  for (const url of assetQueue) {
     if (assets.has(url) || unfetchable.has(url)) continue;
     try {
       const r = await context.request.get(url, { timeout: 60000 });
