@@ -1,13 +1,14 @@
 # website-replica
 
-One-command static replica of https://www.prismoralsurgery.com for research use. Only run this
+One-command static replica of https://www.owldental.ie for research use. Only run this
 against a site you own or have written permission to copy.
 
 ## Status
 
 `site/` holds the captured replica (see `site/manifest.json` for the capture date, page list, asset
-list, and failures). The site is built on **Webflow**; it was captured with `--links=dir` because
-Webflow's runtime marks every `*/index.html` link as the current page when the URL ends in `/`.
+list, and failures). The site is built on **Wix**. It is captured with `--links=dir` so page links
+match the live URLs (`--links=file` writes `dir/index.html` links instead; Webflow sites need `dir`
+because Webflow's runtime marks every `*/index.html` link as the current page when the URL ends in `/`).
 
 Capturing needs **Full** network access in a cloud session (the default **Trusted** level only allows
 package registries and GitHub). Docs: https://code.claude.com/docs/en/cloud-environments#network-access.

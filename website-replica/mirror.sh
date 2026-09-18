@@ -3,7 +3,7 @@
 # JS-rendered DOM, and only same-host assets. Prefer `npm run crawl` for a faithful copy.
 # Usage: ./mirror.sh [url] [outDir]
 set -euo pipefail
-URL="${1:-https://www.prismoralsurgery.com/}"
+URL="${1:-https://www.owldental.ie/}"
 OUT="${2:-site-wget}"
 wget --mirror --page-requisites --convert-links --adjust-extension --no-parent \
   --restrict-file-names=unix --trust-server-names -e robots=off \
