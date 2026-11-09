@@ -19,7 +19,6 @@ const HEAD_LEADING = 0.9, HEAD_TRACK = -0.5;
 const W = 13.333, H = 7.5, M = 0.6;
 const HEAD_Y = 0.5;               // every content headline starts here
 const FOOT_Y = 6.4, FOOT_H = 0.6; // source box, bottom-anchored at 7.0
-const NUM = { x: 12.43, y: 6.7, w: 0.4, h: 0.3 }; // slide number box, bottom at 7.0
 
 const THEME = {
   name: "Gambling Disorder 9990",
@@ -89,16 +88,6 @@ function photo(slide, name, x, y, w, h, alt) {
 function source(slide, t, x, w) {
   text(slide, t, { x, y: FOOT_Y, w, h: FOOT_H, fontSize: 11, valign: "bottom", objectName: "Source" });
 }
-function slideNumber(slide) {
-  slide.slideNumber = { ...NUM, fontFace: FONT, fontSize: 11, color: BLACK, align: "left", valign: "bottom", margin: 0 };
-}
-// Slide number where a photo reaches the bottom-right corner: a white notch keeps it black on white.
-function slideNumberOnPhoto(slide) {
-  slide.addShape(pres.shapes.RECTANGLE, {
-    x: 12.23, y: 6.6, w: W - 12.23, h: H - 6.6, fill: { color: WHITE }, line: { type: "none" }, objectName: "Slide number notch",
-  });
-  slideNumber(slide);
-}
 // A paragraph that starts with a bold label: [label] [rest]
 const labelled = (label, rest, last, extra = {}) => [
   { text: label, options: { bold: true, ...extra } },
@@ -159,7 +148,6 @@ pres.addSection({ title: "Definition and prevalence" });
   });
   source(s, "Source: WHO, ICD-11 6C50 Gambling disorder; APA (2013), DSM-5", M, 6.3);
   photo(s, "s2_B", 7.333, 0, W - 7.333, H, "Hands pressing the buttons of a row of slot machines");
-  slideNumberOnPhoto(s);
   s.addNotes(NOTES[2]);
 }
 
@@ -174,9 +162,8 @@ pres.addSection({ title: "Definition and prevalence" });
   text(s, "of all adults", { x: X, y: 5.45, w: C2 - 0.2, h: 0.35, objectName: "Stat 1 label" });
   text(s, "≈1 in 6", { x: X + C2, y: 4.55, w: CW - C2, h: 0.9, fontSize: 60, charSpacing: -1, objectName: "Stat 2" });
   text(s, "online casino and slots players may have the disorder", { x: X + C2, y: 5.45, w: CW - C2, h: 0.9, objectName: "Stat 2 label" });
-  source(s, "Source: Wardle et al. (2024), Lancet Public Health Commission; Tran et al. (2024), Lancet Public Health", X, 4.95);
+  source(s, "Source: Wardle et al. (2024), Lancet Public Health Commission; Tran et al. (2024), Lancet Public Health", X, CW);
   photo(s, "s3_C", 0, 0, W / 2, H, "Hands holding a phone running a mobile slot machine game");
-  slideNumber(s);
   s.addNotes(NOTES[3]);
 }
 
@@ -199,7 +186,6 @@ pres.addSection({ title: "Explanations" });
   });
   source(s, "Source: Reuter et al. (2005), Nature Neuroscience; Clark et al. (2009), Neuron; Miller (2010), Traumatology", M, 11.5);
   photo(s, "s4_D", 0, 1.95, W, 2.0, "Close-up of slot machine reels showing three sevens");
-  slideNumber(s);
   s.addNotes(NOTES[4]);
 }
 
@@ -224,7 +210,6 @@ pres.addSection({ title: "Treatment" });
   });
   source(s, "Source: Grant, Kim, Hollander & Potenza (2008), Psychopharmacology; Grant, Kim & Hartman (2008), J Clin Psychiatry", M, 6.85);
   photo(s, "s5_E", 8.0, 0, W - 8.0, H, "Hands placing stacks of chips on a roulette table");
-  slideNumberOnPhoto(s);
   s.addNotes(NOTES[5]);
 }
 
@@ -247,9 +232,8 @@ pres.addSection({ title: "Treatment" });
   });
   text(s, labelled("Covert sensitisation:", " imagine gambling, then imagine a disgusting outcome · Glover (1985)", true),
     { x: X, y: 5.05, w: CW, h: 0.65, fontSize: 18, objectName: "Covert sensitisation" });
-  source(s, "Source: Blaszczynski & Nower (2003); McConaghy et al. (1983), Br J Psychiatry; Glover (1985), Br J Clinical Psychology", X, 6.3);
+  source(s, "Source: Blaszczynski & Nower (2003); McConaghy et al. (1983), Br J Psychiatry; Glover (1985), Br J Clinical Psychology", X, CW);
   photo(s, "s6_F", 0, 0, 5.333, H, "Dimly lit casino room lined with slot machines");
-  slideNumber(s);
   s.addNotes(NOTES[6]);
 }
 
@@ -265,7 +249,6 @@ pres.addSection({ title: "Conclusion" });
     ...labelled("Regulation:", " product design matters too", true, p),
   ], { x: M, y: 1.95, w: 9, h: 1.6, fontSize: 20, objectName: "Takeaways" });
   photo(s, "s7_G", 0, 4.0, W, H - 4.0, "Roulette wheel and stacks of chips at a casino table");
-  slideNumberOnPhoto(s);
   s.addNotes(NOTES[7]);
 }
 
@@ -306,7 +289,6 @@ pres.addSection({ title: "Appendix" });
   text(s, runs(refs.slice(0, 7)), { x: M, y: 1.9, w: CW, h: 4.4, fontSize: 11, objectName: "References left" });
   text(s, runs(refs.slice(7)), { x: M + CW + 0.5, y: 1.9, w: CW, h: 4.4, fontSize: 11, objectName: "References right" });
   source(s, "Photos: Unsplash and Pexels (free licences)", M, 8);
-  slideNumber(s);
 }
 
 // ---------- post-processing pptxgenjs cannot do itself ----------
