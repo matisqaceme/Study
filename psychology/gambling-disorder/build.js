@@ -58,12 +58,12 @@ function layout(name, t, fontSize = 32) {
   });
 }
 layout("Title hero", { x: M, y: 5.3, w: 12.133, h: 1.05 }, 60);
-layout("Text 55 photo 45", { x: M, y: HEAD_Y, w: 6.23, h: 1.9 });
-layout("Photo 50 text 50", { x: 7.267, y: HEAD_Y, w: 5.466, h: 1.9 });
-layout("Photo band three columns", { x: M, y: HEAD_Y, w: 12.133, h: 1.2 });
-layout("Text 60 photo 40", { x: M, y: HEAD_Y, w: 6.9, h: 1.9 });
-layout("Photo 40 text 60", { x: 5.933, y: HEAD_Y, w: 6.8, h: 1.3 });
-layout("Closing band", { x: M, y: HEAD_Y, w: 12.133, h: 1.2 });
+layout("Text 55 photo 45", { x: M, y: HEAD_Y, w: 6.23, h: 0.6 });
+layout("Photo 50 text 50", { x: 7.267, y: HEAD_Y, w: 5.466, h: 0.6 });
+layout("Photo band three columns", { x: M, y: HEAD_Y, w: 12.133, h: 0.6 });
+layout("Text 60 photo 40", { x: M, y: HEAD_Y, w: 6.9, h: 0.6 });
+layout("Photo 40 text 60", { x: 5.933, y: HEAD_Y, w: 6.8, h: 0.6 });
+layout("Closing band", { x: M, y: HEAD_Y, w: 12.133, h: 0.6 });
 layout("Appendix", { x: M, y: 0.85, w: 12.133, h: 0.7 });
 
 // ---------- helpers ----------
@@ -80,6 +80,11 @@ function title(slide, t, o = {}) {
   const runs = (typeof t === "string" ? [{ text: t, options: {} }] : t)
     .map((r) => ({ text: r.text, options: { ...r.options, lineSpacingMultiple } }));
   slide.addText(runs, { placeholder: "title", lang: LANG, charSpacing: HEAD_TRACK, ...rest });
+}
+// Smaller line under a headline naming the criteria, studies or techniques the slide covers.
+const SUB_Y = 1.12;
+function subhead(slide, t, x, w) {
+  text(slide, t, { x, y: SUB_Y, w, h: 0.4, fontSize: 20, objectName: "Subheading" });
 }
 const lines = (...ls) => ls.map((t, i) => ({ text: t, options: i ? { softBreakBefore: true } : {} }));
 function photo(slide, name, x, y, w, h, alt) {
@@ -136,15 +141,16 @@ pres.addSection({ title: "Introduction" });
 pres.addSection({ title: "Definition and prevalence" });
 {
   const s = pres.addSlide({ masterName: "Text 55 photo 45", sectionTitle: "Definition and prevalence" });
-  title(s, lines("An addiction with no", "substance: the bet", "itself is the drug"));
+  title(s, "What gambling disorder is");
+  subhead(s, "ICD-11, DSM-5 criteria", M, 6.23);
   const p = { paraSpaceAfter: 20 };
   text(s, [
     ...labelled("Impaired control:", " can't control when, how often or how much", false, p),
     ...labelled("Priority:", " gambling crowds out the rest of life", false, p),
     ...labelled("Harm ignored:", " keeps going despite the damage", true, p),
-  ], { x: M, y: 2.6, w: 6.45, h: 2.8, fontSize: 19, objectName: "Core features" });
+  ], { x: M, y: 2.2, w: 6.45, h: 2.8, fontSize: 19, objectName: "Core features" });
   text(s, "Usually 12+ months · DSM-5: 4 or more of 9 symptoms", {
-    x: M, y: 5.0, w: 6.23, h: 0.35, fontSize: 16, objectName: "Criteria note",
+    x: M, y: 4.6, w: 6.23, h: 0.35, fontSize: 16, objectName: "Criteria note",
   });
   source(s, "Source: WHO, ICD-11 6C50 Gambling disorder; APA (2013), DSM-5", M, 6.3);
   photo(s, "s2_B", 7.333, 0, W - 7.333, H, "Hands pressing the buttons of a row of slot machines");
@@ -154,9 +160,10 @@ pres.addSection({ title: "Definition and prevalence" });
 // ---------- 3. How common it is ----------
 {
   const s = pres.addSlide({ masterName: "Photo 50 text 50", sectionTitle: "Definition and prevalence" });
-  title(s, "Around 80 million adults worldwide have a gambling problem");
+  title(s, "How common it is");
+  subhead(s, "Wardle 2024, Tran 2024", 7.267, 5.466);
   const X = 7.267, CW = 5.466, C2 = 2.25;
-  text(s, "80M", { x: X, y: 1.95, w: CW, h: 1.75, fontSize: 130, charSpacing: -2.5, objectName: "Big number" });
+  text(s, "80M", { x: X, y: 1.75, w: CW, h: 1.9, fontSize: 140, charSpacing: -2.8, objectName: "Big number" });
   text(s, "adults with gambling disorder or problematic gambling", { x: X, y: 3.88, w: CW, h: 0.65, objectName: "Big number label" });
   text(s, "1.4%", { x: X, y: 4.55, w: C2 - 0.2, h: 0.9, fontSize: 60, charSpacing: -1, objectName: "Stat 1" });
   text(s, "of all adults", { x: X, y: 5.45, w: C2 - 0.2, h: 0.35, objectName: "Stat 1 label" });
@@ -171,7 +178,8 @@ pres.addSection({ title: "Definition and prevalence" });
 pres.addSection({ title: "Explanations" });
 {
   const s = pres.addSlide({ masterName: "Photo band three columns", sectionTitle: "Explanations" });
-  title(s, lines("Three forces keep people gambling:", "the brain, reinforcement and thinking"));
+  title(s, "Causes: biological, behavioural, cognitive");
+  subhead(s, "Reuter 2005, Clark 2009, Miller 2010", M, 12.133);
   const cols = [
     ["Biological", "Weaker dopamine response to wins", "Reuter et al. (2005)"],
     ["Behavioural", "Random wins and near-misses reinforce betting", "Clark et al. (2009)"],
@@ -193,7 +201,8 @@ pres.addSection({ title: "Explanations" });
 pres.addSection({ title: "Treatment" });
 {
   const s = pres.addSlide({ masterName: "Text 60 photo 40", sectionTitle: "Treatment" });
-  title(s, "Drugs that block the high work best for gamblers with a family history of alcoholism");
+  title(s, "Drug treatment");
+  subhead(s, "Grant et al. 2008, naltrexone/nalmefene", M, 6.9);
   const stats = [
     ["284", "gamblers across two\ndouble-blind placebo trials"],
     ["2 drugs", "nalmefene and naltrexone,\nboth opiate antagonists"],
@@ -201,12 +210,12 @@ pres.addSection({ title: "Treatment" });
   ];
   const LX = 3.6;
   stats.forEach(([n, label], i) => {
-    const y = 2.55 + i * 0.98;
+    const y = 2.25 + i * 0.98;
     text(s, n, { x: M, y, w: LX - M - 0.15, h: 0.85, fontSize: 52, charSpacing: -1, valign: "middle", objectName: `Stat ${i + 1}` });
     text(s, label, { x: LX, y, w: 7.45 - LX, h: 0.85, fontSize: 18, valign: "middle", objectName: `Stat ${i + 1} label` });
   });
   text(s, "Naltrexone alone: ≈40% stopped gambling for 1+ month vs 10.5% on placebo", {
-    x: M, y: 5.65, w: 6.85, h: 0.55, fontSize: 16, objectName: "Naltrexone note",
+    x: M, y: 5.35, w: 6.85, h: 0.55, fontSize: 16, objectName: "Naltrexone note",
   });
   source(s, "Source: Grant, Kim, Hollander & Potenza (2008), Psychopharmacology; Grant, Kim & Hartman (2008), J Clin Psychiatry", M, 6.85);
   photo(s, "s5_E", 8.0, 0, W - 8.0, H, "Hands placing stacks of chips on a roulette table");
@@ -216,7 +225,8 @@ pres.addSection({ title: "Treatment" });
 // ---------- 6. Treatment: therapy ----------
 {
   const s = pres.addSlide({ masterName: "Photo 40 text 60", sectionTitle: "Treatment" });
-  title(s, "Therapy retrains how gamblers react to their triggers");
+  title(s, "Therapy");
+  subhead(s, "Imaginal desensitisation, covert sensitisation", 5.933, 6.8);
   const X = 5.933, CW = 6.8;
   text(s, "Imaginal desensitisation · Blaszczynski & Nower (2003)", {
     x: X, y: 1.95, w: CW, h: 0.35, fontSize: 16, bold: true, objectName: "Therapy label",
@@ -241,13 +251,13 @@ pres.addSection({ title: "Treatment" });
 pres.addSection({ title: "Conclusion" });
 {
   const s = pres.addSlide({ masterName: "Closing band", sectionTitle: "Conclusion" });
-  title(s, lines("There is no single cause,", "so the best treatment combines approaches"));
+  title(s, "Conclusion: why combined treatment works best");
   const p = { paraSpaceAfter: 14 };
   text(s, [
     ...labelled("Drugs:", " strongest trial evidence", false, p),
     ...labelled("Therapy:", " tackles the triggers", false, p),
     ...labelled("Regulation:", " product design matters too", true, p),
-  ], { x: M, y: 1.95, w: 9, h: 1.6, fontSize: 20, objectName: "Takeaways" });
+  ], { x: M, y: 1.6, w: 9, h: 1.6, fontSize: 20, objectName: "Takeaways" });
   photo(s, "s7_G", 0, 4.0, W, H - 4.0, "Roulette wheel and stacks of chips at a casino table");
   s.addNotes(NOTES[7]);
 }
