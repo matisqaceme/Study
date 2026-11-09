@@ -13,13 +13,13 @@ OUT.mkdir(exist_ok=True)
 
 # name: (source file, box width in, box height in, focal x 0-1, focal y 0-1)
 CROPS = {
-    "s1_A": ("A.jpg", 13.333, 7.5, 0.50, 0.50),
+    "s1_A": ("A.jpg", 13.333, 4.6, 0.50, 0.55),
     "s2_B": ("B.jpg", 6.000, 7.5, 0.30, 0.50),
     "s3_C": ("C.jpg", 6.667, 7.5, 0.55, 0.50),
-    "s4_D": ("D.jpg", 13.333, 2.2, 0.50, 0.50),
+    "s4_D": ("D.jpg", 13.333, 2.0, 0.50, 0.50),
     "s5_E": ("E.jpg", 5.333, 7.5, 0.22, 0.50),
     "s6_F": ("F.jpg", 5.333, 7.5, 0.80, 0.50),
-    "s7_G": ("G.jpg", 13.333, 7.5, 0.50, 0.50),
+    "s7_G": ("G.jpg", 13.333, 3.5, 0.50, 0.65),
 }
 
 MAX_PPI = 150  # enough for projection, keeps the file small
