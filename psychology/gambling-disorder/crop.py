@@ -22,7 +22,7 @@ CROPS = {
     "s7_G": ("G.jpg", 13.333, 3.5, 0.50, 0.65),
 }
 
-MAX_PPI = 150  # enough for projection, keeps the file small
+MAX_PPI = 180  # 2400 px across a full-width photo: crisp on 1080p and 4K projectors
 
 
 def cover_crop(img, box_w, box_h, fx, fy):
